@@ -1,0 +1,102 @@
+.error {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+.error img {
+  width: 40%;
+}
+
+.error__text h1 {
+  color: var(--color-gray);
+  font-family: var(--font-jetbrains);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.error__text button {
+  background-color: var(--color-gray);
+  border: none;
+  border-radius: 1rem;
+  color: var(--color-white);
+  font-family: var(--font-jetbrains);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  outline: none;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  transition: color 0.4s ease-in-out;
+  width: 15rem;
+  z-index: 1;
+}
+
+.error__text button::before {
+  background-color: var(--color-blue-light);
+  border-radius: 50%;
+  content: '';
+  height: 1em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transform-origin: center;
+  transition: transform 0.45s ease-in-out;
+  width: 1em;
+  z-index: -1;
+}
+
+.error__text button:hover a {
+  color: var(--color-black);
+  cursor: pointer
+}
+
+.error__text button:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+.error__text button a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .error {
+    flex-direction: column-reverse;
+  }
+
+  .error img {
+    width: 70%;
+  }
+
+  .error__text {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .error {
+    flex-direction: column-reverse;
+  }
+
+  .error img {
+    width: 80%;
+  }
+
+  .error__text {
+    text-align: center;
+  }
+
+  .error__text h1 {
+    font-size: 2rem;
+  }
+
+  .error__text button {
+    font-size: 1rem;
+  }
+}

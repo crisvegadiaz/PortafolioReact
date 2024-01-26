@@ -1,0 +1,10 @@
+.pie{
+    background-color: var(--color-gray-light);
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--font-jetbrains);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-gray);
+}
