@@ -1,9 +1,9 @@
 .modal {
-  animation: show-animation 0.7s 0.5s both;
-  border: 0.2rem solid var(--color-gray);
+  animation: show-animation .7s .5s both;
+  border: .2rem solid var(--color-gray);
   border-radius: 1rem;
   padding: 2rem;
-  text-align: center;
+  text-align: center
 }
 
 .modal h2 {
@@ -11,53 +11,53 @@
   font-family: var(--font-jetbrains);
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 2rem 0;
+  margin: 2rem 0
 }
 
 .modal button {
   background-color: var(--color-gray);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   color: var(--color-white);
   font-family: var(--font-jetbrains);
   font-size: 1.5rem;
   font-weight: 600;
   margin: auto;
   padding: 1rem;
-  width: 10rem;
+  width: 10rem
 }
 
 .modal button:hover {
   box-shadow: 5px 5px 7px var(--color-blue-light);
-  transition: all 0.5s linear;
+  transition: all .5s linear
 }
 
 .modal[open]::backdrop {
-  animation: show-backdrop 0.5s forwards;
+  animation: show-backdrop .5s forwards
 }
 
 .modal::backdrop {
-  background-color: hsla(195, 36%, 13%, 0.7);
+  background-color: hsla(195, 36%, 13%, 0.7)
 }
 
 @keyframes show-modal {
   0% {
     opacity: 0;
-    transform: translateY(60%);
+    transform: translateY(60%)
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(0%)
   }
 }
 
 @keyframes show-backdorp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(100%)
   }
 
   100% {
-    transform: translateY(0%);
+    transform: translateY(0%)
   }
 }

@@ -1,8 +1,7 @@
 .cabecera {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr)
 }
-
 
 .cabecera__menu {
   align-items: center;
@@ -10,8 +9,8 @@
   grid-column-end: 12;
   grid-column-start: 2;
   justify-content: space-between;
-  width: 100%;
-  margin: 0.5rem 0;
+  margin: .5rem 0;
+  width: 100%
 }
 
 .cabecera__menu i {
@@ -20,7 +19,7 @@
   font-size: 1.5rem;
   height: 2rem;
   justify-content: center;
-  width: 2rem;
+  width: 2rem
 }
 
 .cabecera__menu>a {
@@ -28,8 +27,8 @@
   border: none;
   border-radius: 50%;
   color: var(--color-gray);
-  padding: 0.5rem;
-  text-decoration: none;
+  padding: .5rem;
+  text-decoration: none
 }
 
 .cabecera__menu button {
@@ -37,17 +36,17 @@
   border: none;
   border-radius: 50%;
   color: var(--color-gray);
-  padding: 0.5rem;
-  text-decoration: none;
+  padding: .5rem;
+  text-decoration: none
 }
 
 .cabecera__menu i:hover {
   color: var(--color-blue-light);
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out
 }
 
 .cabecera__menu button {
-  margin-left: 70%;
+  margin-left: 70%
 }
 
 .cabecera__menu__redes {
@@ -56,10 +55,10 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  padding: 0.5rem;
+  padding: .5rem
 }
 
 .cabecera__menu__redes a {
   color: var(--color-gray);
-  text-decoration: none;
+  text-decoration: none
 }

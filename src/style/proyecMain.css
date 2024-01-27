@@ -1,30 +1,29 @@
 .proyecMain {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: 3rem 0;
+  margin: 3rem 0
 }
 
 .carousel__imagenes {
   align-items: center;
   background-color: var(--color-gray-light);
   border-radius: 1rem;
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 5px #0003;
   display: flex;
   grid-column-end: 12;
   grid-column-start: 2;
-  /* height: 30rem; */
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem
 }
 
 .carousel__imagenes a {
-  display: flex;
+  display: flex
 }
 
 .carousel__imagenes a img {
   border-radius: 1rem;
   margin: auto;
-  width: 60%;
+  width: 60%
 }
 
 .carousel__lista {
@@ -33,68 +32,68 @@
   grid-column-end: 12;
   grid-column-start: 2;
   justify-content: center;
-  margin: 2rem;
+  margin: 2rem
 }
 
 .carousel__lista li {
   background-color: var(--color-gray-light);
   border-radius: 1rem;
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 5px #0003;
   cursor: pointer;
   height: 1.5rem;
-  width: 1.5rem;
+  width: 1.5rem
 }
 
 .carousel__lista .isActiveLi {
-  background-color: var(--color-blue-light);
+  background-color: var(--color-blue-light)
 }
 
 .proyectos {
   grid-column-end: 12;
-  grid-column-start: 2;
+  grid-column-start: 2
 }
 
 .proyectos__titulo {
   color: var(--color-gray);
   font-family: var(--font-jetbrains);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   margin: 4.2rem auto;
-  text-align: center;
+  text-align: center
 }
 
 .proyectos__list {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  justify-content: center;
+  justify-content: center
 }
 
 .proyectos__list li {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .proyectos__list li div {
   bottom: 50%;
   opacity: 0;
   position: relative;
-  transition: visibility 0s, opacity 0.5s;
-  visibility: hidden;
+  transition: visibility 0s, opacity .5s;
+  visibility: hidden
 }
 
 .proyectos__list li:hover div {
   opacity: 1;
-  visibility: visible;
+  visibility: visible
 }
 
 .proyectos__list li img {
   background-color: var(--color-gray-light);
   border-radius: 1rem;
-  padding: 1rem;
-  width: 25rem;
   height: 12rem;
+  padding: 1rem;
+  width: 25rem
 }
 
 .proyectos__list li div a {
@@ -103,39 +102,36 @@
   color: var(--color-gray);
   font-size: 2rem;
   margin: 2rem;
-  padding: 0.5rem;
+  padding: .5rem
 }
 
 .proyectos__list li div a:hover {
   color: var(--color-blue-light);
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out
 }
 
 .proyectos__list li div i {
   text-align: center;
-  width: 2.7rem;
+  width: 2.7rem
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .carousel__imagenes {
     height: 15rem;
-  }
-
-  .carousel__imagenes {
-    height: 90%;
+    height: 90%
   }
 
   .carousel__imagenes a img {
-    width: 100%;
+    width: 100%
   }
 
   .proyectos__titulo {
-    font-size: 1.5rem;
+    font-size: 1.5rem
   }
 
   .proyectos__list li img {
-    width: 17rem;
     height: 9rem;
+    width: 17rem
   }
 
   .proyectos__list li div {
@@ -145,37 +141,32 @@
     transition: none;
     visibility: visible
   }
-
-  .proyectos__list li div a {
-    /* margin: 10%; */
-  }
-
 }
 
 @media only screen and (max-width: 767px) {
   .carousel__imagenes {
-    height: 90%;
+    height: 90%
   }
 
   .carousel__imagenes a img {
-    width: 100%;
+    width: 100%
   }
 
   .proyectos__titulo {
-    font-size: 1.5rem;
+    font-size: 1.5rem
   }
 
   .carousel__lista {
-    gap: 30%;
+    gap: 30%
   }
 
   .proyectos__list {
-    gap: 0;
+    gap: 0
   }
 
   .proyectos__list li img {
-    width: 100%;
     height: 50%;
+    width: 100%
   }
 
   .proyectos__list li div {
@@ -185,5 +176,4 @@
     transition: none;
     visibility: visible
   }
-
 }

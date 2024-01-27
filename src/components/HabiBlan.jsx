@@ -1,6 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
-import giphy from "../img/giphy.gif";
+import giphy from "../img/giphy.webp";
 
 function HabiBlan() {
   const { state } = useAppContext();

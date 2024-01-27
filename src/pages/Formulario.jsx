@@ -1,18 +1,19 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import "../style/formulario.css";
-import Modal from "../components/Modal";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
+import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
 import enviarMin from "../img/enviar-min.svg";
+import Modal from "../components/Modal";
+import "../style/formulario.css";
 
 function Formulario() {
+  const modalRef = useRef(null);
   const { state } = useAppContext();
   const [form, setForm] = useState({});
   const [menModal, setMenModal] = useState(null);
 
   const openModal = () => {
-    document.querySelector(".modal").showModal();
+    modalRef.current.showModal();
   };
 
   const handleInput = (e) => {
@@ -24,7 +25,6 @@ function Formulario() {
 
   const handleSumbit = (e) => {
     e.preventDefault();
-    console.log((e.target[1].value = ""));
 
     fetch("https://formsubmit.co/ajax/6b9bc4d351de1366c2abbbd01daa6598", {
       method: "POST",
@@ -36,11 +36,10 @@ function Formulario() {
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then((json) => {
-        console.log(json);
         e.target[1].value = "";
         e.target[2].value = "";
         e.target[3].value = "";
-        e.target[5].value = "";
+        e.target[4].value = "";
         setMenModal(true);
         openModal();
       })
@@ -73,6 +72,7 @@ function Formulario() {
             <input
               type="text"
               name="nombre"
+              id="nombre"
               placeholder="Ingrese su nombre"
               pattern="[A-Za-zÁ-Úá-ú]+(\s[A-Za-zÁ-Úá-ú]+)?"
               title="Ingrese un nombre válido ❌"
@@ -83,6 +83,7 @@ function Formulario() {
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="Ingrese su email"
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
               title="Ingrese un correo electrónico válido ❌"
@@ -92,6 +93,7 @@ function Formulario() {
             <input
               type="tel"
               name="telefono"
+              id="telefono"
               placeholder="Ingrese su número de teléfono"
               pattern="[0-9]{10}"
               title="Ingrese un número de teléfono válido ❌"
@@ -100,15 +102,16 @@ function Formulario() {
             />
           </div>
 
-          <label htmlFor="icon">
+          <label>
             <i className="fa-solid fa-at icon"></i>
           </label>
         </fieldset>
 
         <textarea
           name="mensaje"
+          id="mensaje"
           placeholder="Escriba su mensaje"
-          minLength="50"
+          minLength="10"
           required
           onChange={handleInput}
         ></textarea>
@@ -127,7 +130,7 @@ function Formulario() {
 
       <img src={enviarMin} alt="Email" className="formulario__img" />
 
-      <Modal state={state} colors={colors}>
+      <Modal modalRef={modalRef} state={state} colors={colors}>
         {menModal
           ? "😉 El Mensaje se ha enviado con éxito"
           : "😰 El mensaje no pudo ser enviado"}

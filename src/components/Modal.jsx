@@ -1,12 +1,13 @@
 import "../style/modal.css";
 
-function Modal({ children, state, colors }) {
+function Modal({ modalRef, children, state, colors }) {
   const closeModal = () => {
-    document.querySelector(".modal").close();
+    modalRef.current.close();
   };
 
   return (
     <dialog
+      ref={modalRef}
       className="modal"
       style={
         state.theme
