@@ -4,6 +4,9 @@ import "../style/proyecMain.css";
 import Carrusel from "./Carrusel";
 import ProyecImg from "./ProyecImg";
 import { colors } from "../js/themeDark";
+import Juegodelhorcado from "../img/imgProyec/Juegodelhorcado.png";
+import González from "../img/imgProyec/González.png"
+import MarcadorDeMarkdown from "../img/imgProyec/MarcadorDeMarkdown.png"
 
 const ProyecMain = () => {
   const { state } = useAppContext();
@@ -19,9 +22,9 @@ const ProyecMain = () => {
   }, [state.theme]);
 
   const images = [
-    "./src/img/imgProyec/Juegodelhorcado.png",
-    "./src/img/imgProyec/González.png",
-    "./src/img/imgProyec/MarcadorDeMarkdown.png",
+    Juegodelhorcado,
+    González,
+    MarcadorDeMarkdown,
   ];
 
   const enlaces = [

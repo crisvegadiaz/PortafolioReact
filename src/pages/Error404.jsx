@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../style/error.css";
+import errorMin from "../img/error-min.svg";
 
 function Error404() {
   return (
@@ -12,7 +13,7 @@ function Error404() {
           </Link>
         </button>
       </div>
-      <img src="./src/img/error-min.svg" alt="error" />
+      <img src={errorMin} alt="error" />
     </main>
   );
 }

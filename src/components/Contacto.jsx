@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
+import emailMin from "../img/email-min.svg"
 
 function Contacto() {
   const { state } = useAppContext();
@@ -21,7 +22,7 @@ function Contacto() {
       </h2>
       <article className="contacto__contenido">
         <img
-          src="./src/img/email-min.svg"
+          src={emailMin}
           alt="email"
           className="contacto__contenido__img"
         />

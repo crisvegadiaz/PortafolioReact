@@ -26,10 +26,10 @@ function Menu() {
         )}
 
         <div className="cabecera__menu__redes">
-          <a href="https://github.com/crisvegadiaz" target="_blank">
+          <a href="https://twitter.com/cristiandiazve3" target="_blank">
             <i className="fa-brands fa-twitter"></i>
           </a>
-          <a href="https://github.com/crisvegadiaz" target="_blank">
+          <a href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/" target="_blank">
             <i className="fa-brands fa-linkedin"></i>
           </a>
           <a href="https://github.com/crisvegadiaz" target="_blank">

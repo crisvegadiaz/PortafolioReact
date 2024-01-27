@@ -1,11 +1,12 @@
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
+import cp from "../img/cp.svg";
 
 function Intro() {
   const { state } = useAppContext();
   return (
     <section className="intro">
-      <img src="./src/img/cp.svg" alt="cp" className="intro__img" />
+      <img src={cp} alt="cp" className="intro__img" />
       <p
         className="intro__txt"
         style={state.theme ? { color: colors.white } : { color: colors.black }}

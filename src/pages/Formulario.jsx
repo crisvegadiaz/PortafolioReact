@@ -4,6 +4,7 @@ import "../style/formulario.css";
 import Modal from "../components/Modal";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
+import enviarMin from "../img/enviar-min.svg";
 
 function Formulario() {
   const { state } = useAppContext();
@@ -124,11 +125,7 @@ function Formulario() {
         </fieldset>
       </form>
 
-      <img
-        src="./src/img/enviar-min.svg"
-        alt="Email"
-        className="formulario__img"
-      />
+      <img src={enviarMin} alt="Email" className="formulario__img" />
 
       <Modal state={state} colors={colors}>
         {menModal

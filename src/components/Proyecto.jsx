@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
+import codeMin1 from "../img/code-min1.svg";
+import codeMin2 from "../img/code-min2.svg";
 
 function Proyecto() {
   const { state } = useAppContext();
@@ -15,17 +17,9 @@ function Proyecto() {
       </h2>
       <article className="proyecto__arti">
         {state.theme ? (
-          <img
-            src="./src/img/code-min2.svg"
-            alt="code min"
-            className="proyecto__arti__img"
-          />
+          <img src={codeMin2} alt="code min" className="proyecto__arti__img" />
         ) : (
-          <img
-            src="./src/img/code-min1.svg"
-            alt="code min"
-            className="proyecto__arti__img"
-          />
+          <img src={codeMin1} alt="code min" className="proyecto__arti__img" />
         )}
         <div className="proyecto__arti__div">
           <p

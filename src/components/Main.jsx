@@ -3,16 +3,13 @@ import HabiBlan from "./HabiBlan";
 import HabiTec from "./HabiTec";
 import Intro from "./Intro";
 import Proyecto from "./Proyecto";
+import programador from "../img/programador.svg";
 
 function Main() {
   return (
     <main className="homeMain">
       <Intro />
-      <img
-        src="./src/img/programador.svg"
-        alt="programador"
-        className="main__img"
-      />
+      <img src={programador} alt="programador" className="main__img" />
       <HabiTec />
       <HabiBlan />
       <Contacto />

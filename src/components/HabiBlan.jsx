@@ -1,5 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
+import giphy from "../img/giphy.gif";
 
 function HabiBlan() {
   const { state } = useAppContext();
@@ -13,11 +14,7 @@ function HabiBlan() {
         Habilidad Blandas
       </h2>
       <article className="habilidadBland__arti">
-        <img
-          src="./src/img/giphy.gif"
-          alt="gif"
-          className="habilidadBland__arti__img"
-        />
+        <img src={giphy} alt="gif" className="habilidadBland__arti__img" />
         <ul
           className="habilidadBland__arti__lista"
           style={
@@ -66,9 +63,6 @@ function HabiBlan() {
           <li>
             <details name="info">
               <summary>Colaboración</summary>
-              <p>
-                Este es el texto que se mostrará al hacer clic en el resumen.
-              </p>
               <p>
                 Colaborador efectivo que fomenta la comunicación clara y la
                 sinergia del equipo, contribuyendo a un ambiente de trabajo
