@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
-import emailMin from "../img/email-min.svg"
+import emailMin from "../img/email-min.svg";
 
 function Contacto() {
   const { state } = useAppContext();
@@ -24,6 +24,8 @@ function Contacto() {
         <img
           src={emailMin}
           alt="email"
+          width="426"
+          height="365"
           className="contacto__contenido__img"
         />
         <div className="contacto__contenido__txt">

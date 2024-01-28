@@ -14,7 +14,7 @@ function HabiBlan() {
         Habilidad Blandas
       </h2>
       <article className="habilidadBland__arti">
-        <img src={giphy} alt="gif" className="habilidadBland__arti__img" />
+        <img src={giphy} alt="gif" width="480" height="480" className="habilidadBland__arti__img" />
         <ul
           className="habilidadBland__arti__lista"
           style={

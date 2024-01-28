@@ -39,7 +39,7 @@ function ProyecImg({ stateTheme, colors }) {
       </h2>
       <ul ref={lisRef} className="proyectos__list">
         <li>
-          <img src={Juegodelhorcado} alt="juegodelHorcado" />
+          <img src={Juegodelhorcado} alt="juegodelHorcado" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/juego_del_ahorcado"
@@ -56,7 +56,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={González} alt="González" />
+          <img src={González} alt="González" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/Pagina-institucional"
@@ -73,7 +73,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={MarcadorDeMarkdown} alt="RectRelojo" />
+          <img src={MarcadorDeMarkdown} alt="RectRelojo" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/ReactMarcadorDeMarkdown"
@@ -90,7 +90,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={reactRelojo} alt="RectRelojo" />
+          <img src={reactRelojo} alt="RectRelojo" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/ReactReloj"
@@ -107,7 +107,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={scritp} alt="Script" />
+          <img src={scritp} alt="Script" width="1920" height="965"/>
           <div>
             <a href="https://github.com/crisvegadiaz/script_sh" target="_blank">
               <i className="fa-brands fa-github"></i>
@@ -115,7 +115,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={viteReact} alt="ViteReact" />
+          <img src={viteReact} alt="ViteReact" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/React-citas-aleatorio-"
@@ -132,7 +132,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={juegodelHorcado} alt="JuegoDelHorcadoReact" />
+          <img src={juegodelHorcado} alt="JuegoDelHorcadoReact" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/JuegoDelHorcadoReact"
@@ -149,7 +149,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={calculadora} alt="Calculadora" />
+          <img src={calculadora} alt="Calculadora" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/ReactCalculadora"
@@ -166,7 +166,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={encritador} alt="Encritador" />
+          <img src={encritador} alt="Encritador" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/encriptador"
@@ -183,7 +183,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={hotelJava} alt="HotelJava" />
+          <img src={hotelJava} alt="HotelJava" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/Hotel-Alura"
@@ -194,7 +194,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={javaText} alt="javaText" />
+          <img src={javaText} alt="javaText" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/CopiaTexto"
@@ -205,7 +205,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={nodeClima} alt="nodeClima" />
+          <img src={nodeClima} alt="nodeClima" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/NodeWeather"
@@ -216,7 +216,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={nodeImg} alt="nodeImg" />
+          <img src={nodeImg} alt="nodeImg" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/NodeImgOpt"
@@ -227,7 +227,7 @@ function ProyecImg({ stateTheme, colors }) {
           </div>
         </li>
         <li>
-          <img src={nodeList} alt="nodeList" />
+          <img src={nodeList} alt="nodeList" width="1920" height="965"/>
           <div>
             <a
               href="https://github.com/crisvegadiaz/NodeToDoApp"

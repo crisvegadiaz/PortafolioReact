@@ -9,7 +9,13 @@ function Main() {
   return (
     <main className="homeMain">
       <Intro />
-      <img src={programador} alt="programador" className="main__img" />
+      <img
+        src={programador}
+        width="973.461"
+        height="587.025"
+        alt="programador"
+        className="main__img"
+      />
       <HabiTec />
       <HabiBlan />
       <Contacto />

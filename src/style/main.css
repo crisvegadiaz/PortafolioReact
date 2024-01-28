@@ -22,7 +22,8 @@
 }
 
 .intro__img {
-  width: 25%
+  width: 25rem;
+  height: auto
 }
 
 .intro__txt {
@@ -40,7 +41,8 @@
   grid-column-start: 2;
   position: relative;
   top: 13%;
-  width: 120%
+  width: 120%;
+  height: auto
 }
 
 .habilidadTec {
@@ -101,7 +103,8 @@
 }
 
 .habilidadBland__arti__img {
-  width: 40%
+  width: 40%;
+  height: auto
 }
 
 .habilidadBland__arti__lista {
@@ -157,7 +160,8 @@
 }
 
 .contacto__contenido__img {
-  width: 35%
+  width: 35%;
+  height: auto
 }
 
 .contacto__contenido__txt {
@@ -244,7 +248,8 @@
 }
 
 .proyecto__arti__img {
-  width: 30%
+  width: 30%;
+  height: auto
 }
 
 .proyecto__arti__div button {

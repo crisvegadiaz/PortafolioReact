@@ -43,7 +43,12 @@ function Carrusel({ stateTheme, colors, images, enlaces }) {
         }
       >
         <a href={enlaces[currentIndex]} target="_blank">
-          <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+          <img
+            src={images[currentIndex]}
+            alt={`Image ${currentIndex + 1}`}
+            width="1920"
+            height="965"
+          />
         </a>
       </article>
       <ul className="carousel__lista">

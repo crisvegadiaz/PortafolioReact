@@ -6,7 +6,13 @@ function Intro() {
   const { state } = useAppContext();
   return (
     <section className="intro">
-      <img src={cp} alt="cp" className="intro__img" />
+      <img
+        src={cp}
+        alt="cp"
+        width="1139.171"
+        height="654.543"
+        className="intro__img"
+      />
       <p
         className="intro__txt"
         style={state.theme ? { color: colors.white } : { color: colors.black }}

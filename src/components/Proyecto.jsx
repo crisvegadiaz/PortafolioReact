@@ -17,9 +17,21 @@ function Proyecto() {
       </h2>
       <article className="proyecto__arti">
         {state.theme ? (
-          <img src={codeMin2} alt="code min" className="proyecto__arti__img" />
+          <img
+            src={codeMin2}
+            alt="code min"
+            width="289"
+            height="289"
+            className="proyecto__arti__img"
+          />
         ) : (
-          <img src={codeMin1} alt="code min" className="proyecto__arti__img" />
+          <img
+            src={codeMin1}
+            alt="code min"
+            width="289"
+            height="289"
+            className="proyecto__arti__img"
+          />
         )}
         <div className="proyecto__arti__div">
           <p

@@ -128,7 +128,13 @@ function Formulario() {
         </fieldset>
       </form>
 
-      <img src={enviarMin} alt="Email" className="formulario__img" />
+      <img
+        src={enviarMin}
+        alt="Email"
+        width="643.162"
+        height="528"
+        className="formulario__img"
+      />
 
       <Modal modalRef={modalRef} state={state} colors={colors}>
         {menModal

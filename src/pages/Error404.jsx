@@ -13,7 +13,7 @@ function Error404() {
           </Link>
         </button>
       </div>
-      <img src={errorMin} alt="error" />
+      <img src={errorMin} alt="error" width="611" height="509" />
     </main>
   );
 }
