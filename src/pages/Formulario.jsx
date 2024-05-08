@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import enviarMin from "../img/enviar-min.svg";
 import Modal from "../components/Modal";
 import "../style/formulario.css";
+import texto from "../js/textoPagina.js";
 
 function Formulario() {
   const modalRef = useRef(null);
@@ -73,9 +74,9 @@ function Formulario() {
               type="text"
               name="nombre"
               id="nombre"
-              placeholder="Ingrese su nombre"
+              placeholder={texto.Formulario.inputNombre}
               pattern="[A-Za-zÁ-Úá-ú]+(\s[A-Za-zÁ-Úá-ú]+)?"
-              title="Ingrese un nombre válido ❌"
+              title={texto.Formulario.inputErroNombre}
               required
               onChange={handleInput}
               style={state}
@@ -84,9 +85,9 @@ function Formulario() {
               type="email"
               name="email"
               id="email"
-              placeholder="Ingrese su email"
+              placeholder={texto.Formulario.inputEmail}
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-              title="Ingrese un correo electrónico válido ❌"
+              title={texto.Formulario.inputErrorEmail}
               required
               onChange={handleInput}
             />
@@ -94,9 +95,9 @@ function Formulario() {
               type="tel"
               name="telefono"
               id="telefono"
-              placeholder="Ingrese su número de teléfono"
+              placeholder={texto.Formulario.inputTelefono}
               pattern="[0-9]{10}"
-              title="Ingrese un número de teléfono válido ❌"
+              title={texto.Formulario.inputErrorTelefono}
               required
               onChange={handleInput}
             />
@@ -110,7 +111,7 @@ function Formulario() {
         <textarea
           name="mensaje"
           id="mensaje"
-          placeholder="Escriba su mensaje"
+          placeholder={texto.Formulario.inputMensaje}
           minLength="10"
           required
           onChange={handleInput}
@@ -119,11 +120,13 @@ function Formulario() {
         <fieldset className="formulario__form__butt">
           <button>
             <Link to="/">
-              <i className="fa-solid fa-arrow-left"></i> Inicio
+              <i className="fa-solid fa-arrow-left"></i>{" "}
+              {texto.Formulario.btnInicio}
             </Link>
           </button>
           <button type="submit">
-            <i className="fa-solid fa-paper-plane"></i> Enviar
+            <i className="fa-solid fa-paper-plane"></i>{" "}
+            {texto.Formulario.btnEnviar}
           </button>
         </fieldset>
       </form>
@@ -137,9 +140,7 @@ function Formulario() {
       />
 
       <Modal modalRef={modalRef} state={state} colors={colors}>
-        {menModal
-          ? "😉 El Mensaje se ha enviado con éxito"
-          : "😰 El mensaje no pudo ser enviado"}
+        {menModal ? texto.Formulario.modal1 : texto.Formulario.modal2}
       </Modal>
     </main>
   );

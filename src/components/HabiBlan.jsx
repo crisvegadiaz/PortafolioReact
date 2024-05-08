@@ -1,6 +1,7 @@
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
 import giphy from "../img/giphy.webp";
+import texto from "../js/textoPagina.js";
 
 function HabiBlan() {
   const { state } = useAppContext();
@@ -11,10 +12,16 @@ function HabiBlan() {
         className="titulo"
         style={state.theme ? { color: colors.white } : { color: colors.black }}
       >
-        Habilidad Blandas
+        {texto.Home.habiBlan.titulo}
       </h2>
       <article className="habilidadBland__arti">
-        <img src={giphy} alt="gif" width="480" height="480" className="habilidadBland__arti__img" />
+        <img
+          src={giphy}
+          alt="gif"
+          width="480"
+          height="480"
+          className="habilidadBland__arti__img"
+        />
         <ul
           className="habilidadBland__arti__lista"
           style={
@@ -23,51 +30,32 @@ function HabiBlan() {
         >
           <li>
             <details name="info">
-              <summary>Organización</summary>
-              <p>
-                Gestión eficiente de tareas y proyectos, cumpliendo plazos
-                gracias a mi enfoque estructurado y herramientas de
-                planificación.
-              </p>
+              <summary>{texto.Home.habiBlan.tema1}</summary>
+              <p>{texto.Home.habiBlan.parrafo1}</p>
             </details>
           </li>
           <li>
             <details name="info">
-              <summary>Proactividad</summary>
-              <p>
-                Anticipo desafíos, tomo medidas preventivas y busco
-                constantemente mejoras. Soy impulsor de soluciones innovadoras.
-              </p>
+              <summary>{texto.Home.habiBlan.tema2}</summary>
+              <p>{texto.Home.habiBlan.parrafo2}</p>
             </details>
           </li>
           <li>
             <details name="info">
-              <summary>Creatividad</summary>
-              <p>
-                Pensador creativo con habilidad para aportar ideas frescas y
-                perspectivas originales, contribuyendo a la innovación en
-                proyectos.
-              </p>
+              <summary>{texto.Home.habiBlan.tema3}</summary>
+              <p>{texto.Home.habiBlan.parrafo3}</p>
             </details>
           </li>
           <li>
             <details name="info">
-              <summary>Autodidacta</summary>
-              <p>
-                Aprendizaje continuo a través de investigación independiente,
-                cursos en línea y lectura, demostrando mi motivación para
-                mantenerme actualizado.
-              </p>
+              <summary>{texto.Home.habiBlan.tema4}</summary>
+              <p>{texto.Home.habiBlan.parrafo4}</p>
             </details>
           </li>
           <li>
             <details name="info">
-              <summary>Colaboración</summary>
-              <p>
-                Colaborador efectivo que fomenta la comunicación clara y la
-                sinergia del equipo, contribuyendo a un ambiente de trabajo
-                positivo y colaborativo.
-              </p>
+              <summary>{texto.Home.habiBlan.tema5}</summary>
+              <p>{texto.Home.habiBlan.parrafo5}</p>
             </details>
           </li>
         </ul>

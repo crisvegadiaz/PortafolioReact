@@ -3,6 +3,7 @@ import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
 import codeMin1 from "../img/code-min1.svg";
 import codeMin2 from "../img/code-min2.svg";
+import texto from "../js/textoPagina.js";
 
 function Proyecto() {
   const { state } = useAppContext();
@@ -13,7 +14,7 @@ function Proyecto() {
         className="titulo"
         style={state.theme ? { color: colors.white } : { color: colors.black }}
       >
-        Proyectos Personales
+        {texto.Home.proyecto.titulo}
       </h2>
       <article className="proyecto__arti">
         {state.theme ? (
@@ -39,14 +40,11 @@ function Proyecto() {
               state.theme ? { color: colors.white } : { color: colors.black }
             }
           >
-            Este es mi rincón creativo. Aquí, la imaginación cobra vida en
-            proyectos personales que reflejan mi pasión por. La programación,
-            cada creación, cuenta una historia única. ¡Bienvenido a explorar
-            este viaje creativo conmigo!
+            {texto.Home.proyecto.parrafo}
           </p>
           <button>
             <Link to="/proyectos">
-              Ver <i className="fa-solid fa-code"></i>
+              {texto.Home.proyecto.btn} <i className="fa-solid fa-code"></i>
             </Link>
           </button>
         </div>

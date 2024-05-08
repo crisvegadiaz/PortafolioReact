@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
 import { useRef } from "react";
+import texto from "../js/textoPagina.js";
 
 function HabiTec() {
   const { state } = useAppContext();
@@ -32,52 +33,52 @@ function HabiTec() {
         className="titulo"
         style={state.theme ? { color: colors.white } : { color: colors.black }}
       >
-        Habilidades Técnicas
+        {texto.Home.habiTec.titulo}
       </h2>
       <ul ref={lisRef} className="habilidadTec__lista">
         <li>
           <i className="fa-brands fa-docker"></i>
-          <p>Docker</p>
+          <p>{texto.Home.habiTec.item1}</p>
         </li>
         <li>
           <i className="fa-brands fa-linux"></i>
-          <p>Linux</p>
+          <p>{texto.Home.habiTec.item2}</p>
         </li>
         <li>
           <i className="fa-brands fa-github"></i>
-          <p>Github</p>
+          <p>{texto.Home.habiTec.item3}</p>
         </li>
         <li>
           <i className="fa-brands fa-git-alt"></i>
-          <p>Git</p>
+          <p>{texto.Home.habiTec.item4}</p>
         </li>
         <li>
           <i className="fa-brands fa-js"></i>
-          <p>JavaScript</p>
+          <p>{texto.Home.habiTec.item5}</p>
         </li>
         <li>
           <i className="fa-brands fa-node-js"></i>
-          <p>Node</p>
+          <p>{texto.Home.habiTec.item6}</p>
         </li>
         <li>
           <i className="fa-brands fa-react"></i>
-          <p>React</p>
+          <p>{texto.Home.habiTec.item7}</p>
         </li>
         <li>
           <i className="fa-brands fa-java"></i>
-          <p>Java</p>
+          <p>{texto.Home.habiTec.item8}</p>
         </li>
         <li>
           <i className="fa-solid fa-database"></i>
-          <p>MySQL</p>
+          <p>{texto.Home.habiTec.item9}</p>
         </li>
         <li>
           <i className="fa-solid fa-database"></i>
-          <p>PostgreSQL</p>
+          <p>{texto.Home.habiTec.item10}</p>
         </li>
         <li>
           <i className="fa-solid fa-database"></i>
-          <p>MariaDB</p>
+          <p>{texto.Home.habiTec.item11}</p>
         </li>
       </ul>
     </section>

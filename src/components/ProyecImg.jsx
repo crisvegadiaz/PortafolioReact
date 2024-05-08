@@ -13,6 +13,8 @@ import javaText from "../img/imgProyec/javaText.png";
 import nodeClima from "../img/imgProyec/nodeClima.png";
 import nodeImg from "../img/imgProyec/nodeImg.png";
 import nodeList from "../img/imgProyec/nodeList.png";
+import LiProyec from "./LiProyec";
+import texto from "../js/textoPagina";
 
 function ProyecImg({ stateTheme, colors }) {
   const lisRef = useRef(null);
@@ -20,11 +22,17 @@ function ProyecImg({ stateTheme, colors }) {
   useEffect(() => {
     if (stateTheme) {
       lisRef.current.childNodes.forEach((node) => {
-        node.childNodes[0].style.backgroundColor = colors.blackLight;
+        node.style.backgroundColor = colors.blackLight;
+        node.childNodes[1].childNodes[0].style.color = colors.white;
+        node.childNodes[1].childNodes[2].style.color = colors.white;
+        node.childNodes[1].childNodes[3].style.color = colors.white;
       });
     } else {
       lisRef.current.childNodes.forEach((node) => {
-        node.childNodes[0].style.backgroundColor = colors.grayLight;
+        node.style.backgroundColor = colors.grayLight;
+        node.childNodes[1].childNodes[0].style.color = colors.black;
+        node.childNodes[1].childNodes[2].style.color = colors.black;
+        node.childNodes[1].childNodes[3].style.color = colors.black;
       });
     }
   }, [stateTheme]);
@@ -38,205 +46,151 @@ function ProyecImg({ stateTheme, colors }) {
         Proyectos
       </h2>
       <ul ref={lisRef} className="proyectos__list">
-        <li>
-          <img src={Juegodelhorcado} alt="juegodelHorcado" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/juego_del_ahorcado"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://superlative-liger-734e6a.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={González} alt="González" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/Pagina-institucional"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://clinquant-travesseiro-9bd6ec.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={MarcadorDeMarkdown} alt="RectRelojo" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/ReactMarcadorDeMarkdown"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://heroic-zuccutto-e7944c.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={reactRelojo} alt="RectRelojo" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/ReactReloj"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://mellifluous-brioche-683a3b.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={scritp} alt="Script" width="1920" height="965"/>
-          <div>
-            <a href="https://github.com/crisvegadiaz/script_sh" target="_blank">
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={viteReact} alt="ViteReact" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/React-citas-aleatorio-"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://effervescent-starlight-af3e40.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={juegodelHorcado} alt="JuegoDelHorcadoReact" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/JuegoDelHorcadoReact"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://mellow-zabaione-2b201e.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={calculadora} alt="Calculadora" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/ReactCalculadora"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://astounding-sawine-944061.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={encritador} alt="Encritador" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/encriptador"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://venerable-bavarois-ba1789.netlify.app/"
-              target="_blank"
-            >
-              <i className="fa-solid fa-globe"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={hotelJava} alt="HotelJava" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/Hotel-Alura"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={javaText} alt="javaText" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/CopiaTexto"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={nodeClima} alt="nodeClima" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/NodeWeather"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={nodeImg} alt="nodeImg" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/NodeImgOpt"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src={nodeList} alt="nodeList" width="1920" height="965"/>
-          <div>
-            <a
-              href="https://github.com/crisvegadiaz/NodeToDoApp"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </li>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/juego_del_ahorcado"}
+          enlace2={"https://superlative-liger-734e6a.netlify.app/"}
+          img={Juegodelhorcado}
+          titulo={texto.Proyecto.proye1}
+          texto={texto.Proyecto.parrafo1}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/Pagina-institucional"}
+          enlace2={"https://clinquant-travesseiro-9bd6ec.netlify.app/"}
+          img={González}
+          titulo={texto.Proyecto.proye2}
+          texto={texto.Proyecto.parrafo2}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+          <i className="fa-brands fa-bootstrap"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/ReactMarcadorDeMarkdown"}
+          enlace2={"https://heroic-zuccutto-e7944c.netlify.app/"}
+          img={MarcadorDeMarkdown}
+          titulo={texto.Proyecto.proye3}
+          texto={texto.Proyecto.parrafo3}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+          <i className="fa-brands fa-react"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/ReactReloj"}
+          enlace2={"https://mellifluous-brioche-683a3b.netlify.app/"}
+          img={reactRelojo}
+          titulo={texto.Proyecto.proye4}
+          texto={texto.Proyecto.parrafo4}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+          <i className="fa-brands fa-react"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/script_sh"}
+          img={scritp}
+          titulo={texto.Proyecto.proye5}
+          texto={texto.Proyecto.parrafo5}
+        >
+          <i className="fa-brands fa-linux"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/React-citas-aleatorio-"}
+          enlace2={"https://effervescent-starlight-af3e40.netlify.app/"}
+          img={viteReact}
+          titulo={texto.Proyecto.proye6}
+          texto={texto.Proyecto.parrafo6}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+          <i className="fa-brands fa-react"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/JuegoDelHorcadoReact"}
+          enlace2={"https://mellow-zabaione-2b201e.netlify.app/"}
+          img={juegodelHorcado}
+          titulo={texto.Proyecto.proye7}
+          texto={texto.Proyecto.parrafo7}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+          <i className="fa-brands fa-react"></i>
+        </LiProyec>
+
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/ReactCalculadora"}
+          enlace2={"https://astounding-sawine-944061.netlify.app/"}
+          img={calculadora}
+          titulo={texto.Proyecto.proye8}
+          texto={texto.Proyecto.parrafo8}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+          <i className="fa-brands fa-react"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/encriptador"}
+          enlace2={"https://venerable-bavarois-ba1789.netlify.app/"}
+          img={encritador}
+          titulo={texto.Proyecto.proye9}
+          texto={texto.Proyecto.parrafo9}
+        >
+          <i className="fa-brands fa-html5"></i>
+          <i className="fa-brands fa-css3-alt"></i>
+          <i className="fa-brands fa-js"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/Hotel-Alura"}
+          img={hotelJava}
+          titulo={texto.Proyecto.proye10}
+          texto={texto.Proyecto.parrafo10}
+        >
+          <i class="fa-brands fa-java"></i>
+          <i class="fa-solid fa-database"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/CopiaTexto"}
+          img={javaText}
+          titulo={texto.Proyecto.proye11}
+          texto={texto.Proyecto.parrafo11}
+        >
+          <i class="fa-brands fa-java"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/NodeWeather"}
+          img={nodeClima}
+          titulo={texto.Proyecto.proye12}
+          texto={texto.Proyecto.parrafo12}
+        >
+          <i class="fa-brands fa-node-js"></i>
+        </LiProyec>
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/NodeImgOpt"}
+          img={nodeImg}
+          titulo={texto.Proyecto.proye13}
+          texto={texto.Proyecto.parrafo13}
+        >
+          <i class="fa-brands fa-node-js"></i>
+        </LiProyec>
+
+        <LiProyec
+          enlace1={"https://github.com/crisvegadiaz/NodeToDoApp"}
+          img={nodeList}
+          titulo={texto.Proyecto.proye14}
+          texto={texto.Proyecto.parrafo14}
+        >
+          <i class="fa-brands fa-node-js"></i>
+        </LiProyec>
       </ul>
     </article>
   );

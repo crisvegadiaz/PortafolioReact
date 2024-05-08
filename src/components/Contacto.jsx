@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
 import emailMin from "../img/email-min.svg";
+import texto from "../js/textoPagina.js";
 
 function Contacto() {
   const { state } = useAppContext();
@@ -18,7 +19,7 @@ function Contacto() {
         className="titulo"
         style={state.theme ? { color: colors.white } : { color: colors.black }}
       >
-        Contacto
+        {texto.Home.contacto.titulo}
       </h2>
       <article className="contacto__contenido">
         <img
@@ -34,14 +35,11 @@ function Contacto() {
               state.theme ? { color: colors.white } : { color: colors.black }
             }
           >
-            ¿Quieres contactarme? Complete el siguiente formulario y me pondré
-            en contacto con usted lo antes posible.
-            <br />
-            Email : alexander85vega@gmail.com
+            {texto.Home.contacto.parrafo}
           </p>
           <button>
             <Link to="/formulario">
-              Formulario <i className="fa-solid fa-envelope"></i>
+              {texto.Home.contacto.btn} <i className="fa-solid fa-envelope"></i>
             </Link>
           </button>
         </div>
