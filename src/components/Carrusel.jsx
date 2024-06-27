@@ -16,7 +16,7 @@ function Carrusel({ stateTheme, colors, images, enlaces }) {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, [currentIndex, images.length, isMouseOver]);
+  }, [isMouseOver, images.length]);
 
   const handleLiClick = (index) => {
     setCurrentIndex(index);
@@ -36,16 +36,18 @@ function Carrusel({ stateTheme, colors, images, enlaces }) {
         className="carousel__imagenes"
         onMouseEnter={handleImageMouseEnter}
         onMouseLeave={handleImageMouseLeave}
-        style={
-          stateTheme
-            ? { backgroundColor: colors.blackLight }
-            : { backgroundColor: colors.grayLight }
-        }
+        style={{
+          backgroundColor: stateTheme ? colors.blackLight : colors.grayLight,
+        }}
       >
-        <a href={enlaces[currentIndex]} target="_blank">
+        <a
+          href={enlaces[currentIndex]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={images[currentIndex]}
-            alt={`Image ${currentIndex + 1}`}
+            alt={`Imagen ${currentIndex + 1}`}
             width="1920"
             height="965"
           />
@@ -55,7 +57,7 @@ function Carrusel({ stateTheme, colors, images, enlaces }) {
         {images.map((_, index) => (
           <li
             key={index}
-            className={index === currentIndex ? "isActiveLi" : null}
+            className={index === currentIndex ? "isActiveLi" : ""}
             onClick={() => handleLiClick(index)}
           ></li>
         ))}

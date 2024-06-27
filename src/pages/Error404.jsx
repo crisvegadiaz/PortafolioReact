@@ -1,6 +1,6 @@
+import errorMin from "../img/error-min.svg";
 import { Link } from "react-router-dom";
 import "../style/error.css";
-import errorMin from "../img/error-min.svg";
 
 function Error404() {
   return (

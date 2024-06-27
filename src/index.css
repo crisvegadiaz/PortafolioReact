@@ -84,11 +84,11 @@ time,
 mark,
 audio,
 video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -132,4 +132,13 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+:root {
+  --color-gray: #434962;
+  --color-gray-light: #EBECF0;
+  --color-white: #fff;
+  --color-blue-light: #60D9F9;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+  --color-black: #161616;
 }

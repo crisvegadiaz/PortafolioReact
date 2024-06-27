@@ -6,58 +6,34 @@ import texto from "../js/textoPagina.js";
 function HabiBlan() {
   const { state } = useAppContext();
 
+  const sectionStyle = {
+    color: state.theme ? colors.white : colors.black,
+  };
+
   return (
     <section className="habilidadBland">
-      <h2
-        className="titulo"
-        style={state.theme ? { color: colors.white } : { color: colors.black }}
-      >
+      <h2 className="titulo" style={sectionStyle}>
         {texto.Home.habiBlan.titulo}
       </h2>
       <article className="habilidadBland__arti">
         <img
           src={giphy}
-          alt="gif"
+          alt="GIF ilustrativo"
           width="480"
           height="480"
           className="habilidadBland__arti__img"
         />
-        <ul
-          className="habilidadBland__arti__lista"
-          style={
-            state.theme ? { color: colors.white } : { color: colors.black }
-          }
-        >
-          <li>
-            <details name="info">
-              <summary>{texto.Home.habiBlan.tema1}</summary>
-              <p>{texto.Home.habiBlan.parrafo1}</p>
-            </details>
-          </li>
-          <li>
-            <details name="info">
-              <summary>{texto.Home.habiBlan.tema2}</summary>
-              <p>{texto.Home.habiBlan.parrafo2}</p>
-            </details>
-          </li>
-          <li>
-            <details name="info">
-              <summary>{texto.Home.habiBlan.tema3}</summary>
-              <p>{texto.Home.habiBlan.parrafo3}</p>
-            </details>
-          </li>
-          <li>
-            <details name="info">
-              <summary>{texto.Home.habiBlan.tema4}</summary>
-              <p>{texto.Home.habiBlan.parrafo4}</p>
-            </details>
-          </li>
-          <li>
-            <details name="info">
-              <summary>{texto.Home.habiBlan.tema5}</summary>
-              <p>{texto.Home.habiBlan.parrafo5}</p>
-            </details>
-          </li>
+        <ul className="habilidadBland__arti__lista" style={sectionStyle}>
+          {Object.keys(texto.Home.habiBlan)
+            .filter((key) => key.startsWith("tema"))
+            .map((key, index) => (
+              <li key={index}>
+                <details name="info">
+                  <summary>{texto.Home.habiBlan[key]}</summary>
+                  <p>{texto.Home.habiBlan[`parrafo${index + 1}`]}</p>
+                </details>
+              </li>
+            ))}
         </ul>
       </article>
     </section>

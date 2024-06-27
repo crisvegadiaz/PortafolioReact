@@ -1,13 +1,13 @@
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
-import { useEffect } from "react";
-import "../style/menu.css";
-import "../style/main.css";
-import "../style/footer.css";
-import "../style/responsive.css";
+import Footer from "../components/Footer";
 import Main from "../components/Main";
 import Menu from "../components/Menu";
-import Footer from "../components/Footer";
+import { useEffect } from "react";
+import "../style/footer.css";
+import "../style/menu.css";
+import "../style/main.css";
+import "../style/responsive.css";
 
 function Home() {
   const { state } = useAppContext();
@@ -15,10 +15,12 @@ function Home() {
   useEffect(() => {
     const rootElement = document.getElementById("root");
 
-    if (state.theme) {
-      rootElement.style.backgroundColor = colors.black;
-    } else {
-      rootElement.style.backgroundColor = colors.white;
+    if (rootElement) {
+      if (state.theme) {
+        rootElement.style.backgroundColor = colors.black || "#000000";
+      } else {
+        rootElement.style.backgroundColor = colors.white || "#FFFFFF";
+      }
     }
   }, [state.theme]);
 

@@ -7,8 +7,8 @@
 }
 
 .formulario__img {
-  width: 30rem;
-  height: auto
+  height: auto;
+  width: 30rem
 }
 
 .formulario__form {
@@ -80,7 +80,7 @@
   position: relative;
   transition: color .4s ease-in-out;
   width: 10rem;
-  z-index: 1
+  z-index: 1;
 }
 
 .formulario__form__butt button::before {
@@ -95,26 +95,46 @@
   transform-origin: center;
   transition: transform .45s ease-in-out;
   width: 1em;
-  z-index: -1
+  z-index: -1;
 }
 
 .formulario__form__butt button:hover {
   color: var(--color-black);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .formulario__form__butt button:hover a {
   color: var(--color-black);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .formulario__form__butt button:hover::before {
-  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15)
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
 .formulario__form__butt button a {
   color: var(--color-white);
-  text-decoration: none
+  text-decoration: none;
+}
+
+.formulario__form__butt button:disabled {
+  background-color: #969AA4;
+  color: var(--color-white);
+  cursor: not-allowed;
+}
+
+.formulario__form__butt button:disabled:hover {
+  color: var(--color-white);
+}
+
+.formulario__form__butt button:disabled:hover a {
+  color: var(--color-white);
+  cursor: not-allowed;
+}
+
+.formulario__form__butt button:disabled:hover::before {
+  transform: none;
+  transition: none;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

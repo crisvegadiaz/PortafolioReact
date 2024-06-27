@@ -1,4 +1,3 @@
-// AppContext.js
 import React, { createContext, useReducer, useContext } from "react";
 import { reducerTheme } from "../reducers/reducerTheme";
 

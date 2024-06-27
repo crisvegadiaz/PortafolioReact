@@ -1,7 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
-import { useRef } from "react";
 import texto from "../js/textoPagina.js";
 
 function HabiTec() {
@@ -9,26 +8,19 @@ function HabiTec() {
   const lisRef = useRef(null);
 
   useEffect(() => {
-    if (state.theme) {
-      lisRef.current.childNodes.forEach((node) => {
-        node.childNodes[1].style.color = colors.white;
-      });
-    } else {
-      lisRef.current.childNodes.forEach((node) => {
-        node.childNodes[1].style.color = colors.black;
-      });
-    }
-  }, [state]);
+    const listItems = lisRef.current.querySelectorAll("p");
+    listItems.forEach((p) => {
+      p.style.color = state.theme ? colors.white : colors.black;
+    });
+  }, [state.theme]);
+
+  const sectionStyle = {
+    backgroundColor: state.theme ? colors.blackLight : colors.grayLight,
+    color: state.theme ? colors.white : colors.black,
+  };
 
   return (
-    <section
-      className="habilidadTec"
-      style={
-        state.theme
-          ? { backgroundColor: colors.blackLight }
-          : { backgroundColor: colors.grayLight }
-      }
-    >
+    <section className="habilidadTec" style={sectionStyle}>
       <h2
         className="titulo"
         style={state.theme ? { color: colors.white } : { color: colors.black }}
@@ -36,53 +28,34 @@ function HabiTec() {
         {texto.Home.habiTec.titulo}
       </h2>
       <ul ref={lisRef} className="habilidadTec__lista">
-        <li>
-          <i className="fa-brands fa-docker"></i>
-          <p>{texto.Home.habiTec.item1}</p>
-        </li>
-        <li>
-          <i className="fa-brands fa-linux"></i>
-          <p>{texto.Home.habiTec.item2}</p>
-        </li>
-        <li>
-          <i className="fa-brands fa-github"></i>
-          <p>{texto.Home.habiTec.item3}</p>
-        </li>
-        <li>
-          <i className="fa-brands fa-git-alt"></i>
-          <p>{texto.Home.habiTec.item4}</p>
-        </li>
-        <li>
-          <i className="fa-brands fa-js"></i>
-          <p>{texto.Home.habiTec.item5}</p>
-        </li>
-        <li>
-          <i className="fa-brands fa-node-js"></i>
-          <p>{texto.Home.habiTec.item6}</p>
-        </li>
-        <li>
-          <i className="fa-brands fa-react"></i>
-          <p>{texto.Home.habiTec.item7}</p>
-        </li>
-        <li>
-          <i className="fa-brands fa-java"></i>
-          <p>{texto.Home.habiTec.item8}</p>
-        </li>
-        <li>
-          <i className="fa-solid fa-database"></i>
-          <p>{texto.Home.habiTec.item9}</p>
-        </li>
-        <li>
-          <i className="fa-solid fa-database"></i>
-          <p>{texto.Home.habiTec.item10}</p>
-        </li>
-        <li>
-          <i className="fa-solid fa-database"></i>
-          <p>{texto.Home.habiTec.item11}</p>
-        </li>
+        {Object.keys(texto.Home.habiTec)
+          .filter((key) => key.startsWith("item"))
+          .map((key, index) => (
+            <li key={index}>
+              <i className={getIconClass(key)}></i>
+              <p>{texto.Home.habiTec[key]}</p>
+            </li>
+          ))}
       </ul>
     </section>
   );
 }
+
+const getIconClass = (key) => {
+  const iconClasses = {
+    item1: "fa-brands fa-docker",
+    item2: "fa-brands fa-linux",
+    item3: "fa-brands fa-github",
+    item4: "fa-brands fa-git-alt",
+    item5: "fa-brands fa-js",
+    item6: "fa-brands fa-node-js",
+    item7: "fa-brands fa-react",
+    item8: "fa-brands fa-java",
+    item9: "fa-solid fa-database",
+    item10: "fa-solid fa-database",
+    item11: "fa-solid fa-database",
+  };
+  return iconClasses[key] || "";
+};
 
 export default HabiTec;

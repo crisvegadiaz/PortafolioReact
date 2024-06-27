@@ -1,12 +1,12 @@
-import { useAppContext } from "../components/AppContext";
 import { useEffect } from "react";
-import "../style/proyecMain.css";
+import { useAppContext } from "../components/AppContext";
 import Carrusel from "./Carrusel";
 import ProyecImg from "./ProyecImg";
 import { colors } from "../js/themeDark";
 import Juegodelhorcado from "../img/imgProyec/Juegodelhorcado.png";
-import González from "../img/imgProyec/González.png"
-import MarcadorDeMarkdown from "../img/imgProyec/MarcadorDeMarkdown.png"
+import González from "../img/imgProyec/González.png";
+import MarcadorDeMarkdown from "../img/imgProyec/MarcadorDeMarkdown.png";
+import "../style/proyecMain.css";
 
 const ProyecMain = () => {
   const { state } = useAppContext();
@@ -14,11 +14,7 @@ const ProyecMain = () => {
   useEffect(() => {
     const rootElement = document.getElementById("root");
 
-    if (state.theme) {
-      rootElement.style.backgroundColor = colors.black;
-    } else {
-      rootElement.style.backgroundColor = colors.white;
-    }
+    rootElement.style.backgroundColor = state.theme ? colors.black : colors.white;
   }, [state.theme]);
 
   const images = [

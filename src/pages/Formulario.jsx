@@ -1,16 +1,22 @@
 import { useAppContext } from "../components/AppContext";
-import { colors } from "../js/themeDark.js";
-import { Link } from "react-router-dom";
-import { useRef, useState } from "react";
 import enviarMin from "../img/enviar-min.svg";
+import { colors } from "../js/themeDark.js";
+import texto from "../js/textoPagina.js";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 import "../style/formulario.css";
-import texto from "../js/textoPagina.js";
 
 function Formulario() {
+  const btnRef = useRef(null);
   const modalRef = useRef(null);
   const { state } = useAppContext();
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    mensaje: "",
+  });
   const [menModal, setMenModal] = useState(null);
 
   const openModal = () => {
@@ -24,8 +30,9 @@ function Formulario() {
     });
   };
 
-  const handleSumbit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    btnRef.current.disabled = true;
 
     fetch("https://formsubmit.co/ajax/6b9bc4d351de1366c2abbbd01daa6598", {
       method: "POST",
@@ -37,33 +44,38 @@ function Formulario() {
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then((json) => {
-        e.target[1].value = "";
-        e.target[2].value = "";
-        e.target[3].value = "";
-        e.target[4].value = "";
+        e.target.reset();
+        setForm({
+          nombre: "",
+          email: "",
+          telefono: "",
+          mensaje: "",
+        });
+        btnRef.current.disabled = false;
         setMenModal(true);
         openModal();
       })
-
       .catch((error) => {
         console.error(error);
+        btnRef.current.disabled = false;
         setMenModal(false);
+        openModal();
       });
   };
 
   return (
     <main className="formulario">
       <form
-        onSubmit={handleSumbit}
+        onSubmit={handleSubmit}
         className="formulario__form"
         style={
           state.theme
             ? {
-                background: `linear-gradient(${colors.blueLight}, ${colors.gray} )`,
+                background: `linear-gradient(${colors.blueLight}, ${colors.gray})`,
                 border: `2px solid ${colors.gray}`,
               }
             : {
-                background: `linear-gradient(${colors.blueLight}, ${colors.graylight} )`,
+                background: `linear-gradient(${colors.blueLight}, ${colors.graylight})`,
                 border: `2px solid ${colors.graylight}`,
               }
         }
@@ -79,7 +91,9 @@ function Formulario() {
               title={texto.Formulario.inputErroNombre}
               required
               onChange={handleInput}
+              value={form.nombre}
               style={state}
+              aria-label="Nombre"
             />
             <input
               type="email"
@@ -88,8 +102,9 @@ function Formulario() {
               placeholder={texto.Formulario.inputEmail}
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
               title={texto.Formulario.inputErrorEmail}
-              required
               onChange={handleInput}
+              value={form.email}
+              aria-label="Email"
             />
             <input
               type="tel"
@@ -98,12 +113,13 @@ function Formulario() {
               placeholder={texto.Formulario.inputTelefono}
               pattern="[0-9]{10}"
               title={texto.Formulario.inputErrorTelefono}
-              required
               onChange={handleInput}
+              value={form.telefono}
+              aria-label="Teléfono"
             />
           </div>
 
-          <label>
+          <label htmlFor="mensaje">
             <i className="fa-solid fa-at icon"></i>
           </label>
         </fieldset>
@@ -115,16 +131,18 @@ function Formulario() {
           minLength="10"
           required
           onChange={handleInput}
+          value={form.mensaje}
+          aria-label="Mensaje"
         ></textarea>
 
         <fieldset className="formulario__form__butt">
-          <button>
+          <button type="button">
             <Link to="/">
               <i className="fa-solid fa-arrow-left"></i>{" "}
               {texto.Formulario.btnInicio}
             </Link>
           </button>
-          <button type="submit">
+          <button type="submit" ref={btnRef}>
             <i className="fa-solid fa-paper-plane"></i>{" "}
             {texto.Formulario.btnEnviar}
           </button>

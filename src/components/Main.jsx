@@ -1,9 +1,9 @@
+import programador from "../img/programador.svg";
 import Contacto from "./Contacto";
 import HabiBlan from "./HabiBlan";
+import Proyecto from "./Proyecto";
 import HabiTec from "./HabiTec";
 import Intro from "./Intro";
-import Proyecto from "./Proyecto";
-import programador from "../img/programador.svg";
 
 function Main() {
   return (
@@ -13,8 +13,9 @@ function Main() {
         src={programador}
         width="973.461"
         height="587.025"
-        alt="programador"
+        alt="Ilustración de un programador trabajando"
         className="main__img"
+        loading="lazy"
       />
       <HabiTec />
       <HabiBlan />
@@ -24,4 +25,5 @@ function Main() {
   );
 }
 
-export default Main;
+export default Main; 
+

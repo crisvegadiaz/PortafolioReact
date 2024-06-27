@@ -1,7 +1,7 @@
 import { useAppContext } from "../components/AppContext";
 import { colors } from "../js/themeDark.js";
-import cp from "../img/cp.svg";
 import texto from "../js/textoPagina.js";
+import cp from "../img/cp.svg";
 
 
 function Intro() {

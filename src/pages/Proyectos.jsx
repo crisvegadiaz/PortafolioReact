@@ -1,6 +1,6 @@
-import Menu from "../components/Menu";
 import ProyecMain from "../components/ProyecMain";
 import Footer from "../components/Footer";
+import Menu from "../components/Menu";
 
 function Proyectos() {
 

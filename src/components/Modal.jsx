@@ -5,28 +5,20 @@ function Modal({ modalRef, children, state, colors }) {
     modalRef.current.close();
   };
 
+  const backgroundColor = state.theme ? colors.black : colors.grayLight;
+  const textColor = state.theme ? colors.white : colors.gray;
+
   return (
     <dialog
       ref={modalRef}
       className="modal"
-      style={
-        state.theme
-          ? { backgroundColor: `${colors.black}` }
-          : { backgroundColor: `${colors.grayLight}` }
-      }
+      style={{ backgroundColor }}
+      aria-labelledby="modal-title"
     >
-      <h2
-        style={
-          state.theme
-            ? { color: `${colors.white}` }
-            : {
-                color: `${colors.gray}`,
-              }
-        }
-      >
+      <h2 id="modal-title" style={{ color: textColor }}>
         {children}
       </h2>
-      <button onClick={closeModal}>
+      <button onClick={closeModal} aria-label="Cerrar modal">
         <i className="fa-solid fa-arrow-left"></i> Cerrar
       </button>
     </dialog>

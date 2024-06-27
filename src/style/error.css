@@ -1,14 +1,16 @@
 .error {
   align-items: center;
   display: flex;
+  flex-direction: column-reverse;
   gap: 3rem;
   height: 100vh;
-  justify-content: center
+  justify-content: center;
+  text-align: center;
 }
 
 .error img {
-  height:auto;
-  width: 40%
+  height: auto;
+  width: 40%;
 }
 
 .error__text h1 {
@@ -16,7 +18,7 @@
   font-family: var(--font-jetbrains);
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 
 .error__text button {
@@ -32,9 +34,9 @@
   overflow: hidden;
   padding: 1rem;
   position: relative;
-  transition: color .4s ease-in-out;
+  transition: color 0.4s ease-in-out;
   width: 15rem;
-  z-index: 1
+  z-index: 1;
 }
 
 .error__text button::before {
@@ -47,57 +49,41 @@
   top: 50%;
   transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
   transform-origin: center;
-  transition: transform .45s ease-in-out;
+  transition: transform 0.45s ease-in-out;
   width: 1em;
-  z-index: -1
+  z-index: -1;
 }
 
 .error__text button:hover a {
   color: var(--color-black);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .error__text button:hover::before {
-  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15)
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
 .error__text button a {
   color: var(--color-white);
-  text-decoration: none
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .error {
-    flex-direction: column-reverse
-  }
-
   .error img {
-    width: 70%
-  }
-
-  .error__text {
-    text-align: center
+    width: 70%;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .error {
-    flex-direction: column-reverse
-  }
-
   .error img {
-    width: 80%
-  }
-
-  .error__text {
-    text-align: center
+    width: 80%;
   }
 
   .error__text h1 {
-    font-size: 2rem
+    font-size: 2rem;
   }
 
   .error__text button {
-    font-size: 1rem
+    font-size: 1rem;
   }
 }

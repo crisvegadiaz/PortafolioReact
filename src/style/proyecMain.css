@@ -1,7 +1,9 @@
 .proyecMain {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: 3rem 0
+  margin: 3rem 0;
+  padding: 0 1rem;
+  /* Añadir padding para mejor margen en pantallas pequeñas */
 }
 
 .carousel__imagenes {
@@ -10,30 +12,28 @@
   border-radius: 1rem;
   box-shadow: 0 4px 5px #0003;
   display: flex;
-  grid-column-end: 12;
-  grid-column-start: 2;
+  grid-column: 2 / 12;
   justify-content: center;
-  padding: 1rem
+  padding: 1rem;
 }
 
 .carousel__imagenes a {
-  display: flex
+  display: flex;
 }
 
 .carousel__imagenes a img {
   border-radius: 1rem;
   height: auto;
   margin: auto;
-  width: 60%
+  width: 60%;
 }
 
 .carousel__lista {
   display: flex;
   gap: 5%;
-  grid-column-end: 12;
-  grid-column-start: 2;
+  grid-column: 2 / 12;
   justify-content: center;
-  margin: 2rem
+  margin: 2rem;
 }
 
 .carousel__lista li {
@@ -42,16 +42,15 @@
   box-shadow: 0 4px 5px #0003;
   cursor: pointer;
   height: 1.5rem;
-  width: 1.5rem
+  width: 1.5rem;
 }
 
 .carousel__lista .isActiveLi {
-  background-color: var(--color-blue-light)
+  background-color: var(--color-blue-light);
 }
 
 .proyectos {
-  grid-column-end: 12;
-  grid-column-start: 2
+  grid-column: 2 / 12;
 }
 
 .proyectos__titulo {
@@ -60,14 +59,14 @@
   font-size: 2rem;
   font-weight: 700;
   margin: 4.2rem auto;
-  text-align: center
+  text-align: center;
 }
 
 .proyectos__list {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  justify-content: center
+  justify-content: center;
 }
 
 .proyectos__list li {
@@ -80,11 +79,9 @@
   width: 25rem;
 }
 
-/* ____________________ */
 .proyectos__list li .li__datos {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
   margin: 1rem;
   width: 100%;
@@ -95,45 +92,47 @@
   display: flex;
   font-size: 1.5rem;
 }
-.proyectos__list li .li__datos ul li{
+
+.proyectos__list li .li__datos ul li {
   border-radius: 5rem;
   margin-right: 1rem;
   text-align: center;
   width: 1.6rem;
 }
 
-.proyectos__list li .li__datos h4 {
+.proyectos__list li .li__datos h4,
+.proyectos__list li .li__datos p {
   color: var(--color-gray);
   font-family: var(--font-jetbrains);
+}
+
+.proyectos__list li .li__datos h4 {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
 .proyectos__list li .li__datos p {
-  color: var(--color-gray);
-  font-family: var(--font-jetbrains);
   font-size: 1rem;
   height: 8rem;
 }
 
-/* ____________________ */
 .proyectos__list li .li__button {
   bottom: 76%;
   opacity: 0;
   position: relative;
   transition: visibility 0s, opacity .5s;
-  visibility: hidden
+  visibility: hidden;
 }
 
 .proyectos__list li:hover .li__button {
   opacity: 1;
-  visibility: visible
+  visibility: visible;
 }
 
 .proyectos__list li img {
   border-radius: 1rem;
   height: 12rem;
-  width: 25rem
+  width: 25rem;
 }
 
 .proyectos__list li .li__button a {
@@ -142,7 +141,7 @@
 
 .proyectos__list li .li__button a:hover {
   color: var(--color-blue-light);
-  transition: all .5s ease-in-out
+  transition: all .5s ease-in-out;
 }
 
 .proyectos__list li .li__button i {
@@ -151,21 +150,21 @@
   color: var(--color-gray);
   font-size: 2rem;
   padding: 1rem;
-  text-align: center; 
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .carousel__imagenes {
-    height: 15rem;
-    height: 90%
+    height: auto;
+    width: 100%;
   }
 
   .carousel__imagenes a img {
-    width: 100%
+    width: 100%;
   }
 
   .proyectos__titulo {
-    font-size: 1.5rem
+    font-size: 1.5rem;
   }
 
   .proyectos__list li {
@@ -191,7 +190,6 @@
   }
 
   .proyectos__list li .li__button {
-    margin: 1rem;
     opacity: 1;
     position: static;
     text-align: center;
@@ -199,35 +197,46 @@
     visibility: visible;
     width: 100%;
   }
+
+  .proyectos__list li .li__button a {
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  
   .carousel__imagenes {
-    height: 90%
+    grid-column: 1 / -1;
+    height: 100%;
+    padding: 0px;
   }
-
-  .carousel__imagenes a img {
-    width: 100%
-  }
-
-  .proyectos__titulo {
-    font-size: 1.5rem
+  .carousel__imagenes a img{
+    width: 100%;
   }
 
   .carousel__lista {
-    gap: 30%
+    gap: 30%;
+  }
+
+  .proyectos {
+    grid-column: 1 / -1;
+  }
+
+  .proyectos__titulo {
+    font-size: 1.5rem;
   }
 
   .proyectos__list {
-    gap: 1;
+    gap: 1rem;
   }
-  .proyectos__list li{
+
+  .proyectos__list li {
     width: 100%;
   }
 
   .proyectos__list li img {
-    height: 50%;
-    width: 100%
+    height: auto;
+    width: 100%;
   }
 
   .proyectos__list li .li__button {
