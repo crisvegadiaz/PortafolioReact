@@ -5,7 +5,6 @@ import cp from "../img/cp.svg";
 
 
 function Intro() {
-  console.log(texto)
   const { state } = useAppContext();
   return (
     <section className="intro">
