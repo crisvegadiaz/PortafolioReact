@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { useAppContext } from "../components/AppContext";
-import Carrusel from "./Carrusel";
-import ProyecImg from "./ProyecImg";
-import { colors } from "../js/themeDark";
-import Juegodelhorcado from "../img/imgProyec/Juegodelhorcado.png";
-import González from "../img/imgProyec/González.png";
 import MarcadorDeMarkdown from "../img/imgProyec/MarcadorDeMarkdown.png";
+import Juegodelhorcado from "../img/imgProyec/Juegodelhorcado.png";
+import { useAppContext } from "../components/AppContext";
+import González from "../img/imgProyec/González.png";
+import { colors } from "../js/themeDark";
+import ProyecImg from "./ProyecImg";
+import { useEffect } from "react";
+import Carrusel from "./Carrusel";
 import "../style/proyecMain.css";
 
 const ProyecMain = () => {

@@ -103,6 +103,14 @@ export default {
     proye14: "Node To-Do App",
     parrafo14:
       "Este programa utiliza Node.js y algunas bibliotecas externas como 'readline' y 'chalk' para crear una aplicación de lista de tareas simple que permite al usuario agregar, listar, completar y eliminar tareas.",
+    proye15: "Login",
+    parrafo15: "Login el backend esta creado en Node con express y express-session el frontend fue echo el react y css con react-router-dom y la base da datos con mysql",
+    proye16: "Pomodoro",
+    parrafo16: "Una aplicación Pomodoro creada con React Native y CSS. Esta app te ayuda a gestionar tu tiempo de trabajo y descanso utilizando la técnica Pomodoro.",
+    proye17: "App Nasa",
+    parrafo17: "Una aplicación creada con React Native y CSS que te permite explorar datos y noticias de la NASA, manteniéndote informado sobre el espacio y las misiones espaciales.",
+    proye18: "App Caloría",
+    parrafo18: "Una aplicación para contar calorías, desarrollada con React Native y CSS. Te ayuda a seguir tu ingesta diaria de calorías y mantener un estilo de vida saludable.",
   },
 };
 

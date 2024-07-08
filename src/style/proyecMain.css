@@ -3,7 +3,6 @@
   grid-template-columns: repeat(12, 1fr);
   margin: 3rem 0;
   padding: 0 1rem;
-  /* Añadir padding para mejor margen en pantallas pequeñas */
 }
 
 .carousel__imagenes {
@@ -71,7 +70,6 @@
 
 .proyectos__list li {
   align-items: center;
-  background-color: var(--color-gray-light);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -91,10 +89,11 @@
   color: var(--color-gray);
   display: flex;
   font-size: 1.5rem;
+  justify-content: start;
 }
 
 .proyectos__list li .li__datos ul li {
-  border-radius: 5rem;
+  background-color: var(--color-gray-light);
   margin-right: 1rem;
   text-align: center;
   width: 1.6rem;
@@ -204,13 +203,14 @@
 }
 
 @media only screen and (max-width: 767px) {
-  
+
   .carousel__imagenes {
     grid-column: 1 / -1;
     height: 100%;
     padding: 0px;
   }
-  .carousel__imagenes a img{
+
+  .carousel__imagenes a img {
     width: 100%;
   }
 
