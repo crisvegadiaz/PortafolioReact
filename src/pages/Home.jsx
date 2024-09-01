@@ -4,10 +4,6 @@ import Footer from "../components/Footer";
 import Main from "../components/Main";
 import Menu from "../components/Menu";
 import { useEffect } from "react";
-import "../style/footer.css";
-import "../style/menu.css";
-import "../style/main.css";
-import "../style/responsive.css";
 
 function Home() {
   const { state } = useAppContext();

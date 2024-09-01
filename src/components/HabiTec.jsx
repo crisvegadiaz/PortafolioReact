@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
 import { useAppContext } from "../components/AppContext";
+import styles from "../style/HabiTec.module.css";
 import { colors } from "../js/themeDark.js";
+import { useEffect, useRef } from "react";
 import texto from "../js/textoPagina.js";
 
 function HabiTec() {
@@ -20,14 +21,14 @@ function HabiTec() {
   };
 
   return (
-    <section className="habilidadTec" style={sectionStyle}>
+    <section className={styles.habilidadTec} style={sectionStyle}>
       <h2
-        className="titulo"
+        className={styles.titulo}
         style={state.theme ? { color: colors.white } : { color: colors.black }}
       >
         {texto.Home.habiTec.titulo}
       </h2>
-      <ul ref={lisRef} className="habilidadTec__lista">
+      <ul ref={lisRef} className={styles.habilidadTec__lista}>
         {Object.keys(texto.Home.habiTec)
           .filter((key) => key.startsWith("item"))
           .map((key, index) => (

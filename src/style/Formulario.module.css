@@ -3,12 +3,12 @@
   display: flex;
   gap: 1rem;
   height: 100vh;
-  justify-content: center
+  justify-content: center;
 }
 
 .formulario__img {
   height: auto;
-  width: 30rem
+  width: 30rem;
 }
 
 .formulario__form {
@@ -18,20 +18,20 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  width: 35rem
+  width: 35rem;
 }
 
 .formulario__form__input {
-  display: flex
+  display: flex;
 }
 
 .icon {
   color: var(--color-gray);
-  font-size: 8.5rem
+  font-size: 8.5rem;
 }
 
 .formulario__form__input div {
-  box-sizing: content-box
+  box-sizing: content-box;
 }
 
 .formulario__form__input div input {
@@ -42,11 +42,11 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   padding: .5rem;
-  width: 90%
+  width: 90%;
 }
 
 .formulario__form__input div input::placeholder {
-  color: var(--color-gray)
+  color: var(--color-gray);
 }
 
 .formulario__form textarea {
@@ -58,11 +58,11 @@
   height: 5rem;
   margin-bottom: 1rem;
   padding: .5rem;
-  resize: none
+  resize: none;
 }
 
 .formulario__form textarea::placeholder {
-  color: var(--color-gray)
+  color: var(--color-gray);
 }
 
 .formulario__form__butt button {
@@ -139,61 +139,61 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .formulario {
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
   }
 
   .formulario__img {
-    width: 60%
+    width: 60%;
   }
 
   .formulario__form {
-    width: 70%
+    width: 70%;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .formulario {
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
   }
 
   .formulario__img {
-    width: 80%
+    width: 80%;
   }
 
   .formulario__form {
-    width: 85%
+    width: 85%;
   }
 
   .formulario__form__input {
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
   }
 
   .formulario__form__input label {
     margin-bottom: 1rem;
-    text-align: end
+    text-align: end;
   }
 
   .formulario__form__input div input {
     font-size: 1rem;
-    width: 95%
+    width: 95%;
   }
 
   .icon {
-    font-size: 3rem
+    font-size: 3rem;
   }
 
   .formulario__form textarea {
-    font-size: 1rem
+    font-size: 1rem;
   }
 
   .formulario__form__butt {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
   }
 
   .formulario__form__butt button {
     font-size: 1rem;
     margin: 0;
-    width: 8rem
+    width: 8rem;
   }
 }

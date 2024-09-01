@@ -3,9 +3,9 @@ import JuegoDelHorcado from "../img/imgProyec/JuegodelHorcado.png";
 import Juegodelhorcado from "../img/imgProyec/Juegodelhorcado.png";
 import Calculadora from "../img/imgProyec/Calculadora.png";
 import ReactRelojo from "../img/imgProyec/ReactRelojo.png";
-import AppPomodoro from "../img/imgProyec/AppPomodoro.png"
+import AppPomodoro from "../img/imgProyec/AppPomodoro.png";
 import Encritador from "../img/imgProyec/encritador.png";
-import AppCaloria from "../img/imgProyec/AppCaloria.png"
+import AppCaloria from "../img/imgProyec/AppCaloria.png";
 import ViteReact from "../img/imgProyec/ViteReact.png";
 import HotelJava from "../img/imgProyec/HotelJava.png";
 import NodeClima from "../img/imgProyec/nodeClima.png";
@@ -13,9 +13,11 @@ import JavaText from "../img/imgProyec/javaText.png";
 import González from "../img/imgProyec/González.png";
 import NodeList from "../img/imgProyec/nodeList.png";
 import NodeImg from "../img/imgProyec/nodeImg.png";
-import AppNaza from "../img/imgProyec/AppNaza.png"
+import styles from "../style/ProyecImg.module.css";
+import AppNaza from "../img/imgProyec/AppNaza.png";
 import Scritp from "../img/imgProyec/scritp.png";
 import Login from "../img/imgProyec/Login.png";
+import PhaserJuego from "../img/imgProyec/PhaserJuego.png";
 import { useEffect, useRef } from "react";
 import texto from "../js/textoPagina";
 import LiProyec from "./LiProyec";
@@ -35,17 +37,25 @@ function ProyecImg({ stateTheme, colors }) {
       childNodes[3].style.color = stateTheme ? colors.white : colors.black;
     });
   }, [stateTheme, colors]);
-  
+
   return (
-    <article className="proyectos">
+    <article className={styles.proyectos}>
       <h2
-        className="proyectos__titulo"
+        className={styles.proyectos__titulo}
         style={{ color: stateTheme ? colors.white : colors.gray }}
-        >
+      >
         Proyectos
       </h2>
-      <ul ref={lisRef} className="proyectos__list">
+      <ul ref={lisRef} className={styles.proyectos__list}>
         {[
+          {
+            enlace1: "https://github.com/crisvegadiaz/Phaser-react-flappy-bird",
+            enlace2: "https://phaser-juego.netlify.app/",
+            img: PhaserJuego,
+            titulo: texto.Proyecto.proye18,
+            texto: texto.Proyecto.parrafo18,
+            icons: ["fa-react", "fa-css3-alt", "fa-solid fa-gamepad"],
+          },
           {
             enlace1: "https://github.com/crisvegadiaz/Login-react-node-express",
             img: Login,
@@ -63,30 +73,22 @@ function ProyecImg({ stateTheme, colors }) {
             img: AppCaloria,
             titulo: texto.Proyecto.proye18,
             texto: texto.Proyecto.parrafo18,
-            icons: [
-              "fa-react",
-              "fa-css3-alt",
-            ],
+            icons: ["fa-react", "fa-css3-alt"],
           },
           {
-            enlace1: "https://github.com/crisvegadiaz/ReactNative_ProyectoNasa-",
+            enlace1:
+              "https://github.com/crisvegadiaz/ReactNative_ProyectoNasa-",
             img: AppNaza,
             titulo: texto.Proyecto.proye17,
             texto: texto.Proyecto.parrafo17,
-            icons: [
-              "fa-react",
-              "fa-css3-alt",
-            ],
+            icons: ["fa-react", "fa-css3-alt"],
           },
           {
             enlace1: "https://github.com/crisvegadiaz/ReactNative_Pomodoro",
             img: AppPomodoro,
             titulo: texto.Proyecto.proye16,
             texto: texto.Proyecto.parrafo16,
-            icons: [
-              "fa-react",
-              "fa-css3-alt",
-            ],
+            icons: ["fa-react", "fa-css3-alt"],
           },
           {
             enlace1: "https://github.com/crisvegadiaz/juego_del_ahorcado",
@@ -207,7 +209,7 @@ function ProyecImg({ stateTheme, colors }) {
               <i
                 key={i}
                 className={`${
-                  icon === "fa-solid fa-database" ? "fa-solid" : "fa-brands"
+                  icon.startsWith("fa-solid") ? "fa-solid" : "fa-brands"
                 } ${icon}`}
               ></i>
             ))}

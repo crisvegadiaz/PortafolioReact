@@ -1,11 +1,11 @@
 import { useAppContext } from "../components/AppContext";
+import styles from "../style/Formulario.module.css";
 import enviarMin from "../img/enviar-min.svg";
 import { colors } from "../js/themeDark.js";
 import texto from "../js/textoPagina.js";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
-import "../style/formulario.css";
 
 function Formulario() {
   const btnRef = useRef(null);
@@ -64,10 +64,10 @@ function Formulario() {
   };
 
   return (
-    <main className="formulario">
+    <main className={styles.formulario}>
       <form
         onSubmit={handleSubmit}
-        className="formulario__form"
+        className={styles.formulario__form}
         style={
           state.theme
             ? {
@@ -80,7 +80,7 @@ function Formulario() {
               }
         }
       >
-        <fieldset className="formulario__form__input">
+        <fieldset className={styles.formulario__form__input}>
           <div>
             <input
               type="text"
@@ -120,7 +120,7 @@ function Formulario() {
           </div>
 
           <label htmlFor="mensaje">
-            <i className="fa-solid fa-at icon"></i>
+            <i className={`fa-solid fa-at ${styles.icon}`}></i>
           </label>
         </fieldset>
 
@@ -133,9 +133,10 @@ function Formulario() {
           onChange={handleInput}
           value={form.mensaje}
           aria-label="Mensaje"
+          className={styles.textarea}
         ></textarea>
 
-        <fieldset className="formulario__form__butt">
+        <fieldset className={styles.formulario__form__butt}>
           <button type="button">
             <Link to="/">
               <i className="fa-solid fa-arrow-left"></i>{" "}
@@ -154,7 +155,7 @@ function Formulario() {
         alt="Email"
         width="643.162"
         height="528"
-        className="formulario__img"
+        className={styles.formulario__img}
       />
 
       <Modal modalRef={modalRef} state={state} colors={colors}>

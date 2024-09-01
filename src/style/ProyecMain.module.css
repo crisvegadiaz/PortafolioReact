@@ -1,0 +1,6 @@
+.proyecMain {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 3rem 0;
+    padding: 0 1rem;
+}

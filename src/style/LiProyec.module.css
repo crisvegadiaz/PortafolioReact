@@ -1,0 +1,111 @@
+.LiProyec__li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-gray-light);
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30rem;
+    justify-content: space-around;
+}
+
+.LiProyec__li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.LiProyec__li .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.LiProyec__li:hover .image {
+    transform: scale(1.05);
+}
+
+.li__datos {
+    padding: 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-jetbrains);
+}
+
+.ul__icon {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.ul__icon li {
+    background-color: var(--color-gray-light);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionTitle {
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-gray);
+    margin: 0.5rem 0;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--color-gray);
+    line-height: 1.5;
+    margin: 1rem;
+}
+
+.li__button {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.li__button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    background-color: var(--color-gray-light);
+    border-radius: 50%;
+    color: var(--color-gray);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.li__button a:hover {
+    background-color: var(--color-blue-light);
+    transform: scale(1.1);
+}
+
+.li__button i {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .LiProyec__li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .LiProyec__li {
+        width: 100%;
+    }
+}

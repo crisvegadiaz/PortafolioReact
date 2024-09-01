@@ -1,4 +1,4 @@
-import "../style/modal.css";
+import styles from "../style/Modal.module.css";
 
 function Modal({ modalRef, children, state, colors }) {
   const closeModal = () => {
@@ -11,7 +11,7 @@ function Modal({ modalRef, children, state, colors }) {
   return (
     <dialog
       ref={modalRef}
-      className="modal"
+      className={styles.modal} 
       style={{ backgroundColor }}
       aria-labelledby="modal-title"
     >

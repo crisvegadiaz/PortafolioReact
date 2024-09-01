@@ -1,0 +1,25 @@
+.homeMain {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.main__img {
+    grid-column: 2 / span 3;
+    height: auto;
+    position: relative;
+    top: 13%;
+    width: 120%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main__img {
+        width: 165%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .main__img {
+        grid-column: 2 / span 10;
+        width: 100%;
+    }
+}

@@ -1,4 +1,5 @@
 import { useAppContext } from "../components/AppContext";
+import styles from "../style/Contacto.module.css";
 import { colors } from "../js/themeDark.js";
 import emailMin from "../img/email-min.svg";
 import texto from "../js/textoPagina.js";
@@ -13,19 +14,22 @@ function Contacto() {
   };
 
   return (
-    <section className="contacto" style={{ backgroundColor: sectionStyle.backgroundColor }}>
-      <h2 className="titulo" style={{ color: sectionStyle.color }}>
+    <section
+      className={styles.contacto}
+      style={{ backgroundColor: sectionStyle.backgroundColor }}
+    >
+      <h2 className={styles.titulo} style={{ color: sectionStyle.color }}>
         {texto.Home.contacto.titulo}
       </h2>
-      <article className="contacto__contenido">
+      <article className={styles.contacto__contenido}>
         <img
           src={emailMin}
           alt="Ilustración de un correo electrónico"
           width="426"
           height="365"
-          className="contacto__contenido__img"
+          className={styles.contacto__contenido__img}
         />
-        <div className="contacto__contenido__txt">
+        <div className={styles.contacto__contenido__txt}>
           <p style={{ color: sectionStyle.color }}>
             {texto.Home.contacto.parrafo}
           </p>

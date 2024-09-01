@@ -1,20 +1,21 @@
+import styles from "../style/LiProyec.module.css";
 import React from "react";
 
 function LiProyec({ enlace1, enlace2, img, titulo, texto, children }) {
   return (
-    <li>
-      <img src={img} alt={`Imagen de ${titulo}`} width="1920" height="965" />
-      <div className="li__datos">
-        <h4>Tecnologías</h4>
-        <ul>
+    <li className={styles.LiProyec__li}>
+      <img src={img} alt={`Imagen de ${titulo}`} className={styles.image} />
+      <div className={styles.li__datos}>
+        <h4 className={styles.sectionTitle}>Tecnologías</h4>
+        <ul className={styles.ul__icon}>
           {Array.isArray(children)
             ? children.map((child, index) => <li key={index}>{child}</li>)
             : children && <li>{children}</li>}
         </ul>
-        <h4>{titulo}</h4>
-        <p>{texto}</p>
+        <h4 className={styles.projectTitle}>{titulo}</h4>
+        <p className={styles.description}>{texto}</p>
       </div>
-      <div className="li__button">
+      <div className={styles.li__button}>
         <a href={enlace1} target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-github"></i>
         </a>

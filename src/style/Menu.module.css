@@ -21,7 +21,7 @@
   width: 2rem;
 }
 
-.cabecera__menu>a {
+.cabecera__menu > a {
   background-color: var(--color-gray-light);
   border: none;
   border-radius: 50%;
@@ -57,4 +57,17 @@
 .cabecera__menu__redes a {
   color: var(--color-gray);
   text-decoration: none;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .cabecera__menu button {
+    margin-left: 60%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cabecera__menu button {
+    margin-left: 0;
+  }
 }

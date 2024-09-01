@@ -1,3 +1,4 @@
+import styles from "../style/Carrusel.module.css";
 import { useEffect, useState } from "react";
 
 const initialState = 0;
@@ -33,7 +34,7 @@ function Carrusel({ stateTheme, colors, images, enlaces }) {
   return (
     <>
       <article
-        className="carousel__imagenes"
+        className={styles.carousel__imagenes}
         onMouseEnter={handleImageMouseEnter}
         onMouseLeave={handleImageMouseLeave}
         style={{
@@ -53,11 +54,11 @@ function Carrusel({ stateTheme, colors, images, enlaces }) {
           />
         </a>
       </article>
-      <ul className="carousel__lista">
+      <ul className={styles.carousel__lista}>
         {images.map((_, index) => (
           <li
             key={index}
-            className={index === currentIndex ? "isActiveLi" : ""}
+            className={index === currentIndex ? styles.isActiveLi : ""}
             onClick={() => handleLiClick(index)}
           ></li>
         ))}

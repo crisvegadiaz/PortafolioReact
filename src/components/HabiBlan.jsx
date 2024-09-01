@@ -1,7 +1,8 @@
 import { useAppContext } from "../components/AppContext";
+import styles from "../style/HabiBlan.module.css";
 import { colors } from "../js/themeDark.js";
-import giphy from "../img/giphy.webp";
 import texto from "../js/textoPagina.js";
+import giphy from "../img/giphy.webp";
 
 function HabiBlan() {
   const { state } = useAppContext();
@@ -11,19 +12,19 @@ function HabiBlan() {
   };
 
   return (
-    <section className="habilidadBland">
-      <h2 className="titulo" style={sectionStyle}>
+    <section className={styles.habilidadBland}>
+      <h2 className={styles.titulo} style={sectionStyle}>
         {texto.Home.habiBlan.titulo}
       </h2>
-      <article className="habilidadBland__arti">
+      <article className={styles.habilidadBland__arti}>
         <img
           src={giphy}
           alt="GIF ilustrativo"
           width="480"
           height="480"
-          className="habilidadBland__arti__img"
+          className={styles.habilidadBland__arti__img}
         />
-        <ul className="habilidadBland__arti__lista" style={sectionStyle}>
+        <ul className={styles.habilidadBland__arti__lista} style={sectionStyle}>
           {Object.keys(texto.Home.habiBlan)
             .filter((key) => key.startsWith("tema"))
             .map((key, index) => (
