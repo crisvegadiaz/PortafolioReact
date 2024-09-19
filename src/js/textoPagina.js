@@ -111,8 +111,10 @@ export default {
     parrafo17: "Una aplicación creada con React Native y CSS que te permite explorar datos y noticias de la NASA, manteniéndote informado sobre el espacio y las misiones espaciales.",
     proye18: "App Caloría",
     parrafo18: "Una aplicación para contar calorías, desarrollada con React Native y CSS. Te ayuda a seguir tu ingesta diaria de calorías y mantener un estilo de vida saludable.",
-    proye18: "Juego Phaser",
-    parrafo18: "Un juego estilo Flappy Bird! 🐦🎮 desarrollado con React, Phaser, y CSS. Inspirado en el clásico Flappy Bird"
+    proye19: "Juego Phaser",
+    parrafo19: "Un juego estilo Flappy Bird! 🐦🎮 desarrollado con React, Phaser, y CSS. Inspirado en el clásico Flappy Bird",
+    proye20: "Api-Rest",
+    parrafo20: "API REST Node.js construida con el framework Express, utilizando PostgreSQL como base de datos, JSON Web Tokens para autenticación y HTTPS para asegurar la comunicación"
   },
 };
 

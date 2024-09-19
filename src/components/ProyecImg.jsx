@@ -1,9 +1,11 @@
 import MarcadorDeMarkdown from "../img/imgProyec/MarcadorDeMarkdown.png";
+import ApiRest from "../img/imgProyec/Api-rest.png";
 import JuegoDelHorcado from "../img/imgProyec/JuegodelHorcado.png";
 import Juegodelhorcado from "../img/imgProyec/Juegodelhorcado.png";
 import Calculadora from "../img/imgProyec/Calculadora.png";
 import ReactRelojo from "../img/imgProyec/ReactRelojo.png";
 import AppPomodoro from "../img/imgProyec/AppPomodoro.png";
+import PhaserJuego from "../img/imgProyec/PhaserJuego.png";
 import Encritador from "../img/imgProyec/encritador.png";
 import AppCaloria from "../img/imgProyec/AppCaloria.png";
 import ViteReact from "../img/imgProyec/ViteReact.png";
@@ -17,7 +19,6 @@ import styles from "../style/ProyecImg.module.css";
 import AppNaza from "../img/imgProyec/AppNaza.png";
 import Scritp from "../img/imgProyec/scritp.png";
 import Login from "../img/imgProyec/Login.png";
-import PhaserJuego from "../img/imgProyec/PhaserJuego.png";
 import { useEffect, useRef } from "react";
 import texto from "../js/textoPagina";
 import LiProyec from "./LiProyec";
@@ -50,10 +51,17 @@ function ProyecImg({ stateTheme, colors }) {
         {[
           {
             enlace1: "https://github.com/crisvegadiaz/Phaser-react-flappy-bird",
+            img: ApiRest,
+            titulo: texto.Proyecto.proye20,
+            texto: texto.Proyecto.parrafo20,
+            icons: ["fa-node-js"],
+          },
+          {
+            enlace1: "https://github.com/crisvegadiaz/Phaser-react-flappy-bird",
             enlace2: "https://phaser-juego.netlify.app/",
             img: PhaserJuego,
-            titulo: texto.Proyecto.proye18,
-            texto: texto.Proyecto.parrafo18,
+            titulo: texto.Proyecto.proye19,
+            texto: texto.Proyecto.parrafo19,
             icons: ["fa-react", "fa-css3-alt", "fa-solid fa-gamepad"],
           },
           {
