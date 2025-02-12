@@ -1,26 +1,58 @@
 import styles from "../style/LiProyec.module.css";
-import React from "react";
 
-function LiProyec({ enlace1, enlace2, img, titulo, texto, children }) {
+function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
   return (
-    <li className={styles.LiProyec__li}>
-      <img src={img} alt={`Imagen de ${titulo}`} className={styles.image} />
-      <div className={styles.li__datos}>
-        <h4 className={styles.sectionTitle}>Tecnologías</h4>
-        <ul className={styles.ul__icon}>
-          {Array.isArray(children)
-            ? children.map((child, index) => <li key={index}>{child}</li>)
-            : children && <li>{children}</li>}
-        </ul>
-        <h4 className={styles.projectTitle}>{titulo}</h4>
-        <p className={styles.description}>{texto}</p>
+    <li
+      className={`${styles.card} ${theme ? styles.darkCard : styles.lightCard}`}
+    >
+      <img className={styles.card_image} src={img} alt="imagen del proyecto" />
+
+      <div
+        className={`${styles.card_icons} ${
+          theme ? styles.darkText : styles.lightText
+        }`}
+      >
+        {children}
       </div>
-      <div className={styles.li__button}>
-        <a href={enlace1} target="_blank" rel="noopener noreferrer">
+
+      <details
+        name="info"
+        className={`${styles.card_details} ${
+          theme ? styles.darkDetails : styles.lightDetails
+        }`}
+      >
+        <summary
+          className={`${styles.cad_title} ${
+            theme ? styles.darkText : styles.lightText
+          }`}
+        >
+          {titulo}
+        </summary>
+        <p
+          className={`${styles.card_text} ${
+            theme ? styles.darkText : styles.lightText
+          }`}
+        >
+          {texto}
+        </p>
+      </details>
+
+      <div className={styles.boton}>
+        <a
+          href={enlace1}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={theme ? styles.darkLink : styles.lightLink}
+        >
           <i className="fa-brands fa-github"></i>
         </a>
         {enlace2 && (
-          <a href={enlace2} target="_blank" rel="noopener noreferrer">
+          <a
+            href={enlace2}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={theme ? styles.darkLink : styles.lightLink}
+          >
             <i className="fa-solid fa-globe"></i>
           </a>
         )}

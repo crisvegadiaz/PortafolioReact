@@ -13,8 +13,8 @@
 }
 
 .intro__txt {
-    color: var(--color-gray);
-    font-family: var(--font-jetbrains);
+    color: var(--light-text);
+    font-family: var(--font-monospace);
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.5;

@@ -1,4 +1,3 @@
-import programador from "../img/programador.svg";
 import styles from "../style/Main.module.css";
 import Contacto from "./Contacto";
 import HabiBlan from "./HabiBlan";
@@ -11,7 +10,7 @@ function Main() {
     <main className={styles.homeMain}>
       <Intro />
       <img
-        src={programador}
+        src="img/programador.svg"
         width="973.461"
         height="587.025"
         alt="Ilustración de un programador trabajando"

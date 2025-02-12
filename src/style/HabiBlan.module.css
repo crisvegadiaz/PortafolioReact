@@ -1,6 +1,6 @@
 .titulo {
-    color: var(--color-gray);
-    font-family: var(--font-jetbrains);
+    color: var(--light-text);
+    font-family: var(--font-monospace);
     font-size: 2rem;
     font-weight: 700;
     margin-top: 4.2rem;
@@ -27,8 +27,8 @@
 }
 
 .habilidadBland__arti__lista {
-    color: var(--color-gray);
-    font-family: var(--font-jetbrains);
+    color: var(--light-text);
+    font-family: var(--font-monospace);
     font-size: 1.5rem;
     font-weight: 500;
     width: 40%;
@@ -38,8 +38,8 @@
     margin-bottom: 1rem;
 }
 
-.habilidadBland__arti__lista li:hover {
-    color: var(--color-blue-light);
+.habilidadBland__arti__lista summary:hover {
+    color: var(--light-accent);
     transition: all 0.5s ease-in-out;
 }
 
@@ -101,8 +101,19 @@
         font-size: 1.2rem;
         width: 100%;
     }
+    .habilidadBland__arti__lista li:nth-child(2) {
+        margin-left: 0;
+    }
+    
+    .habilidadBland__arti__lista li:nth-child(3) {
+        margin-left: 0;
+    }
+    
+    .habilidadBland__arti__lista li:nth-child(4) {
+        margin-left: 0;
+    }
 
     .habilidadBland__arti__lista li details p {
-        width: 11rem;
+        width: 100%;
     }
 }

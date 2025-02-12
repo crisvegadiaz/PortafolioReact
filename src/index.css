@@ -135,10 +135,21 @@ table {
 }
 
 :root {
-  --color-gray: #434962;
-  --color-gray-light: #EBECF0;
-  --color-white: #fff;
-  --color-blue-light: #60D9F9;
-  --font-jetbrains: 'JetBrains Mono', monospace;
+  /* Modo Claro */
+  --light-background: #EBECF0;
+  --light-surface: #fff;
+  --light-text: #434962;
+  --light-accent: #60D9F9;
+  
+  /*  Tipografía */
+  --font-monospace: 'JetBrains Mono', monospace;
+
+  /*  Modo Oscuro */
+  --dark-background: #181a1b;
+  --dark-surface: #222526;
+  --dark-text-primary: #21252F;
+  --dark-text-muted: #b4ada4;
+
+  /* Neutros */
   --color-black: #161616;
 }

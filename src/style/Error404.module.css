@@ -10,23 +10,23 @@
 
 .error img {
   height: auto;
-  width: 40%;
+  width: 30%;
 }
 
 .error__text h1 {
-  color: var(--color-gray);
-  font-family: var(--font-jetbrains);
+  color: var(--light-text);
+  font-family: var(--font-monospace);
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
 
 .error__text button {
-  background-color: var(--color-gray);
+  background-color: var(--light-text);
   border: none;
   border-radius: 1rem;
-  color: var(--color-white);
-  font-family: var(--font-jetbrains);
+  color: var(--light-surface);
+  font-family: var(--font-monospace);
   font-size: 1.3rem;
   font-weight: 700;
   margin-top: 3rem;
@@ -40,7 +40,7 @@
 }
 
 .error__text button::before {
-  background-color: var(--color-blue-light);
+  background-color: var(--light-accent);
   border-radius: 50%;
   content: '';
   height: 1em;
@@ -64,7 +64,7 @@
 }
 
 .error__text button a {
-  color: var(--color-white);
+  color: var(--light-surface);
   text-decoration: none;
 }
 

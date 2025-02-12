@@ -1,87 +1,110 @@
-.LiProyec__li {
-    align-items: center;
-    background-color: var(--color-gray-light);
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Estilos comunes */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.2s;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30rem;
+    justify-content: space-between;
 }
 
-.LiProyec__li:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-10px);
-}
-
-.LiProyec__li .image {
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    width: 100%;
-}
-
-.LiProyec__li:hover .image {
+.card:hover {
     transform: scale(1.05);
 }
 
-.li__datos {
-    font-family: var(--font-jetbrains);
-    padding: 1.5rem;
-    text-align: center;
+.card_image {
     width: 100%;
+    height: auto;
 }
 
-.ul__icon {
+/* Estilos para el modo claro */
+.lightCard {
+    background-color: var(--light-background);
+}
+
+.lightText {
+    color: var(--light-text);
+}
+
+.lightDetails {
+    background-color: var(--light-surface);
+}
+
+.lightLink {
+    background-color: var(--light-background);
+    color: var(--light-text);
+}
+
+/* Estilos para el modo oscuro */
+.darkCard {
+    background-color: var(--dark-surface);
+}
+
+.darkText {
+    color: var(--dark-text-muted);
+}
+
+.darkDetails {
+    background-color: var(--dark-background);
+}
+
+.darkLink {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-muted);
+}
+
+/* Resto de estilos */
+.card_icons {
     display: flex;
-    gap: 0.8rem;
-    justify-content: center;
-    margin-bottom: 1rem;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    height: 100%;
 }
 
-.ul__icon li {
-    align-items: center;
-    background-color: var(--color-gray-light);
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
-}
 
-.sectionTitle {
-    color: var(--color-gray);
+.cad_title {
     font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-monospace);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s;
 }
 
-.projectTitle {
-    color: var(--color-gray);
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin: 0.5rem 0;
+.cad_title:hover {
+    color: var(--light-accent);
 }
 
-.description {
-    color: var(--color-gray);
+.card_text {
+    font-family: var(--font-monospace);
+    padding: 0 1rem;
     font-size: 1rem;
-    line-height: 1.5;
-    margin: 1rem;
+    font-weight: 500;
+    text-align: initial;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 
-.li__button {
+.card_details[open] .card_text {
+    max-height: 500px;
+    opacity: 1;
+    padding: 1rem;
+}
+
+.boton {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
+    justify-content: space-around;
+    padding: 10px;
 }
 
-.li__button a {
+.boton a {
     align-items: center;
-    background-color: var(--color-gray-light);
     border-radius: 50%;
-    color: var(--color-gray);
     display: flex;
     justify-content: center;
     padding: 0.8rem;
@@ -89,23 +112,11 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.li__button a:hover {
-    background-color: var(--color-blue-light);
+.boton a:hover {
+    background-color: var(--light-accent);
     transform: scale(1.1);
 }
 
-.li__button i {
-    font-size: 1.5rem;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .LiProyec__li {
-        width: 100%;
-    }
-}
-
-@media (max-width: 767px) {
-    .LiProyec__li {
-        width: 100%;
-    }
+.boton i {
+    font-size: 24px;
 }

@@ -1,23 +1,20 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Proyecto.module.css";
-import { colors } from "../js/themeDark.js";
-import codeMin1 from "../img/code-min1.svg";
-import codeMin2 from "../img/code-min2.svg";
 import texto from "../js/textoPagina.js";
 import { Link } from "react-router-dom";
 
 function Proyecto() {
-  const { state } = useAppContext();
+  const {
+    state: { theme },
+  } = useAppContext();
 
-  const sectionStyle = {
-    color: state.theme ? colors.white : colors.black,
-  };
-
-  const imgSrc = state.theme ? codeMin2 : codeMin1;
+  const textColor = theme ? "var(--dark-text-muted)" : "var(--light-text)";
+  const buttonBackground = theme ? "var(--dark-surface)" : "var(--light-text)";
+  const imgSrc = theme ? "/img/code-min2.svg" : "/img/code-min1.svg";
 
   return (
     <section className={styles.proyecto}>
-      <h2 className={styles.titulo} style={{ color: sectionStyle.color }}>
+      <h2 className={styles.titulo} style={{ color: textColor }}>
         {texto.Home.proyecto.titulo}
       </h2>
       <article className={styles.proyecto__arti}>
@@ -29,10 +26,8 @@ function Proyecto() {
           className={styles.proyecto__arti__img}
         />
         <div className={styles.proyecto__arti__div}>
-          <p style={{ color: sectionStyle.color }}>
-            {texto.Home.proyecto.parrafo}
-          </p>
-          <button>
+          <p style={{ color: textColor }}>{texto.Home.proyecto.parrafo}</p>
+          <button style={{ backgroundColor: buttonBackground }}>
             <Link to="/proyectos">
               {texto.Home.proyecto.btn} <i className="fa-solid fa-code"></i>
             </Link>

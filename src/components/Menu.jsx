@@ -6,40 +6,54 @@ import { Link } from "react-router-dom";
 function Menu() {
   const { state, dispatch } = useAppContext();
 
-  const buttonTheme = () => {
+  const handleThemeToggle = () => {
     dispatch({ type: TYPES.THEME });
   };
+
+  const themeStyle = {
+    backgroundColor: state.theme ? "var(--dark-surface)" : "var(--light-background)",
+    color: state.theme ? "var(--dark-text-muted)" : "var(--light-text)",
+  };
+
+  const socialContainerStyle = { backgroundColor: themeStyle.backgroundColor };
+  const socialLinkStyle = { color: themeStyle.color };
 
   return (
     <header className={styles.cabecera}>
       <nav className={styles.cabecera__menu}>
-        <Link to="/">
-          <i className="fa-solid fa-code"></i>
+        <Link to="/" style={themeStyle}>
+          <i className="fa-solid fa-code" />
         </Link>
-        <button onClick={buttonTheme}>
-          <i className={`fa-solid ${!state.theme ? "fa-sun" : "fa-moon"}`}></i>
+        <button onClick={handleThemeToggle} style={themeStyle}>
+          <i className={`fa-solid ${!state.theme ? "fa-sun" : "fa-moon"}`} />
         </button>
-        <div className={styles.cabecera__menu__redes}>
+        <div
+          className={styles.cabecera__menu__redes}
+          style={socialContainerStyle}
+        >
           <a
             href="https://twitter.com/cristiandiazve3"
             target="_blank"
             rel="noopener noreferrer"
+            style={socialLinkStyle}
           >
-            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-twitter" />
           </a>
           <a
             href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/"
             target="_blank"
             rel="noopener noreferrer"
+            style={socialLinkStyle}
           >
-            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-linkedin" />
           </a>
           <a
             href="https://github.com/crisvegadiaz"
             target="_blank"
             rel="noopener noreferrer"
+            style={socialLinkStyle}
           >
-            <i className="fa-brands fa-github"></i>
+            <i className="fa-brands fa-github" />
           </a>
         </div>
       </nav>

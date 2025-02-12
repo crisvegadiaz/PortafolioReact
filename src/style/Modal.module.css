@@ -1,35 +1,59 @@
 .modal {
   animation: show-modal 0.7s 0.5s both;
-  border: 0.2rem solid var(--color-gray);
+  border: 0.2rem solid var(--light-text);
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
 }
 
 .modal h2 {
-  color: var(--color-gray);
-  font-family: var(--font-jetbrains);
+  color: var(--light-text);
+  font-family: var(--font-monospace);
   font-size: 1.5rem;
   font-weight: 600;
   margin: 2rem 0;
 }
 
 .modal button {
-  background-color: var(--color-gray);
+  background-color: var(--light-text);
   border: none;
-  border-radius: 0.5rem;
-  color: var(--color-white);
-  font-family: var(--font-jetbrains);
+  border-radius: 1rem;
+  color: var(--light-surface);
+  font-family: var(--font-monospace);
   font-size: 1.5rem;
   font-weight: 600;
-  margin: auto;
   padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.3s ease;
   width: 10rem;
+  z-index: 1;
+}
+
+.modal button::before {
+  background-color: var(--light-accent);
+  border-radius: 50%;
+  content: '';
+  height: 1em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transform-origin: center;
+  transition: transform 0.45s ease-in-out;
+  width: 1em;
+  z-index: -1;
 }
 
 .modal button:hover {
-  box-shadow: 5px 5px 7px var(--color-blue-light);
-  transition: all 0.5s linear;
+  color: var(--color-black);
+  cursor: pointer;
+  background-color: var(--light-text);
+  /* Se mantiene el color original */
+}
+
+.modal button:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
 .modal[open]::backdrop {

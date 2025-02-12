@@ -1,7 +1,5 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Formulario.module.css";
-import enviarMin from "../img/enviar-min.svg";
-import { colors } from "../js/themeDark.js";
 import texto from "../js/textoPagina.js";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,14 +8,18 @@ import Modal from "../components/Modal";
 function Formulario() {
   const btnRef = useRef(null);
   const modalRef = useRef(null);
-  const { state } = useAppContext();
+  const {
+    state: { theme },
+  } = useAppContext();
+
   const [form, setForm] = useState({
     nombre: "",
     email: "",
     telefono: "",
     mensaje: "",
   });
-  const [menModal, setMenModal] = useState(null);
+  
+  const [modalSuccess, setModalSuccess] = useState(null);
 
   const openModal = () => {
     modalRef.current.showModal();
@@ -52,78 +54,73 @@ function Formulario() {
           mensaje: "",
         });
         btnRef.current.disabled = false;
-        setMenModal(true);
+        setModalSuccess(true);
         openModal();
       })
       .catch((error) => {
         console.error(error);
         btnRef.current.disabled = false;
-        setMenModal(false);
+        setModalSuccess(false);
         openModal();
       });
   };
+
+  const formStyle = theme
+    ? {
+        background:
+          "linear-gradient(var(--light-accent), var(--dark-background))",
+        border: "2px solid var(--light-surface)",
+      }
+    : {
+        background:
+          "linear-gradient(var(--light-accent), var(--light-background))",
+        border: "2px solid var(--light-text)",
+      };
 
   return (
     <main className={styles.formulario}>
       <form
         onSubmit={handleSubmit}
         className={styles.formulario__form}
-        style={
-          state.theme
-            ? {
-                background: `linear-gradient(${colors.blueLight}, ${colors.gray})`,
-                border: `2px solid ${colors.gray}`,
-              }
-            : {
-                background: `linear-gradient(${colors.blueLight}, ${colors.graylight})`,
-                border: `2px solid ${colors.graylight}`,
-              }
-        }
+        style={formStyle}
       >
-        <fieldset className={styles.formulario__form__input}>
-          <div>
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder={texto.Formulario.inputNombre}
-              pattern="[A-Za-zÁ-Úá-ú]+(\s[A-Za-zÁ-Úá-ú]+)?"
-              title={texto.Formulario.inputErroNombre}
-              required
-              onChange={handleInput}
-              value={form.nombre}
-              style={state}
-              aria-label="Nombre"
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder={texto.Formulario.inputEmail}
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-              title={texto.Formulario.inputErrorEmail}
-              onChange={handleInput}
-              value={form.email}
-              aria-label="Email"
-            />
-            <input
-              type="tel"
-              name="telefono"
-              id="telefono"
-              placeholder={texto.Formulario.inputTelefono}
-              pattern="[0-9]{10}"
-              title={texto.Formulario.inputErrorTelefono}
-              onChange={handleInput}
-              value={form.telefono}
-              aria-label="Teléfono"
-            />
-          </div>
-
-          <label htmlFor="mensaje">
-            <i className={`fa-solid fa-at ${styles.icon}`}></i>
-          </label>
-        </fieldset>
-
+        <i className={`fa-solid fa-at ${styles.icon}`}></i>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder={texto.Formulario.inputNombre}
+          pattern="[A-Za-zÁ-Úá-ú]+(\s[A-Za-zÁ-Úá-ú]+)?"
+          title={texto.Formulario.inputErroNombre}
+          required
+          onChange={handleInput}
+          value={form.nombre}
+          aria-label="Nombre"
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder={texto.Formulario.inputEmail}
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          title={texto.Formulario.inputErrorEmail}
+          required
+          onChange={handleInput}
+          value={form.email}
+          aria-label="Email"
+        />
+        <input
+          type="tel"
+          name="telefono"
+          id="telefono"
+          placeholder={texto.Formulario.inputTelefono}
+          pattern="[0-9]{10}"
+          title={texto.Formulario.inputErrorTelefono}
+          required
+          onChange={handleInput}
+          value={form.telefono}
+          aria-label="Teléfono"
+        />
         <textarea
           name="mensaje"
           id="mensaje"
@@ -151,15 +148,15 @@ function Formulario() {
       </form>
 
       <img
-        src={enviarMin}
+        src="/img/enviar-min.svg"
         alt="Email"
         width="643.162"
         height="528"
         className={styles.formulario__img}
       />
 
-      <Modal modalRef={modalRef} state={state} colors={colors}>
-        {menModal ? texto.Formulario.modal1 : texto.Formulario.modal2}
+      <Modal modalRef={modalRef} theme={theme}>
+        {modalSuccess ? texto.Formulario.modal1 : texto.Formulario.modal2}
       </Modal>
     </main>
   );

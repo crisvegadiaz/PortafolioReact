@@ -1,0 +1,171 @@
+:root {
+    --color-light-blue: #60d9f9;
+    --color-light-grey: #ebecf0;
+    --color-withe: #fff;
+    --color-dark-grey: #434962;
+    --color-grey: #90a4ae;
+    --color-red: #ff5252;
+    --color-dark: rgba(0, 0, 0, 0.2);
+    --color-grey-apacity: rgba(255, 255, 255, 0.7);
+}
+
+.robot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 2rem;
+}
+
+/* Cabeza con gradiente y sombra */
+.head {
+    position: relative;
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(145deg, var(--color-light-grey), var(--color-light-blue));
+    border-radius: 50%;
+    border: 2px solid var(--color-grey);
+    box-shadow: 8px 8px 10px var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Antena en la parte superior */
+.antenna {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 30px;
+    background: var(--color-grey);
+    border-radius: 2px;
+}
+
+.antenna::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -6px;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, var(--color-red), var(--color-red));
+    border-radius: 50%;
+    border: 2px solid var(--color-grey);
+}
+
+/* Ojos con contorno, reflejo y animación de parpadeo */
+.eyes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    gap: 10px;
+    background-color: var(--color-dark-grey);
+    border-radius: 50%;
+}
+
+.eye {
+    width: 25px;
+    height: 25px;
+    background: var(--color-dark-grey);
+    border: 2px solid var(--color-grey);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.eye::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1);
+    width: 10px;
+    height: 10px;
+    background: var(--color-withe);
+    border-radius: 50%;
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    90%,
+    100% {
+        transform: translate(-50%, -50%) scaleY(1);
+    }
+
+    95% {
+        transform: translate(-50%, -50%) scaleY(0.1);
+    }
+}
+
+/* Cuerpo y brazos */
+.body {
+    display: flex;
+    gap: 10px;
+}
+
+.arm {
+    width: 25px;
+    height: 100px;
+    background: linear-gradient(145deg, var(--color-light-grey), var(--color-light-blue));
+    border: 2px solid var(--color-grey);
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px var(--color-dark);
+}
+
+/* Animación de saludo para el brazo derecho*/
+.arm.right {
+    transform-origin: top left;
+    animation: wave 2s alternate infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(-100deg);
+    }
+
+    100% {
+        transform: rotate(-140deg);
+    }
+}
+
+.trunk {
+    width: 120px;
+    height: 150px;
+    background: linear-gradient(145deg, var(--color-light-grey), var(--color-withe));
+    border: 2px solid var(--color-grey);
+    border-radius: 20px 20px 50% 50%;
+    box-shadow: inset 4px 4px 8px var(--color-dark), inset -4px -4px 8px var(--color-grey-apacity);
+    position: relative;
+}
+
+/* Detalles decorativos en el tronco */
+.trunk::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    background: var(--color-grey);
+    border-radius: 10px;
+}
+
+.trunk::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 20px;
+    background: var(--color-grey);
+    border-radius: 10px;
+}

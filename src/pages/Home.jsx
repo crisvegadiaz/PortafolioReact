@@ -1,5 +1,4 @@
 import { useAppContext } from "../components/AppContext";
-import { colors } from "../js/themeDark.js";
 import Footer from "../components/Footer";
 import Main from "../components/Main";
 import Menu from "../components/Menu";
@@ -13,9 +12,10 @@ function Home() {
 
     if (rootElement) {
       if (state.theme) {
-        rootElement.style.backgroundColor = colors.black || "#000000";
+        rootElement.style.backgroundColor =
+          "var(--dark-background)" || "#000000";
       } else {
-        rootElement.style.backgroundColor = colors.white || "#FFFFFF";
+        rootElement.style.backgroundColor = "var(--light-surface)" || "#FFFFFF";
       }
     }
   }, [state.theme]);

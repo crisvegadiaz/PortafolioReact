@@ -22,31 +22,31 @@
 }
 
 .cabecera__menu > a {
-  background-color: var(--color-gray-light);
+  background-color: var(--light-background);
   border: none;
   border-radius: 50%;
-  color: var(--color-gray);
+  color: var(--light-text);
   padding: 0.5rem;
   text-decoration: none;
 }
 
 .cabecera__menu button {
-  background-color: var(--color-gray-light);
+  background-color: var(--light-background);
   border: none;
   border-radius: 50%;
-  color: var(--color-gray);
+  color: var(--light-text);
   margin-left: 70%;
   padding: 0.5rem;
   text-decoration: none;
 }
 
 .cabecera__menu i:hover {
-  color: var(--color-blue-light);
+  color: var(--light-accent);
   transition: all 0.5s ease-in-out;
 }
 
 .cabecera__menu__redes {
-  background-color: var(--color-gray-light);
+  background-color: var(--light-background);
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
@@ -55,7 +55,7 @@
 }
 
 .cabecera__menu__redes a {
-  color: var(--color-gray);
+  color: var(--light-text);
   text-decoration: none;
 }
 

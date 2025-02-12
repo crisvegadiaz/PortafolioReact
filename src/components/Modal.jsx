@@ -1,21 +1,24 @@
 import styles from "../style/Modal.module.css";
 
-function Modal({ modalRef, children, state, colors }) {
-  const closeModal = () => {
-    modalRef.current.close();
+const Modal = ({ modalRef, children, theme }) => {
+  const closeModal = () => modalRef.current.close();
+
+  const modalStyles = {
+    backgroundColor: theme ? "var(--dark-surface)" : "var(--light-background)",
   };
 
-  const backgroundColor = state.theme ? colors.black : colors.grayLight;
-  const textColor = state.theme ? colors.white : colors.gray;
+  const titleStyles = {
+    color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
+  };
 
   return (
     <dialog
       ref={modalRef}
-      className={styles.modal} 
-      style={{ backgroundColor }}
+      className={styles.modal}
+      style={modalStyles}
       aria-labelledby="modal-title"
     >
-      <h2 id="modal-title" style={{ color: textColor }}>
+      <h2 id="modal-title" style={titleStyles}>
         {children}
       </h2>
       <button onClick={closeModal} aria-label="Cerrar modal">
@@ -23,6 +26,6 @@ function Modal({ modalRef, children, state, colors }) {
       </button>
     </dialog>
   );
-}
+};
 
 export default Modal;

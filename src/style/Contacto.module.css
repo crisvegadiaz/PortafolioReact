@@ -1,6 +1,6 @@
 .titulo {
-    color: var(--color-gray);
-    font-family: var(--font-jetbrains);
+    color: var(--light-text);
+    font-family: var(--font-monospace);
     font-size: 2rem;
     font-weight: 700;
     margin-top: 4.2rem;
@@ -8,7 +8,7 @@
 
 .contacto {
     align-items: center;
-    background-color: var(--color-gray-light);
+    background-color: var(--light-background);
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -28,8 +28,8 @@
 }
 
 .contacto__contenido__txt {
-    color: var(--color-gray);
-    font-family: var(--font-jetbrains);
+    color: var(--light-text);
+    font-family: var(--font-monospace);
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.5;
@@ -38,7 +38,7 @@
 }
 
 .contacto__contenido__txt button {
-    background-color: var(--color-gray);
+    background-color: var(--light-text);
     border: none;
     border-radius: 1rem;
     color: #fff;
@@ -56,7 +56,7 @@
 }
 
 .contacto__contenido__txt button::before {
-    background-color: var(--color-blue-light);
+    background-color: var(--light-accent);
     border-radius: 50%;
     content: '';
     height: 1em;
@@ -80,7 +80,7 @@
 }
 
 .contacto__contenido__txt button a {
-    color: var(--color-white);
+    color: var(--light-surface);
     text-decoration: none;
 }
 

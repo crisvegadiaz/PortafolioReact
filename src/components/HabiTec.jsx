@@ -1,40 +1,40 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/HabiTec.module.css";
-import { colors } from "../js/themeDark.js";
-import { useEffect, useRef } from "react";
 import texto from "../js/textoPagina.js";
 
 function HabiTec() {
-  const { state } = useAppContext();
-  const lisRef = useRef(null);
-
-  useEffect(() => {
-    const listItems = lisRef.current.querySelectorAll("p");
-    listItems.forEach((p) => {
-      p.style.color = state.theme ? colors.white : colors.black;
-    });
-  }, [state.theme]);
+  const {
+    state: { theme },
+  } = useAppContext();
 
   const sectionStyle = {
-    backgroundColor: state.theme ? colors.blackLight : colors.grayLight,
-    color: state.theme ? colors.white : colors.black,
+    backgroundColor: theme ? "var(--dark-surface)" : "var(--light-background)",
+  };
+
+  const titleStyle = {
+    color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
+  };
+
+  const iconStyle = theme
+    ? { backgroundColor: "var(--dark-background)", color: "var(--dark-text-muted)" }
+    : { backgroundColor: "var(--light-surface)", color: "var(--light-text)" };
+
+  const textStyle = {
+    color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
   };
 
   return (
     <section className={styles.habilidadTec} style={sectionStyle}>
-      <h2
-        className={styles.titulo}
-        style={state.theme ? { color: colors.white } : { color: colors.black }}
-      >
+      <h2 className={styles.titulo} style={titleStyle}>
         {texto.Home.habiTec.titulo}
       </h2>
-      <ul ref={lisRef} className={styles.habilidadTec__lista}>
+      <ul className={styles.habilidadTec__lista}>
         {Object.keys(texto.Home.habiTec)
           .filter((key) => key.startsWith("item"))
           .map((key, index) => (
             <li key={index}>
-              <i className={getIconClass(key)}></i>
-              <p>{texto.Home.habiTec[key]}</p>
+              <i className={getIconClass(key)} style={iconStyle} />
+              <p style={textStyle}>{texto.Home.habiTec[key]}</p>
             </li>
           ))}
       </ul>
