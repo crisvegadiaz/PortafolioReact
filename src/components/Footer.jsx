@@ -15,7 +15,9 @@ function Footer() {
   return (
     <footer className={styles.pie} style={footerStyle}>
       <p>
-        {footer}
+        {footer.desarrollo}
+        <br />
+        {footer.copyright}
         <i className="fa-sharp fa-regular fa-copyright"></i>
       </p>
     </footer>

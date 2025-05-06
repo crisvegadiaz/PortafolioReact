@@ -37,5 +37,8 @@
     "parrafo": "Este es mi rincón creativo. Aquí, la imaginación cobra vida en proyectos personales que reflejan mi pasión por. La programación, cada creación, cuenta una historia única. ¡Bienvenido a explorar este viaje creativo conmigo!",
     "btn": "Ver"
   },
-  "footer": "Desarrollado por Cristian Diaz Vega.\n Derechos reservados 2023"
+  "footer":{
+    "desarrollo": "Desarrollado por Cristian Diaz Vega.",
+    "copyright": "Derechos reservados 2023"
+  } 
 }
