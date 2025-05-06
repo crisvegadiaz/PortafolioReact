@@ -1,6 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Formulario.module.css";
-import texto from "../js/textoPagina.js";
+import formData from "../texts/Formulario.json";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
@@ -18,7 +18,7 @@ function Formulario() {
     telefono: "",
     mensaje: "",
   });
-  
+
   const [modalSuccess, setModalSuccess] = useState(null);
 
   const openModal = () => {
@@ -45,7 +45,7 @@ function Formulario() {
       body: JSON.stringify(form),
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
-      .then((json) => {
+      .then(() => {
         e.target.reset();
         setForm({
           nombre: "",
@@ -89,9 +89,9 @@ function Formulario() {
           type="text"
           name="nombre"
           id="nombre"
-          placeholder={texto.Formulario.inputNombre}
+          placeholder={formData.inputNombre}
           pattern="[A-Za-zÁ-Úá-ú]+(\s[A-Za-zÁ-Úá-ú]+)?"
-          title={texto.Formulario.inputErroNombre}
+          title={formData.inputErroNombre}
           required
           onChange={handleInput}
           value={form.nombre}
@@ -101,9 +101,9 @@ function Formulario() {
           type="email"
           name="email"
           id="email"
-          placeholder={texto.Formulario.inputEmail}
+          placeholder={formData.inputEmail}
           pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-          title={texto.Formulario.inputErrorEmail}
+          title={formData.inputErrorEmail}
           required
           onChange={handleInput}
           value={form.email}
@@ -113,9 +113,9 @@ function Formulario() {
           type="tel"
           name="telefono"
           id="telefono"
-          placeholder={texto.Formulario.inputTelefono}
+          placeholder={formData.inputTelefono}
           pattern="[0-9]{10}"
-          title={texto.Formulario.inputErrorTelefono}
+          title={formData.inputErrorTelefono}
           required
           onChange={handleInput}
           value={form.telefono}
@@ -124,7 +124,7 @@ function Formulario() {
         <textarea
           name="mensaje"
           id="mensaje"
-          placeholder={texto.Formulario.inputMensaje}
+          placeholder={formData.inputMensaje}
           minLength="10"
           required
           onChange={handleInput}
@@ -136,13 +136,11 @@ function Formulario() {
         <fieldset className={styles.formulario__form__butt}>
           <button type="button">
             <Link to="/">
-              <i className="fa-solid fa-arrow-left"></i>{" "}
-              {texto.Formulario.btnInicio}
+              <i className="fa-solid fa-arrow-left"></i> {formData.btnInicio}
             </Link>
           </button>
           <button type="submit" ref={btnRef}>
-            <i className="fa-solid fa-paper-plane"></i>{" "}
-            {texto.Formulario.btnEnviar}
+            <i className="fa-solid fa-paper-plane"></i> {formData.btnEnviar}
           </button>
         </fieldset>
       </form>
@@ -156,7 +154,7 @@ function Formulario() {
       />
 
       <Modal modalRef={modalRef} theme={theme}>
-        {modalSuccess ? texto.Formulario.modal1 : texto.Formulario.modal2}
+        {modalSuccess ? formData.modal1 : formData.modal2}
       </Modal>
     </main>
   );

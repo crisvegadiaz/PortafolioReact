@@ -1,6 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/HabiTec.module.css";
-import texto from "../js/textoPagina.js";
+import { habiTec } from "../texts/Home.json";
 
 function HabiTec() {
   const {
@@ -16,7 +16,10 @@ function HabiTec() {
   };
 
   const iconStyle = theme
-    ? { backgroundColor: "var(--dark-background)", color: "var(--dark-text-muted)" }
+    ? {
+        backgroundColor: "var(--dark-background)",
+        color: "var(--dark-text-muted)",
+      }
     : { backgroundColor: "var(--light-surface)", color: "var(--light-text)" };
 
   const textStyle = {
@@ -26,15 +29,15 @@ function HabiTec() {
   return (
     <section className={styles.habilidadTec} style={sectionStyle}>
       <h2 className={styles.titulo} style={titleStyle}>
-        {texto.Home.habiTec.titulo}
+        {habiTec.titulo}
       </h2>
       <ul className={styles.habilidadTec__lista}>
-        {Object.keys(texto.Home.habiTec)
+        {Object.keys(habiTec)
           .filter((key) => key.startsWith("item"))
           .map((key, index) => (
             <li key={index}>
               <i className={getIconClass(key)} style={iconStyle} />
-              <p style={textStyle}>{texto.Home.habiTec[key]}</p>
+              <p style={textStyle}>{habiTec[key]}</p>
             </li>
           ))}
       </ul>

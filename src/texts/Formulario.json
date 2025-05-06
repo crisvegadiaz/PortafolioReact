@@ -1,0 +1,13 @@
+{
+  "inputNombre": "Ingrese su nombre",
+  "inputErroNombre": "Ingrese un nombre válido ❌",
+  "inputEmail": "Ingrese su email",
+  "inputErrorEmail": "Ingrese un correo electrónico válido ❌",
+  "inputTelefono": "Ingrese su número de teléfono",
+  "inputErrorTelefono": "Ingrese un número de teléfono válido ❌",
+  "inputMensaje": "Escriba su mensaje",
+  "btnInicio": "Inicio",
+  "btnEnviar": "Enviar",
+  "modal1": "😉 El Mensaje se ha enviado con éxito",
+  "modal2": "😰 El mensaje no pudo ser enviado"
+}

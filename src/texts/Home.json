@@ -1,0 +1,41 @@
+{
+  "intro": "👋¡Hola! Soy Cristian Diaz Vega, Técnico Superior en Soporte de Infraestructura de Tecnología de Información, con experiencia en el desarrollo de aplicaciones web seguras y escalables. Disfruto resolviendo problemas y optimizando sistemas, siempre buscando nuevas oportunidades para mejorar mis habilidades",
+  "habiTec": {
+    "titulo": "Habilidades Técnicas",
+    "item1": "Docker",
+    "item2": "Linux",
+    "item3": "Github",
+    "item4": "Git",
+    "item5": "JavaScrip",
+    "item6": "Node",
+    "item7": "React",
+    "item8": "Java",
+    "item9": "MySQL",
+    "item10": "PostgreSQL",
+    "item11": "MariaDB"
+  },
+  "habiBlan": {
+    "titulo": "Habilidades Blandas",
+    "tema1": "Organización",
+    "parrafo1": "Manejo eficiente de tareas y proyectos, asegurando el cumplimiento de plazos mediante planificación estructurada y herramientas digitales.",
+    "tema2": "Proactividad",
+    "parrafo2": "Anticipo problemas y propongo soluciones antes de que surjan, adaptándome rápidamente a nuevas tecnologías y metodologías.",
+    "tema3": "Autodidacta",
+    "parrafo3": "Aprendizaje continuo mediante investigación, cursos y práctica, manteniéndome siempre actualizado con nuevas tecnologías.",
+    "tema4": "Colaboración",
+    "parrafo4": "Trabajo en equipo efectivo, fomentando una comunicación clara y una cultura de apoyo mutuo en entornos multidisciplinarios.",
+    "tema5": "Análisis",
+    "parrafo5": "Enfoque metódico para resolver problemas complejos, identificando patrones y aplicando soluciones basadas en datos y mejores prácticas."
+  },
+  "contacto": {
+    "titulo": "Contacto",
+    "parrafo": "¿Quieres contactarme? Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. Email: alexander85vega@gmail.com",
+    "btn": "Formulario"
+  },
+  "proyecto": {
+    "titulo": "Proyectos Personales",
+    "parrafo": "Este es mi rincón creativo. Aquí, la imaginación cobra vida en proyectos personales que reflejan mi pasión por. La programación, cada creación, cuenta una historia única. ¡Bienvenido a explorar este viaje creativo conmigo!",
+    "btn": "Ver"
+  },
+  "footer": "Desarrollado por Cristian Diaz Vega.\n Derechos reservados 2023"
+}

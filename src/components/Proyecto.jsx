@@ -1,6 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Proyecto.module.css";
-import texto from "../js/textoPagina.js";
+import { proyecto } from "../texts/Home.json";
 import { Link } from "react-router-dom";
 
 function Proyecto() {
@@ -15,7 +15,7 @@ function Proyecto() {
   return (
     <section className={styles.proyecto}>
       <h2 className={styles.titulo} style={{ color: textColor }}>
-        {texto.Home.proyecto.titulo}
+        {proyecto.titulo}
       </h2>
       <article className={styles.proyecto__arti}>
         <img
@@ -26,10 +26,10 @@ function Proyecto() {
           className={styles.proyecto__arti__img}
         />
         <div className={styles.proyecto__arti__div}>
-          <p style={{ color: textColor }}>{texto.Home.proyecto.parrafo}</p>
+          <p style={{ color: textColor }}>{proyecto.parrafo}</p>
           <button style={{ backgroundColor: buttonBackground }}>
             <Link to="/proyectos">
-              {texto.Home.proyecto.btn} <i className="fa-solid fa-code"></i>
+              {proyecto.btn} <i className="fa-solid fa-code"></i>
             </Link>
           </button>
         </div>

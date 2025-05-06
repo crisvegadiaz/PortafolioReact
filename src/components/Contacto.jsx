@@ -1,6 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Contacto.module.css";
-import texto from "../js/textoPagina.js";
+import { contacto } from "../texts/Home.json";
 import { Link } from "react-router-dom";
 
 function Contacto() {
@@ -19,7 +19,7 @@ function Contacto() {
   return (
     <section className={styles.contacto} style={{ backgroundColor }}>
       <h2 className={styles.titulo} style={{ color: textColor }}>
-        {texto.Home.contacto.titulo}
+        {contacto.titulo}
       </h2>
       <article className={styles.contacto__contenido}>
         <img
@@ -30,10 +30,10 @@ function Contacto() {
           className={styles.contacto__contenido__img}
         />
         <div className={styles.contacto__contenido__txt}>
-          <p style={{ color: textColor }}>{texto.Home.contacto.parrafo}</p>
+          <p style={{ color: textColor }}>{contacto.parrafo}</p>
           <button style={{ backgroundColor: buttonBackground }}>
             <Link to="/formulario">
-              {texto.Home.contacto.btn} <i className="fa-solid fa-envelope" />
+              {contacto.btn} <i className="fa-solid fa-envelope" />
             </Link>
           </button>
         </div>

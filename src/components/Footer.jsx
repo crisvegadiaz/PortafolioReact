@@ -1,5 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Footer.module.css";
+import { footer } from "../texts/Home.json";
 
 function Footer() {
   const { state } = useAppContext();
@@ -14,8 +15,7 @@ function Footer() {
   return (
     <footer className={styles.pie} style={footerStyle}>
       <p>
-        Desarrollado por Cristian Diaz Vega. <br />
-        Derechos reservados 2023
+        {footer}
         <i className="fa-sharp fa-regular fa-copyright"></i>
       </p>
     </footer>

@@ -1,6 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/HabiBlan.module.css";
-import texto from "../js/textoPagina.js";
+import { habiBlan } from "../texts/Home.json"
 import ImgRobot from "./ImgRobot.jsx";
 
 function HabiBlan() {
@@ -15,18 +15,18 @@ function HabiBlan() {
   return (
     <section className={styles.habilidadBland}>
       <h2 className={styles.titulo} style={textStyle}>
-        {texto.Home.habiBlan.titulo}
+        {habiBlan.titulo}
       </h2>
       <article className={styles.habilidadBland__arti}>
         <ImgRobot />
         <ul className={styles.habilidadBland__arti__lista} style={textStyle}>
-          {Object.keys(texto.Home.habiBlan)
+          {Object.keys(habiBlan)
             .filter((key) => key.startsWith("tema"))
             .map((key, index) => (
               <li key={index}>
                 <details name="info">
-                  <summary>{texto.Home.habiBlan[key]}</summary>
-                  <p>{texto.Home.habiBlan[`parrafo${index + 1}`]}</p>
+                  <summary>{habiBlan[key]}</summary>
+                  <p>{habiBlan[`parrafo${index + 1}`]}</p>
                 </details>
               </li>
             ))}

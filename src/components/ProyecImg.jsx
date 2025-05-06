@@ -1,5 +1,5 @@
+import { titulo, card } from "../texts/Proyecto.json";
 import styles from "../style/ProyecImg.module.css";
-import texto from "../js/textoPagina";
 import LiProyec from "./LiProyec";
 
 function ProyecImg({ theme }) {
@@ -11,10 +11,10 @@ function ProyecImg({ theme }) {
           color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
         }}
       >
-        {texto.Proyecto.titulo}
+        {titulo}
       </h2>
       <ul className={styles.proyectos__list}>
-        {texto.Proyecto.card.map((proyecto, index) => (
+        {card.map((proyecto, index) => (
           <LiProyec
             key={index}
             enlace1={proyecto.enlace1}

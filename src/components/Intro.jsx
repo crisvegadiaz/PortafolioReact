@@ -1,6 +1,6 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Intro.module.css";
-import texto from "../js/textoPagina.js";
+import { intro } from "../texts/Home.json";
 
 function Intro() {
   const { state } = useAppContext();
@@ -21,7 +21,7 @@ function Intro() {
             : { color: "var(--dark-text)" }
         }
       >
-        {texto.Home.intro}
+        {intro}
       </p>
     </section>
   );
