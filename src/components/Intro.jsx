@@ -1,5 +1,5 @@
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/Intro.module.css";
+import styles from "../styles/Intro.module.css";
 import { intro } from "../texts/Home.json";
 
 function Intro() {

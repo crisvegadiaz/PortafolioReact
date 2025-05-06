@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/HabiTec.module.css";
+import styles from "../styles/HabiTec.module.css";
 import { habiTec } from "../texts/Home.json";
 import {
   faDocker,

@@ -1,5 +1,5 @@
 import { titulo, card } from "../texts/Proyecto.json";
-import styles from "../style/ProyecImg.module.css";
+import styles from "../styles/ProyecImg.module.css";
 import LiProyec from "./LiProyec";
 
 function ProyecImg({ theme }) {

@@ -1,5 +1,5 @@
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/ProyecMain.module.css";
+import styles from "../styles/ProyecMain.module.css";
 import ProyecImg from "./ProyecImg";
 import { useEffect } from "react";
 

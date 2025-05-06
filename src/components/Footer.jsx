@@ -1,7 +1,7 @@
 import { faCopyright } from "@fortawesome/free-regular-svg-icons"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/Footer.module.css";
+import styles from "../styles/Footer.module.css";
 import { footer } from "../texts/Home.json";
 
 function Footer() {

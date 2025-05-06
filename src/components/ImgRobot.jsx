@@ -1,4 +1,4 @@
-import styles from "../style/ImgRobot.module.css";
+import styles from "../styles/ImgRobot.module.css";
 
 function ImgRobot() {
   return (

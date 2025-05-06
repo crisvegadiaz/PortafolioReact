@@ -1,5 +1,5 @@
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/Error404.module.css";
+import styles from "../styles/Error404.module.css";
 import { Link } from "react-router-dom";
 
 function Error404() {

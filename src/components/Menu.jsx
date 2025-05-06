@@ -1,7 +1,7 @@
 import { faCode, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TYPES } from "../actions/actionTheme";
-import styles from "../style/Menu.module.css";
+import styles from "../styles/Menu.module.css";
 import { useAppContext } from "./AppContext";
 import { Link } from "react-router-dom";
 import {

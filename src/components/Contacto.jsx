@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/Contacto.module.css";
+import styles from "../styles/Contacto.module.css";
 import { contacto } from "../texts/Home.json";
 import { Link } from "react-router-dom";
 

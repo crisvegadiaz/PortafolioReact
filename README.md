@@ -13,15 +13,14 @@ Este proyecto es un portafolio personal desarrollado con React. Aquí se muestra
 
 - React
 - JavaScript (ES6+)
-- CSS/SCSS
+- CSS
 - HTML5
-- Webpack
 
 ## Instalación
 
 1. Clona este repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/PortafolioReact.git
+    git clone https://github.com/crisvegadiaz/PortafolioReact
     ```
 2. Navega al directorio del proyecto:
     ```bash
@@ -33,18 +32,22 @@ Este proyecto es un portafolio personal desarrollado con React. Aquí se muestra
     ```
 4. Inicia el servidor de desarrollo:
     ```bash
-    npm start
+    node --run dev 
     ```
 
 ## Estructura del Proyecto
 
 ```
-/src
-  /components   # Componentes reutilizables
-  /assets       # Imágenes y recursos estáticos
-  /styles       # Archivos CSS/SCSS
-  App.js        # Componente principal
-  index.js      # Punto de entrada
+
+./src
+├── /actions    # Acciones de Redux
+├── /components # Componentes reutilizables
+├── /pages      # Páginas principales
+├── /reducers   # Reducers de Redux
+├── /style      # Archivos CSS
+├── /texts      # Textos de paginas
+├──index.css    # Estilos globales
+└──main.js      # Punto de entrada
 ```
 
 ## Contribución
@@ -65,8 +68,8 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 
 Si tienes preguntas o sugerencias, no dudes en contactarme:
 
-- **Email**: tu-email@example.com
-- **LinkedIn**: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-- **GitHub**: [Tu Usuario](https://github.com/tu-usuario)
+- **Email**: alexander85vega@gmail.com
+- **LinkedIn**: [cristian-diaz-vega](https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/)
+- **GitHub**: [crisvegadiaz](https://github.com/crisvegadiaz)
 
 ¡Gracias por visitar mi portafolio!

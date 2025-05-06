@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/Formulario.module.css";
+import styles from "../styles/Formulario.module.css";
 import formData from "../texts/Formulario.json";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";

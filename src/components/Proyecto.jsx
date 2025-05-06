@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/Proyecto.module.css";
+import styles from "../styles/Proyecto.module.css";
 import { proyecto } from "../texts/Home.json";
 import { Link } from "react-router-dom";
 

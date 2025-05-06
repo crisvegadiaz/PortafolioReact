@@ -1,4 +1,4 @@
-import styles from "../style/Main.module.css";
+import styles from "../styles/Main.module.css";
 import Contacto from "./Contacto";
 import HabiBlan from "./HabiBlan";
 import Proyecto from "./Proyecto";

@@ -1,4 +1,4 @@
-import styles from "../style/LiProyec.module.css";
+import styles from "../styles/LiProyec.module.css";
 
 function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
   return (

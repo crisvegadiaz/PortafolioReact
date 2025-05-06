@@ -1,5 +1,5 @@
 import { useAppContext } from "../components/AppContext";
-import styles from "../style/HabiBlan.module.css";
+import styles from "../styles/HabiBlan.module.css";
 import { habiBlan } from "../texts/Home.json"
 import ImgRobot from "./ImgRobot.jsx";
 
