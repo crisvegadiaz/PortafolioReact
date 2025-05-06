@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Contacto.module.css";
 import { contacto } from "../texts/Home.json";
@@ -33,7 +35,7 @@ function Contacto() {
           <p style={{ color: textColor }}>{contacto.parrafo}</p>
           <button style={{ backgroundColor: buttonBackground }}>
             <Link to="/formulario">
-              {contacto.btn} <i className="fa-solid fa-envelope" />
+              {contacto.btn} <FontAwesomeIcon icon={faEnvelope} />
             </Link>
           </button>
         </div>

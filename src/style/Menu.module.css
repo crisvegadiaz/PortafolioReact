@@ -12,13 +12,9 @@
   width: 100%;
 }
 
-.cabecera__menu i {
-  align-items: center;
-  display: flex;
-  font-size: 1.5rem;
-  height: 2rem;
-  justify-content: center;
-  width: 2rem;
+.cabecera__menu svg {
+  height: 1.7rem;
+  width: 1.7rem;
 }
 
 .cabecera__menu > a {
@@ -40,7 +36,7 @@
   text-decoration: none;
 }
 
-.cabecera__menu i:hover {
+.cabecera__menu :hover {
   color: var(--light-accent);
   transition: all 0.5s ease-in-out;
 }

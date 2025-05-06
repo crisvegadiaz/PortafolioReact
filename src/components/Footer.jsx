@@ -1,3 +1,5 @@
+import { faCopyright } from "@fortawesome/free-regular-svg-icons"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Footer.module.css";
 import { footer } from "../texts/Home.json";
@@ -18,7 +20,7 @@ function Footer() {
         {footer.desarrollo}
         <br />
         {footer.copyright}
-        <i className="fa-sharp fa-regular fa-copyright"></i>
+        <FontAwesomeIcon icon={faCopyright} />
       </p>
     </footer>
   );

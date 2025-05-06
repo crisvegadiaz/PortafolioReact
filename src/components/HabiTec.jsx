@@ -1,6 +1,18 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/HabiTec.module.css";
 import { habiTec } from "../texts/Home.json";
+import {
+  faDocker,
+  faLinux,
+  faGithub,
+  faGitAlt,
+  faJs,
+  faNodeJs,
+  faReact,
+  faJava,
+} from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 function HabiTec() {
   const {
@@ -15,12 +27,9 @@ function HabiTec() {
     color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
   };
 
-  const iconStyle = theme
-    ? {
-        backgroundColor: "var(--dark-background)",
-        color: "var(--dark-text-muted)",
-      }
-    : { backgroundColor: "var(--light-surface)", color: "var(--light-text)" };
+  const iconColorStyle = {
+    color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
+  };
 
   const textStyle = {
     color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
@@ -36,7 +45,7 @@ function HabiTec() {
           .filter((key) => key.startsWith("item"))
           .map((key, index) => (
             <li key={index}>
-              <i className={getIconClass(key)} style={iconStyle} />
+              <FontAwesomeIcon icon={getIcon(key)} style={iconColorStyle} />
               <p style={textStyle}>{habiTec[key]}</p>
             </li>
           ))}
@@ -45,21 +54,21 @@ function HabiTec() {
   );
 }
 
-const getIconClass = (key) => {
-  const iconClasses = {
-    item1: "fa-brands fa-docker",
-    item2: "fa-brands fa-linux",
-    item3: "fa-brands fa-github",
-    item4: "fa-brands fa-git-alt",
-    item5: "fa-brands fa-js",
-    item6: "fa-brands fa-node-js",
-    item7: "fa-brands fa-react",
-    item8: "fa-brands fa-java",
-    item9: "fa-solid fa-database",
-    item10: "fa-solid fa-database",
-    item11: "fa-solid fa-database",
+const getIcon = (key) => {
+  const icons = {
+    item1: faDocker,
+    item2: faLinux,
+    item3: faGithub,
+    item4: faGitAlt,
+    item5: faJs,
+    item6: faNodeJs,
+    item7: faReact,
+    item8: faJava,
+    item9: faDatabase,
+    item10: faDatabase,
+    item11: faDatabase,
   };
-  return iconClasses[key] || "";
+  return icons[key];
 };
 
 export default HabiTec;

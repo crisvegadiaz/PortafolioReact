@@ -1,7 +1,14 @@
+import { faCode, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TYPES } from "../actions/actionTheme";
 import styles from "../style/Menu.module.css";
 import { useAppContext } from "./AppContext";
 import { Link } from "react-router-dom";
+import {
+  faTwitter,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 function Menu() {
   const { state, dispatch } = useAppContext();
@@ -11,7 +18,9 @@ function Menu() {
   };
 
   const themeStyle = {
-    backgroundColor: state.theme ? "var(--dark-surface)" : "var(--light-background)",
+    backgroundColor: state.theme
+      ? "var(--dark-surface)"
+      : "var(--light-background)",
     color: state.theme ? "var(--dark-text-muted)" : "var(--light-text)",
   };
 
@@ -22,10 +31,10 @@ function Menu() {
     <header className={styles.cabecera}>
       <nav className={styles.cabecera__menu}>
         <Link to="/" style={themeStyle}>
-          <i className="fa-solid fa-code" />
+          <FontAwesomeIcon icon={faCode} />
         </Link>
         <button onClick={handleThemeToggle} style={themeStyle}>
-          <i className={`fa-solid ${!state.theme ? "fa-sun" : "fa-moon"}`} />
+          <FontAwesomeIcon icon={!state.theme ? faSun : faMoon} />
         </button>
         <div
           className={styles.cabecera__menu__redes}
@@ -37,7 +46,7 @@ function Menu() {
             rel="noopener noreferrer"
             style={socialLinkStyle}
           >
-            <i className="fa-brands fa-twitter" />
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a
             href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/"
@@ -45,7 +54,7 @@ function Menu() {
             rel="noopener noreferrer"
             style={socialLinkStyle}
           >
-            <i className="fa-brands fa-linkedin" />
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a
             href="https://github.com/crisvegadiaz"
@@ -53,7 +62,7 @@ function Menu() {
             rel="noopener noreferrer"
             style={socialLinkStyle}
           >
-            <i className="fa-brands fa-github" />
+            <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
       </nav>

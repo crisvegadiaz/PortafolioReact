@@ -1,9 +1,15 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
 import styles from "../style/Formulario.module.css";
 import formData from "../texts/Formulario.json";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
+import {
+  faAt,
+  faArrowLeft,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Formulario() {
   const btnRef = useRef(null);
@@ -84,7 +90,7 @@ function Formulario() {
         className={styles.formulario__form}
         style={formStyle}
       >
-        <i className={`fa-solid fa-at ${styles.icon}`}></i>
+        <FontAwesomeIcon icon={faAt} className={styles.icon} />
         <input
           type="text"
           name="nombre"
@@ -136,11 +142,11 @@ function Formulario() {
         <fieldset className={styles.formulario__form__butt}>
           <button type="button">
             <Link to="/">
-              <i className="fa-solid fa-arrow-left"></i> {formData.btnInicio}
+              <FontAwesomeIcon icon={faArrowLeft} /> {formData.btnInicio}
             </Link>
           </button>
           <button type="submit" ref={btnRef}>
-            <i className="fa-solid fa-paper-plane"></i> {formData.btnEnviar}
+            <FontAwesomeIcon icon={faPaperPlane} /> {formData.btnEnviar}
           </button>
         </fieldset>
       </form>

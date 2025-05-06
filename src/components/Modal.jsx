@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import styles from "../style/Modal.module.css";
 
 const Modal = ({ modalRef, children, theme }) => {
@@ -22,7 +24,7 @@ const Modal = ({ modalRef, children, theme }) => {
         {children}
       </h2>
       <button onClick={closeModal} aria-label="Cerrar modal">
-        <i className="fa-solid fa-arrow-left"></i> Cerrar
+        <FontAwesomeIcon icon={faArrowLeft} /> Cerrar
       </button>
     </dialog>
   );

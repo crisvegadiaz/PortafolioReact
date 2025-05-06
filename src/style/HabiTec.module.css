@@ -37,13 +37,12 @@
     font-weight: 700;
 }
 
-.habilidadTec__lista li i {
+.habilidadTec__lista li svg {
     background-color: var(--light-surface);
     border-radius: 50%;
-    font-size: 2rem;
     padding: 1rem;
-    text-align: center;
     width: 2rem;
+    height: 2rem;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -63,9 +62,10 @@
         font-size: 1rem;
     }
 
-    .habilidadTec__lista li i {
+    .habilidadTec__lista li svg {
         font-size: 1.5rem;
         width: 1.5rem;
+        height: 1.5rem;
     }
 }
 
@@ -92,9 +92,10 @@
         font-size: 1rem;
     }
 
-    .habilidadTec__lista li i {
+    .habilidadTec__lista li svg {
         font-size: 1rem;
         padding: 0.6rem;
         width: 1rem;
+        height: 1rem;
     }
 }
