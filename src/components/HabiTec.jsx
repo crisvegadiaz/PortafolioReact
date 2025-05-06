@@ -27,9 +27,12 @@ function HabiTec() {
     color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
   };
 
-  const iconColorStyle = {
-    color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
-  };
+  const iconColorStyle = theme
+    ? {
+        backgroundColor: "var(--dark-background)",
+        color: "var(--dark-text-muted)",
+      }
+    : { backgroundColor: "var(--light-surface)", color: "var(--light-text)" };
 
   const textStyle = {
     color: theme ? "var(--dark-text-muted)" : "var(--light-text)",
