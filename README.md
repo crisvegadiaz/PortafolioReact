@@ -44,7 +44,7 @@ Este proyecto es un portafolio personal desarrollado con React. Aquí se muestra
 ├── /components # Componentes reutilizables
 ├── /pages      # Páginas principales
 ├── /reducers   # Reducers de Redux
-├── /style      # Archivos CSS
+├── /styles     # Archivos CSS
 ├── /texts      # Textos de paginas
 ├──index.css    # Estilos globales
 └──main.js      # Punto de entrada
