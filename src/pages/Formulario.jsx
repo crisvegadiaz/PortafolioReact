@@ -68,15 +68,19 @@ function Formulario() {
 
   const formStyle = theme
     ? {
-        background:
-          "linear-gradient(var(--light-accent), var(--dark-background))",
-        border: "2px solid var(--light-surface)",
+        background: "color-mix(in srgb, var(--dark-background) 85%, white 15%)",
+        border:
+          "2px solid color-mix(in srgb, var(--light-accent) 40%, var(--dark-background) 60%)",
       }
     : {
         background:
-          "linear-gradient(var(--light-accent), var(--light-background))",
-        border: "2px solid var(--light-text)",
+          "linear-gradient(color-mix(in srgb, var(--light-accent) 20%, var(--light-background) 80%), var(--light-background))",
+        border:
+          "2px solid color-mix(in srgb, var(--light-accent) 50%, var(--light-background) 50%)",
       };
+
+  const buttonBackground = theme ? "var(--dark-surface)" : "var(--light-text)";
+  const iconColor = theme ? "var(--dark-text-muted)" : "var(--light-text)";
 
   return (
     <main className={styles.formulario}>
@@ -85,7 +89,11 @@ function Formulario() {
         className={styles.formulario__form}
         style={formStyle}
       >
-        <FontAwesomeIcon icon="fa-at" className={styles.icon} />
+        <FontAwesomeIcon
+          icon="fa-at"
+          className={styles.icon}
+          style={{ color: iconColor }}
+        />
         <input
           type="text"
           name="nombre"
@@ -135,12 +143,16 @@ function Formulario() {
         ></textarea>
 
         <fieldset className={styles.formulario__form__butt}>
-          <button type="button">
+          <button type="button" style={{ backgroundColor: buttonBackground }}>
             <Link to="/">
               <FontAwesomeIcon icon="fa-arrow-left" /> {formData.btnInicio}
             </Link>
           </button>
-          <button type="submit" ref={btnRef}>
+          <button
+            type="submit"
+            ref={btnRef}
+            style={{ backgroundColor: buttonBackground }}
+          >
             <FontAwesomeIcon icon="fa-paper-plane" /> {formData.btnEnviar}
           </button>
         </fieldset>
