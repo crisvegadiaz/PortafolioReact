@@ -1,7 +1,7 @@
-import styles from "../styles/LiProyec.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import styles from "../styles/LiProyec.module.css";
 
 function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
   return (

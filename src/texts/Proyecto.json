@@ -2,6 +2,13 @@
   "titulo": "Proyectos",
   "card": [
     {
+      "enlace1": "https://github.com/crisvegadiaz/microservicios-api-rest",
+      "img": "imgProyec/microservicio.png",
+      "titulo": "Microservicios con Api-rest",
+      "texto": "Este proyecto implementa una arquitectura basada en microservicios que combina las siguientes tecnologías: Node.js, Express, PostgreSQL y Podman. Cada microservicio tiene su propia base de datos y se comunica con otros microservicios a través de API REST.",
+      "icons": ["fa-node-js", "fa-solid fa-database"]
+    },
+    {
       "enlace1": "https://github.com/crisvegadiaz/chat-node-socket",
       "enlace2": "https://chat-node-socket-mar4.onrender.com/",
       "img": "imgProyec/Chat.png",

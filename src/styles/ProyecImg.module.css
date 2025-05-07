@@ -16,6 +16,7 @@
 }
 
 .proyectos__list {
+  align-items: start;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(var(--proyectos-columns), minmax(0, 1fr));
