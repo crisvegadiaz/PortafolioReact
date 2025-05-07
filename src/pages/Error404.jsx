@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
 import styles from "../styles/Error404.module.css";
 import { Link } from "react-router-dom";
@@ -16,7 +17,7 @@ function Error404() {
         <h1 style={{ color: textColor }}>Error 404</h1>
         <button style={{ backgroundColor: buttonBackground }}>
           <Link to="/">
-            <i className="fa-solid fa-arrow-left" /> Inicio
+            <FontAwesomeIcon icon="fa-solid fa-arrow-left" /> Inicio
           </Link>
         </button>
       </div>

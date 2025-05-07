@@ -1,14 +1,8 @@
-import { faCode, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TYPES } from "../actions/actionTheme";
 import styles from "../styles/Menu.module.css";
 import { useAppContext } from "./AppContext";
 import { Link } from "react-router-dom";
-import {
-  faTwitter,
-  faLinkedin,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
 
 function Menu() {
   const { state, dispatch } = useAppContext();
@@ -31,30 +25,24 @@ function Menu() {
     <header className={styles.cabecera}>
       <nav className={styles.cabecera__menu}>
         <Link to="/" style={themeStyle}>
-          <FontAwesomeIcon icon={faCode} />
+          <FontAwesomeIcon icon="fa-solid fa-code" />
         </Link>
         <button onClick={handleThemeToggle} style={themeStyle}>
-          <FontAwesomeIcon icon={!state.theme ? faSun : faMoon} />
+          <FontAwesomeIcon
+            icon={!state.theme ? "fa-solid fa-sun" : "fa-solid fa-moon"}
+          />
         </button>
         <div
           className={styles.cabecera__menu__redes}
           style={socialContainerStyle}
         >
           <a
-            href="https://twitter.com/cristiandiazve3"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={socialLinkStyle}
-          >
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a
             href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/"
             target="_blank"
             rel="noopener noreferrer"
             style={socialLinkStyle}
           >
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon="fa-brands fa-linkedin" />
           </a>
           <a
             href="https://github.com/crisvegadiaz"
@@ -62,7 +50,7 @@ function Menu() {
             rel="noopener noreferrer"
             style={socialLinkStyle}
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon="fa-brands fa-github" />
           </a>
         </div>
       </nav>

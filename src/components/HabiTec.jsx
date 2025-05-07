@@ -2,17 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
 import styles from "../styles/HabiTec.module.css";
 import { habiTec } from "../texts/Home.json";
-import {
-  faDocker,
-  faLinux,
-  faGithub,
-  faGitAlt,
-  faJs,
-  faNodeJs,
-  faReact,
-  faJava,
-} from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 function HabiTec() {
   const {
@@ -59,19 +48,19 @@ function HabiTec() {
 
 const getIcon = (key) => {
   const icons = {
-    item1: faDocker,
-    item2: faLinux,
-    item3: faGithub,
-    item4: faGitAlt,
-    item5: faJs,
-    item6: faNodeJs,
-    item7: faReact,
-    item8: faJava,
-    item9: faDatabase,
-    item10: faDatabase,
-    item11: faDatabase,
+    item1: ["fab", "docker"],
+    item2: ["fab", "linux"],
+    item3: ["fab", "github"],
+    item4: ["fab", "git-alt"],
+    item5: ["fab", "js"],
+    item6: ["fab", "node-js"],
+    item7: ["fab", "react"],
+    item8: ["fab", "java"],
+    item9: ["fas", "database"],
+    item10: ["fas", "database"],
+    item11: ["fas", "database"],
   };
-  return icons[key];
+  return icons[key] || ["fas", "question-circle"];
 };
 
 export default HabiTec;

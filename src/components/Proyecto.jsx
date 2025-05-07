@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "../components/AppContext";
 import styles from "../styles/Proyecto.module.css";
 import { proyecto } from "../texts/Home.json";
@@ -31,7 +30,7 @@ function Proyecto() {
           <p style={{ color: textColor }}>{proyecto.parrafo}</p>
           <button style={{ backgroundColor: buttonBackground }}>
             <Link to="/proyectos">
-              {proyecto.btn} <FontAwesomeIcon icon={faCode} />
+              {proyecto.btn} <FontAwesomeIcon icon="fa-code" />
             </Link>
           </button>
         </div>

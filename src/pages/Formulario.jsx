@@ -5,11 +5,6 @@ import formData from "../texts/Formulario.json";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
-import {
-  faAt,
-  faArrowLeft,
-  faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
 
 function Formulario() {
   const btnRef = useRef(null);
@@ -90,7 +85,7 @@ function Formulario() {
         className={styles.formulario__form}
         style={formStyle}
       >
-        <FontAwesomeIcon icon={faAt} className={styles.icon} />
+        <FontAwesomeIcon icon="fa-at" className={styles.icon} />
         <input
           type="text"
           name="nombre"
@@ -142,11 +137,11 @@ function Formulario() {
         <fieldset className={styles.formulario__form__butt}>
           <button type="button">
             <Link to="/">
-              <FontAwesomeIcon icon={faArrowLeft} /> {formData.btnInicio}
+              <FontAwesomeIcon icon="fa-arrow-left" /> {formData.btnInicio}
             </Link>
           </button>
           <button type="submit" ref={btnRef}>
-            <FontAwesomeIcon icon={faPaperPlane} /> {formData.btnEnviar}
+            <FontAwesomeIcon icon="fa-paper-plane" /> {formData.btnEnviar}
           </button>
         </fieldset>
       </form>

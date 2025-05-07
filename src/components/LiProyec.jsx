@@ -1,6 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/LiProyec.module.css";
 
 function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
@@ -47,7 +45,7 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
           rel="noopener noreferrer"
           className={theme ? styles.darkLink : styles.lightLink}
         >
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={['fab', 'github']} />
         </a>
         {enlace2 && (
           <a
@@ -56,7 +54,7 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
             rel="noopener noreferrer"
             className={theme ? styles.darkLink : styles.lightLink}
           >
-            <FontAwesomeIcon icon={faGlobe} />
+            <FontAwesomeIcon icon={['fas', 'globe']} />
           </a>
         )}
       </div>
