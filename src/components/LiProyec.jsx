@@ -1,4 +1,7 @@
 import styles from "../styles/LiProyec.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
   return (
@@ -44,7 +47,7 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
           rel="noopener noreferrer"
           className={theme ? styles.darkLink : styles.lightLink}
         >
-          <i className="fa-brands fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
         {enlace2 && (
           <a
@@ -53,7 +56,7 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
             rel="noopener noreferrer"
             className={theme ? styles.darkLink : styles.lightLink}
           >
-            <i className="fa-solid fa-globe"></i>
+            <FontAwesomeIcon icon={faGlobe} />
           </a>
         )}
       </div>
