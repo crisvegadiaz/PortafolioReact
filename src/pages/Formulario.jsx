@@ -1,10 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
 import styles from "../styles/Formulario.module.css";
 import formData from "../texts/Formulario.json";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
+import FormInputs from "../components/FormInputs";
+import FormButtons from "../components/FormButtons";
+import FormImage from "../components/FormImage";
 
 function Formulario() {
   const btnRef = useRef(null);
@@ -89,82 +90,22 @@ function Formulario() {
         className={styles.formulario__form}
         style={formStyle}
       >
-        <FontAwesomeIcon
-          icon="fa-at"
-          className={styles.icon}
-          style={{ color: iconColor }}
+        <FormInputs
+          formData={formData}
+          form={form}
+          handleInput={handleInput}
+          styles={styles}
+          iconColor={iconColor}
         />
-        <input
-          type="text"
-          name="nombre"
-          id="nombre"
-          placeholder={formData.inputNombre}
-          pattern="[A-Za-zÁ-Úá-ú]+(\s[A-Za-zÁ-Úá-ú]+)?"
-          title={formData.inputErroNombre}
-          required
-          onChange={handleInput}
-          value={form.nombre}
-          aria-label="Nombre"
+        <FormButtons
+          formData={formData}
+          btnRef={btnRef}
+          buttonBackground={buttonBackground}
+          styles={styles}
         />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder={formData.inputEmail}
-          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-          title={formData.inputErrorEmail}
-          required
-          onChange={handleInput}
-          value={form.email}
-          aria-label="Email"
-        />
-        <input
-          type="tel"
-          name="telefono"
-          id="telefono"
-          placeholder={formData.inputTelefono}
-          pattern="[0-9]{10}"
-          title={formData.inputErrorTelefono}
-          required
-          onChange={handleInput}
-          value={form.telefono}
-          aria-label="Teléfono"
-        />
-        <textarea
-          name="mensaje"
-          id="mensaje"
-          placeholder={formData.inputMensaje}
-          minLength="10"
-          required
-          onChange={handleInput}
-          value={form.mensaje}
-          aria-label="Mensaje"
-          className={styles.textarea}
-        ></textarea>
-
-        <fieldset className={styles.formulario__form__butt}>
-          <button type="button" style={{ backgroundColor: buttonBackground }}>
-            <Link to="/">
-              <FontAwesomeIcon icon="fa-arrow-left" /> {formData.btnInicio}
-            </Link>
-          </button>
-          <button
-            type="submit"
-            ref={btnRef}
-            style={{ backgroundColor: buttonBackground }}
-          >
-            <FontAwesomeIcon icon="fa-paper-plane" /> {formData.btnEnviar}
-          </button>
-        </fieldset>
       </form>
 
-      <img
-        src="/img/enviar-min.svg"
-        alt="Email"
-        width="643.162"
-        height="528"
-        className={styles.formulario__img}
-      />
+      <FormImage styles={styles} />
 
       <Modal modalRef={modalRef} theme={theme}>
         {modalSuccess ? formData.modal1 : formData.modal2}
