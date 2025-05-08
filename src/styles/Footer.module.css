@@ -2,6 +2,7 @@
   background-color: var(--light-background);
   color: var(--light-text);
   font-family: var(--font-monospace);
+  font-display: swap;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.5;

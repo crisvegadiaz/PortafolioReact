@@ -16,6 +16,7 @@
 .error__text h1 {
   color: var(--light-text);
   font-family: var(--font-monospace);
+  font-display: swap;
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -27,6 +28,7 @@
   border-radius: 1rem;
   color: var(--light-surface);
   font-family: var(--font-monospace);
+  font-display: swap;
   font-size: 1.3rem;
   font-weight: 700;
   margin-top: 3rem;

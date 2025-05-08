@@ -1,6 +1,7 @@
 .titulo {
     color: var(--light-text);
     font-family: var(--font-monospace);
+    font-display: swap;
     font-size: 2rem;
     font-weight: 700;
     margin-top: 4.2rem;
@@ -29,6 +30,7 @@
 .habilidadBland__arti__lista {
     color: var(--light-text);
     font-family: var(--font-monospace);
+    font-display: swap;
     font-size: 1.5rem;
     font-weight: 500;
     width: 40%;
@@ -101,14 +103,15 @@
         font-size: 1.2rem;
         width: 100%;
     }
+
     .habilidadBland__arti__lista li:nth-child(2) {
         margin-left: 0;
     }
-    
+
     .habilidadBland__arti__lista li:nth-child(3) {
         margin-left: 0;
     }
-    
+
     .habilidadBland__arti__lista li:nth-child(4) {
         margin-left: 0;
     }

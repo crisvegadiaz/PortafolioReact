@@ -11,6 +11,7 @@ function Intro() {
         alt="cp"
         width="1139.171"
         height="654.543"
+        fetchpriority="high"
         className={styles.intro__img}
       />
       <p

@@ -68,6 +68,7 @@
 .cad_title {
     font-size: 1.2rem;
     font-family: var(--font-monospace);
+    font-display: swap;
     font-weight: bold;
     cursor: pointer;
     padding: 0.5rem;
@@ -80,6 +81,7 @@
 
 .card_text {
     font-family: var(--font-monospace);
+    font-display: swap;
     padding: 0 1rem;
     font-size: 1rem;
     font-weight: 500;

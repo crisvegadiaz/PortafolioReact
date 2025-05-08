@@ -13,6 +13,10 @@ function Proyecto() {
   const buttonBackground = theme ? "var(--dark-surface)" : "var(--light-text)";
   const imgSrc = theme ? "/img/code-min2.svg" : "/img/code-min1.svg";
 
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section className={styles.proyecto}>
       <h2 className={styles.titulo} style={{ color: textColor }}>
@@ -29,7 +33,7 @@ function Proyecto() {
         <div className={styles.proyecto__arti__div}>
           <p style={{ color: textColor }}>{proyecto.parrafo}</p>
           <button style={{ backgroundColor: buttonBackground }}>
-            <Link to="/proyectos">
+            <Link to="/proyectos" onClick={handleLinkClick}>
               {proyecto.btn} <FontAwesomeIcon icon="fa-code" />
             </Link>
           </button>

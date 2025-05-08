@@ -1,6 +1,7 @@
 .titulo {
     color: var(--light-text);
     font-family: var(--font-monospace);
+    font-display: swap;
     font-size: 2rem;
     font-weight: 700;
     margin-top: 4.2rem;
@@ -30,6 +31,7 @@
 .contacto__contenido__txt {
     color: var(--light-text);
     font-family: var(--font-monospace);
+    font-display: swap;
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.5;
