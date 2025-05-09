@@ -24,12 +24,19 @@ function Menu() {
   return (
     <header className={styles.cabecera}>
       <nav className={styles.cabecera__menu}>
-        <Link to="/" style={themeStyle}>
+        <Link to="/" style={themeStyle} aria-label="Ir a la página de inicio">
           <FontAwesomeIcon icon="fa-solid fa-code" />
         </Link>
-        <button onClick={handleThemeToggle} style={themeStyle}>
+        <button
+          onClick={handleThemeToggle}
+          style={themeStyle}
+          aria-label={
+            state.theme ? "Activar modo claro" : "Activar modo oscuro"
+          }
+        >
           <FontAwesomeIcon
             icon={!state.theme ? "fa-solid fa-sun" : "fa-solid fa-moon"}
+            aria-hidden="true"
           />
         </button>
         <div
@@ -40,17 +47,19 @@ function Menu() {
             href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Perfil de LinkedIn de Cristian Diaz Vega"
             style={socialLinkStyle}
           >
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+            <FontAwesomeIcon icon="fa-brands fa-linkedin" aria-hidden="true" />
           </a>
           <a
             href="https://github.com/crisvegadiaz"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Perfil de GitHub de crisvegadiaz"
             style={socialLinkStyle}
           >
-            <FontAwesomeIcon icon="fa-brands fa-github" />
+            <FontAwesomeIcon icon="fa-brands fa-github" aria-hidden="true" />
           </a>
         </div>
       </nav>

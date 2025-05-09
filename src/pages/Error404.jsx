@@ -15,11 +15,13 @@ function Error404() {
     <main className={styles.error}>
       <div className={styles.error__text}>
         <h1 style={{ color: textColor }}>Error 404</h1>
-        <button style={{ backgroundColor: buttonBackground }}>
-          <Link to="/">
-            <FontAwesomeIcon icon="fa-solid fa-arrow-left" /> Inicio
-          </Link>
-        </button>
+        <Link
+          to="/"
+          style={{ backgroundColor: buttonBackground }}
+          aria-label="Ir a la página de inicio"
+        >
+          <FontAwesomeIcon icon="fa-solid fa-arrow-left" /> Inicio
+        </Link>
       </div>
       <img src="/img/error-min.svg" alt="error" width="611" height="509" />
     </main>

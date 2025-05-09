@@ -44,8 +44,9 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
           target="_blank"
           rel="noopener noreferrer"
           className={theme ? styles.darkLink : styles.lightLink}
+          aria-label={`Ver el código de ${titulo} en GitHub`}
         >
-          <FontAwesomeIcon icon={['fab', 'github']} />
+          <FontAwesomeIcon icon={['fab', 'github']} aria-hidden="true" />
         </a>
         {enlace2 && (
           <a
@@ -53,8 +54,9 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
             target="_blank"
             rel="noopener noreferrer"
             className={theme ? styles.darkLink : styles.lightLink}
+            aria-label={`Ver el proyecto ${titulo} desplegado`}
           >
-            <FontAwesomeIcon icon={['fas', 'globe']} />
+            <FontAwesomeIcon icon={['fas', 'globe']} aria-hidden="true" />
           </a>
         )}
       </div>

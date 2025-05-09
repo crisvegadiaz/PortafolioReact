@@ -21,7 +21,7 @@
 
 /* Formulario */
 .formulario__form {
-  background: linear-gradient(var(--light-accent),var(--light-background));
+  background: linear-gradient(var(--light-accent), var(--light-background));
   border: 2px solid var(--light-text);
   border-radius: 1rem;
   display: flex;
@@ -105,29 +105,32 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
+  justify-content: space-evenly;
   margin-top: 1rem;
+  font-family: var(--font-monospace);
 }
 
-/* Estilos para botones */
-.formulario__form__butt button {
+.form__butt {
   background-color: var(--light-text);
   border: none;
   border-radius: 1rem;
   color: var(--light-surface);
-  font-family: var(--font-monospace);
-  font-display: swap;
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 1rem;
-  position: relative;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
   overflow: hidden;
-  transition: color 0.4s ease-in-out, background-color 0.3s ease;
-  width: 10rem;
+  padding: 1.2rem;
+  position: relative;
+  transition: color 0.4s ease-in-out;
   z-index: 1;
+  display: block;
+  text-align: center;
 }
 
-/* Efecto de fondo con pseudo-elemento (se mantiene la idea original) */
-.formulario__form__butt button::before {
+.form__butt::before {
   background-color: var(--light-accent);
   border-radius: 50%;
   content: '';
@@ -142,46 +145,13 @@
   z-index: -1;
 }
 
-/* Hover en botones */
-.formulario__form__butt button:hover {
+.form__butt:hover {
   color: var(--color-black);
-  cursor: pointer;
-  background-color: var(--light-text);
-  /* Se mantiene el color original */
+  /* Change 'a' tag's color on hover */
 }
 
-.formulario__form__butt button:hover::before {
+.form__butt:hover::before {
   transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
-}
-
-/* Enlaces dentro de botones */
-.formulario__form__butt button a {
-  color: var(--light-surface);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.formulario__form__butt button:hover a {
-  color: var(--color-black);
-}
-
-.formulario__form__butt button:disabled {
-  background-color: var(--dark-text-muted);
-  color: var(--light-surface);
-  cursor: not-allowed;
-}
-
-.formulario__form__butt button:disabled:hover {
-  color: var(--light-surface);
-}
-
-.formulario__form__butt button:disabled:hover a {
-  color: var(--light-surface);
-}
-
-.formulario__form__butt button:disabled:hover::before {
-  transform: none;
-  transition: none;
 }
 
 /* Media queries para tablets y pantallas medianas */
@@ -231,14 +201,7 @@
     font-size: 1rem;
   }
 
-  .formulario__form__butt {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .formulario__form__butt button {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    width: 80%;
+  .form__butt {
+    font-size: 1.2rem;
   }
 }

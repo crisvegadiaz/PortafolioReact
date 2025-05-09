@@ -37,25 +37,28 @@
     width: 30%;
 }
 
-.proyecto__arti__div button {
+.proyecto__arti__div a {
     background-color: var(--light-text);
     border: none;
     border-radius: 1rem;
-    color: #fff;
+    color: var(--light-surface);
     font-family: inherit;
     font-size: 1.3rem;
     font-weight: 700;
-    margin-top: 5%;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5% auto;
     outline: none;
     overflow: hidden;
     padding: 1rem;
     position: relative;
     transition: color 0.4s ease-in-out;
-    width: 15rem;
+    width: 13rem;
     z-index: 1;
+    display: block;
 }
 
-.proyecto__arti__div button::before {
+.proyecto__arti__div a::before {
     background-color: var(--light-accent);
     border-radius: 50%;
     content: '';
@@ -70,18 +73,13 @@
     z-index: -1;
 }
 
-.proyecto__arti__div button:hover a {
+.proyecto__arti__div a:hover {
     color: var(--color-black);
-    cursor: pointer;
+    /* Change 'a' tag's color on hover */
 }
 
-.proyecto__arti__div button:hover::before {
+.proyecto__arti__div a:hover::before {
     transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
-}
-
-.proyecto__arti__div button a {
-    color: var(--light-surface);
-    text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -102,10 +100,10 @@
         width: 50%;
     }
 
-    .proyecto__arti__div button {
+    .proyecto__arti__div a {
         font-size: 1rem;
         margin-top: 2rem;
-        width: 11rem;
+        width: 8.7rem;
     }
 }
 
@@ -135,8 +133,8 @@
         width: 100%;
     }
 
-    .proyecto__arti__div button {
+    .proyecto__arti__div a {
         font-size: 1rem;
-        width: 11rem;
+        width: 8.7rem;
     }
 }

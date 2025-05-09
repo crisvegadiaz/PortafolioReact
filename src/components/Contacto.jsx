@@ -32,11 +32,14 @@ function Contacto() {
         />
         <div className={styles.contacto__contenido__txt}>
           <p style={{ color: textColor }}>{contacto.parrafo}</p>
-          <button style={{ backgroundColor: buttonBackground }}>
-            <Link to="/formulario">
-              {contacto.btn} <FontAwesomeIcon icon="fa-envelope" />
-            </Link>
-          </button>
+          <Link
+            to="/formulario"
+            aria-label="Ir al formulario de contacto"
+            style={{ backgroundColor: buttonBackground }}
+          >
+            {contacto.btn + " "}
+            <FontAwesomeIcon icon="fa-envelope" aria-hidden="true" />
+          </Link>
         </div>
       </article>
     </section>

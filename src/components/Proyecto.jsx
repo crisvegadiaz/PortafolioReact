@@ -32,11 +32,15 @@ function Proyecto() {
         />
         <div className={styles.proyecto__arti__div}>
           <p style={{ color: textColor }}>{proyecto.parrafo}</p>
-          <button style={{ backgroundColor: buttonBackground }}>
-            <Link to="/proyectos" onClick={handleLinkClick}>
-              {proyecto.btn} <FontAwesomeIcon icon="fa-code" />
-            </Link>
-          </button>
+          <Link
+            to="/proyectos"
+            onClick={handleLinkClick}
+            aria-label="Ver todos los proyectos"
+            style={{ backgroundColor: buttonBackground }}
+          >
+            {proyecto.btn + " "}
+            <FontAwesomeIcon icon="fa-code" aria-hidden="true" />
+          </Link>
         </div>
       </article>
     </section>
