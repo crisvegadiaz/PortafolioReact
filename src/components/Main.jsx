@@ -11,8 +11,8 @@ function Main() {
       <Intro />
       <img
         src="img/programador.svg"
-        // width="973.461"
-        // height="587.025"
+        width="973.461"
+        height="587.025"
         alt="Ilustración de un programador trabajando"
         className={styles.main__img}
         loading="lazy"
