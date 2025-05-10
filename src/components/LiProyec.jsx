@@ -6,7 +6,13 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
     <li
       className={`${styles.card} ${theme ? styles.darkCard : styles.lightCard}`}
     >
-      <img className={styles.card_image} src={img} alt="imagen del proyecto" />
+      <img
+        className={styles.card_image}
+        src={img}
+        width="600"
+        height="400"
+        alt="imagen del proyecto"
+      />
 
       <div
         className={`${styles.card_icons} ${
@@ -46,7 +52,7 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
           className={theme ? styles.darkLink : styles.lightLink}
           aria-label={`Ver el código de ${titulo} en GitHub`}
         >
-          <FontAwesomeIcon icon={['fab', 'github']} aria-hidden="true" />
+          <FontAwesomeIcon icon={["fab", "github"]} aria-hidden="true" />
         </a>
         {enlace2 && (
           <a
@@ -56,7 +62,7 @@ function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
             className={theme ? styles.darkLink : styles.lightLink}
             aria-label={`Ver el proyecto ${titulo} desplegado`}
           >
-            <FontAwesomeIcon icon={['fas', 'globe']} aria-hidden="true" />
+            <FontAwesomeIcon icon={["fas", "globe"]} aria-hidden="true" />
           </a>
         )}
       </div>
