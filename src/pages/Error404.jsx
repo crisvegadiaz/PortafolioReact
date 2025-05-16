@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAppContext } from "../components/AppContext";
 import styles from "../styles/Error404.module.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 function Error404() {
   const {
@@ -13,6 +14,11 @@ function Error404() {
 
   return (
     <main className={styles.error}>
+      <Helmet>
+        <link rel="preload" as="image" href="/img/programador.svg" />
+        <meta name="description" content="Página no encontrada" />
+        <title>Error 404</title>
+      </Helmet>
       <div className={styles.error__text}>
         <h1 style={{ color: textColor }}>Error 404</h1>
         <Link

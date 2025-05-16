@@ -1,11 +1,12 @@
 import { useAppContext } from "../components/AppContext";
 import styles from "../styles/Formulario.module.css";
+import FormButtons from "../components/FormButtons";
+import FormInputs from "../components/FormInputs";
+import FormImage from "../components/FormImage";
 import formData from "../texts/Formulario.json";
+import { Helmet } from "react-helmet-async";
 import { useRef, useState } from "react";
 import Modal from "../components/Modal";
-import FormInputs from "../components/FormInputs";
-import FormButtons from "../components/FormButtons";
-import FormImage from "../components/FormImage";
 
 function Formulario() {
   const btnRef = useRef(null);
@@ -85,6 +86,14 @@ function Formulario() {
 
   return (
     <main className={styles.formulario}>
+      <Helmet>
+        <link rel="preload" as="image" href="/img/enviar-min.svg" />
+        <meta
+          name="description"
+          content="Formulario de contacto para enviar mensajes y consultas."
+        />
+        <title>Formulario</title>
+      </Helmet>
       <form
         onSubmit={handleSubmit}
         className={styles.formulario__form}

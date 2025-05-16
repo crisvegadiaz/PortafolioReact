@@ -1,9 +1,11 @@
 {
   "titulo": "Proyectos",
+  "sizes": "(max-width: 600px) 360px, (max-width: 900px) 480px, 600px",
   "card": [
     {
       "enlace1": "https://github.com/crisvegadiaz/microservicios-api-rest",
-      "img": "imgProyec/microservicio.webp",
+      "src": "imgProyec/480x248/Microservicio.webp",
+      "srcset": "imgProyec/600x310/Microservicio.webp 600w, imgProyec/480x248/Microservicio.webp 480w, imgProyec/360x186/Microservicio.webp 360w",
       "titulo": "Microservicios con Api-rest",
       "texto": "Este proyecto implementa una arquitectura basada en microservicios que combina las siguientes tecnologías: Node.js, Express, Base de Datos SQL y Podman. Cada microservicio tiene su propia base de datos y se comunica con otros microservicios a través de API REST.",
       "icons": ["node-js", "box", "database"]
@@ -11,14 +13,16 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/chat-node-socket",
       "enlace2": "https://chat-node-socket-mar4.onrender.com/",
-      "img": "imgProyec/Chat.webp",
+      "src": "imgProyec/480x248/Chat.webp",
+      "srcset": "imgProyec/600x310/Chat.webp 600w, imgProyec/480x248/Chat.webp 480w, imgProyec/360x186/Chat.webp 360w",
       "titulo": "Chat Node Socket",
       "texto": "Chat en tiempo real con Node.js y Socket.io. Los usuarios pueden enviar mensajes de texto y ubicación en tiempo real.",
       "icons": ["react", "node-js", "database"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/api-rest_Node_Express_HTTPS",
-      "img": "/imgProyec/ApiRest.webp",
+      "src": "imgProyec/480x248/ApiRest.webp",
+      "srcset": "imgProyec/600x310/ApiRest.webp 600w, imgProyec/480x248/ApiRest.webp 480w, imgProyec/360x186/ApiRest.webp 360w",
       "titulo": "API REST",
       "texto": "API REST Node.js construida con el framework Express, utilizando PostgreSQL como base de datos, JSON Web Tokens para autenticación y HTTPS para asegurar la comunicación.",
       "icons": ["node-js"]
@@ -26,35 +30,40 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/Phaser-react-flappy-bird",
       "enlace2": "https://phaser-juego.netlify.app/",
-      "img": "imgProyec/PhaserJuego.webp",
+      "src": "imgProyec/480x248/PhaserJuego.webp",
+      "srcset": "imgProyec/600x310/PhaserJuego.webp 600w, imgProyec/480x248/PhaserJuego.webp 480w, imgProyec/360x186/PhaserJuego.webp 360w",
       "titulo": "Juego Phaser",
       "texto": "Un juego estilo Flappy Bird! 🐦🎮 desarrollado con React, Phaser, y CSS. Inspirado en el clásico Flappy Bird.",
       "icons": ["react", "css3-alt", "fa-solid gamepad"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/Login-react-node-express",
-      "img": "/imgProyec/Login.webp",
+      "src": "imgProyec/480x248/Login.webp",
+      "srcset": "imgProyec/600x310/Login.webp 600w, imgProyec/480x248/Login.webp 480w, imgProyec/360x186/Login.webp 360w",
       "titulo": "Login",
       "texto": "El backend está creado en Node con Express y express-session. El frontend fue hecho con React y CSS con react-router-dom, y la base de datos con MySQL.",
       "icons": ["react", "css3-alt", "node-js", "database"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/ReactNative_Pomodoro",
-      "img": "imgProyec/AppPomodoro.webp",
+      "src": "imgProyec/480x248/AppPomodoro.webp",
+      "srcset": "imgProyec/600x310/AppPomodoro.webp 600w, imgProyec/480x248/AppPomodoro.webp 480w, imgProyec/360x186/AppPomodoro.webp 360w",
       "titulo": "Pomodoro",
       "texto": "Una aplicación Pomodoro creada con React Native y CSS. Esta app te ayuda a gestionar tu tiempo de trabajo y descanso utilizando la técnica Pomodoro.",
       "icons": ["react", "css3-alt"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/ReactNative_ProyectoNasa-",
-      "img": "imgProyec/AppNaza.webp",
+      "src": "imgProyec/480x248/AppNaza.webp",
+      "srcset": "imgProyec/600x310/AppNaza.webp 600w, imgProyec/480x248/AppNaza.webp 480w, imgProyec/360x186/AppNaza.webp 360w",
       "titulo": "App Nasa",
       "texto": "Una aplicación creada con React Native y CSS que te permite explorar datos y noticias de la NASA, manteniéndote informado sobre el espacio y las misiones espaciales.",
       "icons": ["react", "css3-alt"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/ReactNative_AppCalorias",
-      "img": "imgProyec/AppCaloria.webp",
+      "src": "imgProyec/480x248/AppCaloria.webp",
+      "srcset": "imgProyec/600x310/AppCaloria.webp 600w, imgProyec/480x248/AppCaloria.webp 480w, imgProyec/360x186/AppCaloria.webp 360w",
       "titulo": "App Caloría",
       "texto": "Una aplicación para contar calorías, desarrollada con React Native y CSS. Te ayuda a seguir tu ingesta diaria de calorías y mantener un estilo de vida saludable.",
       "icons": ["react", "css3-alt"]
@@ -62,7 +71,8 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/juego_del_ahorcado",
       "enlace2": "https://superlative-liger-734e6a.netlify.app/",
-      "img": "/imgProyec/JuegodelHorcado.webp",
+      "src": "imgProyec/480x248/JuegodelHorcado.webp",
+      "srcset": "imgProyec/600x310/JuegodelHorcado.webp 600w, imgProyec/480x248/JuegodelHorcado.webp 480w, imgProyec/360x186/JuegodelHorcado.webp 360w",
       "titulo": "Juego del Horcado",
       "texto": "Esta página, creada con HTML, CSS y JavaScript, te permite disfrutar del popular juego del ahorcado en cualquier momento y lugar. Adivina la palabra secreta letra por letra antes de que se complete el ahorcado.",
       "icons": ["html5", "css3-alt", "js"]
@@ -70,7 +80,8 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/JuegoDelHorcadoReact",
       "enlace2": "https://mellow-zabaione-2b201e.netlify.app/",
-      "img": "/imgProyec/ReactJuegodelHorcado.webp",
+      "src": "imgProyec/480x248/ReactJuegodelHorcado.webp",
+      "srcset": "imgProyec/600x310/ReactJuegodelHorcado.webp 600w, imgProyec/480x248/ReactJuegodelHorcado.webp 480w, imgProyec/360x186/ReactJuegodelHorcado.webp 360w",
       "titulo": "Juego del Horcado",
       "texto": "Esta página, creada con HTML, CSS, JavaScript y React te permite disfrutar del popular juego del ahorcado en cualquier momento y lugar. Adivina la palabra secreta letra por letra antes de que se complete el ahorcado.",
       "icons": ["react", "js"]
@@ -78,7 +89,8 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/ReactCalculadora",
       "enlace2": "https://astounding-sawine-944061.netlify.app/",
-      "img": "/imgProyec/Calculadora.webp",
+      "src": "imgProyec/480x248/Calculadora.webp",
+      "srcset": "imgProyec/600x310/Calculadora.webp 600w, imgProyec/480x248/Calculadora.webp 480w, imgProyec/360x186/Calculadora.webp 360w",
       "titulo": "Calculadora en React",
       "texto": "En esta página web, puedes realizar operaciones matemáticas básicas de forma rápida y sencilla, la web está creada con las tecnologías HTML, CSS, JavaScript y React.",
       "icons": ["react", "css3-alt", "js"]
@@ -86,7 +98,8 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/React-citas-aleatorio-",
       "enlace2": "https://effervescent-starlight-af3e40.netlify.app/",
-      "img": "/imgProyec/ViteReact.webp",
+      "src": "imgProyec/480x248/ViteReact.webp",
+      "srcset": "imgProyec/600x310/ViteReact.webp 600w, imgProyec/480x248/ViteReact.webp 480w, imgProyec/360x186/ViteReact.webp 360w",
       "titulo": "Citas aleatorio",
       "texto": "En esta página web, puedes encontrar frases motivadoras y reflexivas de diferentes autores y épocas. Cada vez que cargues la página, se mostrará una cita nueva al azar, la web está creada con las tecnologías HTML, CSS, JavaScript y React",
       "icons": ["react", "css3-alt", "js"]
@@ -94,7 +107,8 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/ReactReloj",
       "enlace2": "https://mellifluous-brioche-683a3b.netlify.app/",
-      "img": "/imgProyec/ReactRelojo.webp",
+      "src": "imgProyec/480x248/ReactRelojo.webp",
+      "srcset": "imgProyec/600x310/ReactRelojo.webp 600w, imgProyec/480x248/ReactRelojo.webp 480w, imgProyec/360x186/ReactRelojo.webp 360w",
       "titulo": "Reloj de Descanso",
       "texto": "¡El Reloj de Descanso es la solución perfecta para ti! Esta herramienta, creada con HTML, CSS, JavaScript y React, te ayuda a optimizar tu tiempo de trabajo y mejorar tu bienestar.",
       "icons": ["react", "css3-alt", "js"]
@@ -102,7 +116,8 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/encriptador",
       "enlace2": "https://venerable-bavarois-ba1789.netlify.app/",
-      "img": "/imgProyec/encritador.webp",
+      "src": "imgProyec/480x248/Encritador.webp",
+      "srcset": "imgProyec/600x310/Encritador.webp 600w, imgProyec/480x248/Encritador.webp 480w, imgProyec/360x186/Encritador.webp 360w",
       "titulo": "Encriptado de Texto",
       "texto": "En esta página web, puedes cifrar y descifrar tus mensajes de forma segura y gratuita, la página web está creada con las tecnologías HTML, CSS y JavaScript.",
       "icons": ["html5", "css3-alt", "js"]
@@ -110,7 +125,8 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/Pagina-institucional",
       "enlace2": "https://clinquant-travesseiro-9bd6ec.netlify.app/",
-      "img": "/imgProyec/Gonzalez.webp",
+      "src": "imgProyec/480x248/Gonzalez.webp",
+      "srcset": "imgProyec/600x310/Gonzalez.webp 600w, imgProyec/480x248/Gonzalez.webp 480w, imgProyec/360x186/Gonzalez.webp 360w",
       "titulo": "Página Escolar",
       "texto": "Esta página web, creada con HTML, CSS, JavaScript y Bootstrap, ofrece una experiencia educativa dinámica e interactiva para estudiantes de todas las edades.",
       "icons": ["html5", "css3-alt", "js", "bootstrap"]
@@ -118,42 +134,48 @@
     {
       "enlace1": "https://github.com/crisvegadiaz/ReactMarcadorDeMarkdown",
       "enlace2": "https://heroic-zuccutto-e7944c.netlify.app/",
-      "img": "/imgProyec/MarcadorDeMarkdown.webp",
+      "src": "imgProyec/480x248/MarcadorDeMarkdown.webp",
+      "srcset": "imgProyec/600x310/MarcadorDeMarkdown.webp 600w, imgProyec/480x248/MarcadorDeMarkdown.webp 480w, imgProyec/360x186/MarcadorDeMarkdown.webp 360w",
       "titulo": "Marcador de Markdown",
       "texto": "Este Marcador de Markdown, creado con HTML, CSS, JavaScript y React, te ofrece todo lo que necesitas para trabajar con tus archivos Markdown de manera eficiente.",
       "icons": ["html5", "css3-alt", "js", "react"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/script_sh",
-      "img": "/imgProyec/scritp.webp",
+      "src": "imgProyec/480x248/Scritp.webp",
+      "srcset": "imgProyec/600x310/Scritp.webp 600w, imgProyec/480x248/Scritp.webp 480w, imgProyec/360x186/Scritp.webp 360w",
       "titulo": "Scripts en Bash",
       "texto": "Los Scripts son una colección de programas o scripts escritos en lenguaje Bash, diseñados para automatizar tareas en sistemas operativos Linux.",
       "icons": ["linux"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/NodeWeather",
-      "img": "/imgProyec/nodeClima.webp",
+      "src": "imgProyec/480x248/NodeClima.webp",
+      "srcset": "imgProyec/600x310/NodeClima.webp 600w, imgProyec/480x248/NodeClima.webp 480w, imgProyec/360x186/NodeClima.webp 360w",
       "titulo": "Node Weather",
       "texto": "Esta aplicación Node.js obtiene y muestra información meteorológica actual para una ciudad dada utilizando la API de OpenWeatherMap.",
       "icons": ["node-js"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/NodeToDoApp",
-      "img": "/imgProyec/nodeList.webp",
+      "src": "imgProyec/480x248/NodeList.webp",
+      "srcset": "imgProyec/600x310/NodeList.webp 600w, imgProyec/480x248/NodeList.webp 480w, imgProyec/360x186/NodeList.webp 360w",
       "titulo": "Node To-Do App",
       "texto": "Este programa utiliza Node.js y algunas bibliotecas externas como 'readline' y 'chalk' para crear una aplicación de lista de tareas simple.",
       "icons": ["node-js"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/NodeToDoApp",
-      "img": "/imgProyec/nodeImg.webp",
+      "src": "imgProyec/480x248/NodeImg.webp",
+      "srcset": "imgProyec/600x310/NodeImg.webp 600w, imgProyec/480x248/NodeImg.webp 480w, imgProyec/360x186/NodeImg.webp 360w",
       "titulo": "Optimizado de Imágenes",
       "texto": "Este script de Node.js está diseñado para optimizar imágenes en una carpeta específica. Utiliza diversas bibliotecas, como sharp para redimensionar imágenes y imagemin para comprimir imágenes en varios formatos.",
       "icons": ["node-js"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/Hotel-Alura",
-      "img": "/imgProyec/HotelJava.webp",
+      "src": "imgProyec/480x248/HotelJava.webp",
+      "srcset": "imgProyec/600x310/HotelJava.webp 600w, imgProyec/480x248/HotelJava.webp 480w, imgProyec/360x186/HotelJava.webp 360w",
       "titulo": "Registro a Hotel",
       "texto": "El sistema está desarrollado con Java y MySQL. Java se utiliza para crear la interfaz de usuario y la lógica del programa, mientras que MySQL almacena los datos de reservas y huéspedes.",
       "icons": ["java", "database"]

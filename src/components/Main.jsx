@@ -15,7 +15,6 @@ function Main() {
         height="587.025"
         alt="Ilustración de un programador trabajando"
         className={styles.main__img}
-        loading="lazy"
         fetchpriority="high"
       />
       <HabiTec />

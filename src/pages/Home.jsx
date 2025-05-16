@@ -1,4 +1,5 @@
 import { useAppContext } from "../components/AppContext";
+import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 import Main from "../components/Main";
 import Menu from "../components/Menu";
@@ -22,6 +23,14 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+        <link rel="preload" as="image" href="img/programador.svg" />
+        <meta
+          name="description"
+          content="Portafolio de Cristian Diaz Vega, mostrando proyectos y habilidades en desarrollo web."
+        />
+        <title>Portafolio Cristian Diaz Vega</title>
+      </Helmet>
       <Menu />
       <Main />
       <Footer />

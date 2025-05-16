@@ -1,17 +1,30 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/LiProyec.module.css";
 
-function LiProyec({ enlace1, enlace2, img, titulo, texto, children, theme }) {
+function LiProyec({
+  enlace1,
+  enlace2,
+  src,
+  srcset,
+  sizes,
+  titulo,
+  texto,
+  children,
+  theme,
+}) {
   return (
     <li
       className={`${styles.card} ${theme ? styles.darkCard : styles.lightCard}`}
     >
       <img
         className={styles.card_image}
-        src={img}
         width="600"
-        height="400"
-        alt="imagen del proyecto"
+        height="310"
+        src={src}
+        srcSet={srcset}
+        sizes={sizes}
+        alt={`Imagen del proyecto ${titulo}`}
+        // loading="lazy"
       />
 
       <div
