@@ -3,8 +3,8 @@ function FormImage({ styles }) {
     <img
       src="/img/enviar-min.svg"
       alt="Email"
-      width="643.162"
-      height="528"
+      width="480"
+      height="400"
       className={styles.formulario__img}
     />
   );
