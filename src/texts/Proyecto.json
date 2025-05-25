@@ -8,7 +8,7 @@
       "srcset": "imgProyec/600x310/Microservicio.webp 600w, imgProyec/480x248/Microservicio.webp 480w, imgProyec/360x186/Microservicio.webp 360w",
       "titulo": "Microservicios con Api-rest",
       "texto": "Este proyecto implementa una arquitectura basada en microservicios que combina las siguientes tecnologías: Node.js, Express, Base de Datos SQL y Podman. Cada microservicio tiene su propia base de datos y se comunica con otros microservicios a través de API REST.",
-      "icons": ["node-js", "box", "database"]
+      "icons": ["node-js", "database"]
     },
     {
       "enlace1": "https://github.com/crisvegadiaz/chat-node-socket",
@@ -56,7 +56,7 @@
       "enlace1": "https://github.com/crisvegadiaz/ReactNative_ProyectoNasa-",
       "src": "imgProyec/480x248/AppNaza.webp",
       "srcset": "imgProyec/600x310/AppNaza.webp 600w, imgProyec/480x248/AppNaza.webp 480w, imgProyec/360x186/AppNaza.webp 360w",
-      "titulo": "App Nasa",
+      "titulo": "App NASA",
       "texto": "Una aplicación creada con React Native y CSS que te permite explorar datos y noticias de la NASA, manteniéndote informado sobre el espacio y las misiones espaciales.",
       "icons": ["react", "css3-alt"]
     },
@@ -73,7 +73,7 @@
       "enlace2": "https://superlative-liger-734e6a.netlify.app/",
       "src": "imgProyec/480x248/JuegodelHorcado.webp",
       "srcset": "imgProyec/600x310/JuegodelHorcado.webp 600w, imgProyec/480x248/JuegodelHorcado.webp 480w, imgProyec/360x186/JuegodelHorcado.webp 360w",
-      "titulo": "Juego del Horcado",
+      "titulo": "Juego del Ahorcado",
       "texto": "Esta página, creada con HTML, CSS y JavaScript, te permite disfrutar del popular juego del ahorcado en cualquier momento y lugar. Adivina la palabra secreta letra por letra antes de que se complete el ahorcado.",
       "icons": ["html5", "css3-alt", "js"]
     },
@@ -82,7 +82,7 @@
       "enlace2": "https://mellow-zabaione-2b201e.netlify.app/",
       "src": "imgProyec/480x248/ReactJuegodelHorcado.webp",
       "srcset": "imgProyec/600x310/ReactJuegodelHorcado.webp 600w, imgProyec/480x248/ReactJuegodelHorcado.webp 480w, imgProyec/360x186/ReactJuegodelHorcado.webp 360w",
-      "titulo": "Juego del Horcado",
+      "titulo": "Juego del Ahorcado en React",
       "texto": "Esta página, creada con HTML, CSS, JavaScript y React te permite disfrutar del popular juego del ahorcado en cualquier momento y lugar. Adivina la palabra secreta letra por letra antes de que se complete el ahorcado.",
       "icons": ["react", "js"]
     },
@@ -100,7 +100,7 @@
       "enlace2": "https://effervescent-starlight-af3e40.netlify.app/",
       "src": "imgProyec/480x248/ViteReact.webp",
       "srcset": "imgProyec/600x310/ViteReact.webp 600w, imgProyec/480x248/ViteReact.webp 480w, imgProyec/360x186/ViteReact.webp 360w",
-      "titulo": "Citas aleatorio",
+      "titulo": "Citas Aleatorias",
       "texto": "En esta página web, puedes encontrar frases motivadoras y reflexivas de diferentes autores y épocas. Cada vez que cargues la página, se mostrará una cita nueva al azar, la web está creada con las tecnologías HTML, CSS, JavaScript y React",
       "icons": ["react", "css3-alt", "js"]
     },

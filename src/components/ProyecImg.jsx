@@ -57,7 +57,13 @@ function ProyecImg({ theme }) {
                 }
               }
 
-              return <FontAwesomeIcon key={i} icon={[prefix, iconName]} />;
+                return (
+                <FontAwesomeIcon
+                  title={`Icon: ${iconName.replace(/-/g, ' ')}`}
+                  key={i}
+                  icon={[prefix, iconName]}
+                />
+                );
             })}
           </LiProyec>
         ))}

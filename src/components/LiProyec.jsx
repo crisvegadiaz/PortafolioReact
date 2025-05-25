@@ -64,6 +64,7 @@ function LiProyec({
           rel="noopener noreferrer"
           className={theme ? styles.darkLink : styles.lightLink}
           aria-label={`Ver el código de ${titulo} en GitHub`}
+          title="Ver el código de este proyecto en GitHub"
         >
           <FontAwesomeIcon icon={["fab", "github"]} aria-hidden="true" />
         </a>
@@ -74,6 +75,7 @@ function LiProyec({
             rel="noopener noreferrer"
             className={theme ? styles.darkLink : styles.lightLink}
             aria-label={`Ver el proyecto ${titulo} desplegado`}
+            title={`Ver el proyecto ${titulo} desplegado`}
           >
             <FontAwesomeIcon icon={["fas", "globe"]} aria-hidden="true" />
           </a>

@@ -8,6 +8,7 @@ function FormButtons({ formData, btnRef, buttonBackground, styles }) {
         className={styles.form__butt}
         to="/"
         style={{ backgroundColor: buttonBackground }}
+        title="Volver a la página de inicio"
       >
         <FontAwesomeIcon icon="fa-arrow-left" /> {formData.btnInicio}
       </Link>
@@ -16,6 +17,7 @@ function FormButtons({ formData, btnRef, buttonBackground, styles }) {
         type="submit"
         ref={btnRef}
         style={{ backgroundColor: buttonBackground }}
+        title="Enviar el formulario"
       >
         <FontAwesomeIcon icon="fa-paper-plane" /> {formData.btnEnviar}
       </button>

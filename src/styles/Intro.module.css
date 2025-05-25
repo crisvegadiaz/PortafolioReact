@@ -15,13 +15,20 @@
 .intro__txt {
     color: var(--light-text);
     font-family: var(--font-monospace);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-display: swap;
-    font-weight: 600;
-    line-height: 1.5;
-    text-align: initial;
-    width: 34%;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    width: 40%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .intro {

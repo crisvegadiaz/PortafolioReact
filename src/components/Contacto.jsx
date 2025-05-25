@@ -36,6 +36,7 @@ function Contacto() {
             to="/formulario"
             aria-label="Ir al formulario de contacto"
             style={{ backgroundColor: buttonBackground }}
+            title="Formulario de contacto"
           >
             {contacto.btn + " "}
             <FontAwesomeIcon icon="fa-envelope" aria-hidden="true" />

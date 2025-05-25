@@ -1,12 +1,12 @@
 {
-  "intro": "👋¡Hola! Soy Cristian Diaz Vega, Técnico Superior en Soporte de Infraestructura de Tecnología de Información, con experiencia en el desarrollo de aplicaciones web seguras y escalables. Disfruto resolviendo problemas y optimizando sistemas, siempre buscando nuevas oportunidades para mejorar mis habilidades",
+  "intro": "👋¡Hola! Soy Cristian Diaz Vega, Técnico en Infraestructura IT y desarrollador web fullstack. Me apasiona resolver problemas reales mediante código limpio y eficiente. Me especializo en construir aplicaciones seguras, escalables y bien estructuradas, usando herramientas como React, Node.js y bases de datos SQL. Actualmente busco un rol donde pueda seguir creciendo, aportar valor y trabajar en equipo",
   "habiTec": {
-    "titulo": "Habilidades Técnicas",
+    "titulo": "Tecnologías que Domino",
     "item1": "Docker",
     "item2": "Linux",
     "item3": "Github",
     "item4": "Git",
-    "item5": "JavaScrip",
+    "item5": "JavaScript",
     "item6": "Node",
     "item7": "React",
     "item8": "Java",

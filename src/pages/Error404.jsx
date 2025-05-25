@@ -25,6 +25,7 @@ function Error404() {
           to="/"
           style={{ backgroundColor: buttonBackground }}
           aria-label="Ir a la página de inicio"
+          title="Ir a la página de inicio"
         >
           <FontAwesomeIcon icon="fa-solid fa-arrow-left" /> Inicio
         </Link>

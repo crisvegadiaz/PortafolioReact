@@ -37,6 +37,7 @@ function Proyecto() {
             onClick={handleLinkClick}
             aria-label="Ver todos los proyectos"
             style={{ backgroundColor: buttonBackground }}
+            title="Ver todos los proyectos"
           >
             {proyecto.btn + " "}
             <FontAwesomeIcon icon="fa-code" aria-hidden="true" />
