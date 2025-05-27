@@ -22,11 +22,6 @@
     width: 80%;
 }
 
-.habilidadBland__arti__img {
-    height: auto;
-    width: 40%;
-}
-
 .habilidadBland__arti__lista {
     color: var(--light-text);
     font-family: var(--font-monospace);
@@ -42,10 +37,11 @@
 
 .habilidadBland__arti__lista summary:hover {
     color: var(--light-accent);
-    transition: all 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
 }
 
-.habilidadBland__arti__lista li:nth-child(2) {
+.habilidadBland__arti__lista li:nth-child(2),
+.habilidadBland__arti__lista li:nth-child(4) {
     margin-left: 3rem;
 }
 
@@ -53,12 +49,9 @@
     margin-left: 6rem;
 }
 
-.habilidadBland__arti__lista li:nth-child(4) {
-    margin-left: 3rem;
-}
-
 .habilidadBland__arti__lista li details p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin: 1rem;
     width: 30rem;
 }
@@ -66,22 +59,31 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .titulo {
         font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .habilidadBland {
+        gap: 0;
     }
 
     .habilidadBland__arti {
         width: 100%;
-    }
-
-    .habilidadBland__arti__img {
-        width: 60%;
+        justify-content: space-around;
     }
 
     .habilidadBland__arti__lista {
         font-size: 1.2rem;
     }
 
+    .habilidadBland__arti__lista li:nth-child(2),
+    .habilidadBland__arti__lista li:nth-child(3),
+    .habilidadBland__arti__lista li:nth-child(4) {
+        margin-left: 0;
+    }
+
     .habilidadBland__arti__lista li details p {
-        width: 11rem;
+        width: 100%;
+        hyphens: auto;
     }
 }
 
@@ -95,23 +97,13 @@
         width: 100%;
     }
 
-    .habilidadBland__arti__img {
-        width: 100%;
-    }
-
     .habilidadBland__arti__lista {
         font-size: 1.2rem;
         width: 100%;
     }
 
-    .habilidadBland__arti__lista li:nth-child(2) {
-        margin-left: 0;
-    }
-
-    .habilidadBland__arti__lista li:nth-child(3) {
-        margin-left: 0;
-    }
-
+    .habilidadBland__arti__lista li:nth-child(2),
+    .habilidadBland__arti__lista li:nth-child(3),
     .habilidadBland__arti__lista li:nth-child(4) {
         margin-left: 0;
     }

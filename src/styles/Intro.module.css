@@ -1,64 +1,61 @@
 .intro {
-    align-items: center;
-    display: flex;
-    gap: 5%;
-    grid-column: 2 / span 10;
-    justify-content: center;
-    margin: 8rem 0;
+  grid-column: 2 / span 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 8rem 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .intro__img {
-    height: auto;
-    width: 25rem;
+  width: 25rem;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.intro__img:hover {
+  transform: scale(1.05);
 }
 
 .intro__txt {
-    color: var(--light-text);
-    font-family: var(--font-monospace);
-    font-size: 1.1rem;
-    font-display: swap;
-    font-weight: 700;
-    line-height: 1.4;
-    text-align: left;
-    width: 40%;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  max-width: 65ch;
+  font-family: var(--font-monospace);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--light-text);
+  text-align: center;
+  transition: color 0.3s ease-in-out;
 }
 
-
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .intro {
-        margin: 5rem 0;
-    }
-
-    .intro__img {
-        width: 50%;
-    }
-
-    .intro__txt {
-        font-size: 1rem;
-        width: 50%;
-    }
+.intro__txt:hover {
+  color: var(--primary-color);
 }
 
-@media only screen and (max-width: 767px) {
-    .intro {
-        flex-direction: column;
-        gap: 3rem;
-        margin: 3rem 0;
-    }
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    margin: 4rem 0;
+    gap: 2rem;
+  }
 
-    .intro__img {
-        width: 100%;
-    }
+  .intro__img {
+    width: 80%;
+  }
 
-    .intro__txt {
-        font-size: 1rem;
-        text-align: center;
-        width: 100%;
-    }
+  .intro__txt {
+    width: 100%;
+    font-size: 1rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .intro__img {
+    width: 50%;
+  }
 }

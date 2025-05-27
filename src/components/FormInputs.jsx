@@ -39,7 +39,6 @@ function FormInputs({ formData, form, handleInput, styles, iconColor }) {
         placeholder={formData.inputTelefono}
         pattern="[0-9]{10}"
         title={formData.inputErrorTelefono}
-        required
         onChange={handleInput}
         value={form.telefono}
         aria-label="Teléfono"

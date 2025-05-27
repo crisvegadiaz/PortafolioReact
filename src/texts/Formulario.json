@@ -1,10 +1,10 @@
 {
   "inputNombre": "Nombre completo",
-  "inputErroNombre": "Por favor, ingrese un nombre válido ❌",
+  "inputErroNombre": "Por favor, ingrese un nombre válido. Este campo es obligatorio ❌",
   "inputEmail": "Correo electrónico",
-  "inputErrorEmail": "Por favor, ingrese un correo electrónico válido ❌",
+  "inputErrorEmail": "Por favor, ingrese un correo electrónico válido. Este campo es obligatorio ❌",
   "inputTelefono": "Número de teléfono",
-  "inputErrorTelefono": "Por favor, ingrese un número de teléfono válido ❌",
+  "inputErrorTelefono": "Por favor, ingrese un número de teléfono válido. No es obligatorio ❌",
   "inputMensaje": "Escriba su mensaje aquí...",
   "btnInicio": "Inicio",
   "btnEnviar": "Enviar",
