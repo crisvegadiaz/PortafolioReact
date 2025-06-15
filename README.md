@@ -1,6 +1,5 @@
 # Portafolio React
-
-Este proyecto es un portafolio personal desarrollado con React. Aquí se muestran mis habilidades, proyectos y experiencia profesional.
+Este proyecto es un portafolio personal desarrollado con React, donde presento mis habilidades, proyectos y experiencia profesional de manera clara y atractiva.
 
 ## Características
 
