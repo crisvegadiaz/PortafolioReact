@@ -3,13 +3,13 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { AppProvider } from "./components/AppContext";
+import { HelmetProvider } from "react-helmet-async";
 import Formulario from "./pages/Formulario";
 import Proyectos from "./pages/Proyectos";
 import Error404 from "./pages/Error404";
 import ReactDOM from "react-dom/client";
 import Home from "./pages/Home";
 import React from "react";
-import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 

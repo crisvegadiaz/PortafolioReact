@@ -31,7 +31,9 @@ function Contacto() {
           className={styles.contacto__contenido__img}
         />
         <div className={styles.contacto__contenido__txt}>
-          <p style={{ color: textColor }}>{contacto.parrafo}</p>
+          <p className={styles.parrafo} style={{ color: textColor }}>
+            {contacto.parrafo}
+          </p>
           <Link
             to="/formulario"
             aria-label="Ir al formulario de contacto"

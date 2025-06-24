@@ -31,7 +31,9 @@ function Proyecto() {
           className={styles.proyecto__arti__img}
         />
         <div className={styles.proyecto__arti__div}>
-          <p style={{ color: textColor }}>{proyecto.parrafo}</p>
+          <p className={styles.parrafo} style={{ color: textColor }}>
+            {proyecto.parrafo}
+          </p>
           <Link
             to="/proyectos"
             onClick={handleLinkClick}

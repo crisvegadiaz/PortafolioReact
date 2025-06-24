@@ -4,65 +4,66 @@
 }
 
 .cabecera__menu {
-  align-items: center;
   display: flex;
-  grid-column: 2 / span 10;
+  align-items: center;
   justify-content: space-between;
+  grid-column: 2 / span 10;
   margin: 0.5rem 0;
   width: 100%;
 }
 
 .cabecera__menu svg {
-  height: 1.6rem;
-  width: 1.6rem;
+  height: 1.5rem;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
-.cabecera__menu > a {
-  background-color: var(--light-background);
-  border: none;
-  border-radius: 50%;
-  color: var(--light-text);
-  padding: 0.5rem;
-  text-decoration: none;
-}
-
+.cabecera__menu > a,
 .cabecera__menu button {
   background-color: var(--light-background);
   border: none;
   border-radius: 50%;
   color: var(--light-text);
-  margin-left: 70%;
   padding: 0.5rem;
   text-decoration: none;
+  transition: color 0.5s ease-in-out;
 }
 
-.cabecera__menu :hover {
+.cabecera__menu button {
+  margin-left: 70%;
+}
+
+.cabecera__menu > a:hover,
+.cabecera__menu button:hover {
   color: var(--light-accent);
-  transition: all 0.5s ease-in-out;
 }
 
 .cabecera__menu__redes {
-  background-color: var(--light-background);
-  border-radius: 1rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  background-color: var(--light-background);
+  border-radius: 1rem;
   padding: 0.5rem;
 }
 
 .cabecera__menu__redes a {
   color: var(--light-text);
   text-decoration: none;
+  transition: color 0.5s ease-in-out;
 }
 
+.cabecera__menu__redes a:hover {
+  color: var(--light-accent);
+}
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .cabecera__menu button {
     margin-left: 60%;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .cabecera__menu button {
     margin-left: 0;
   }

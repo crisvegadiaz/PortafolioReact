@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  margin: 8rem 0;
+  margin: 6rem 0;
   transition: all 0.3s ease-in-out;
 }
 
 .intro__img {
-  width: 25rem;
+  width: 22rem;
   height: auto;
   transition: transform 0.3s ease-in-out;
 }
@@ -19,15 +19,16 @@
 }
 
 .intro__txt {
-  width: 40%;
+  width: 50%;
   max-width: 65ch;
   font-family: var(--font-monospace);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 750;
   line-height: 1.6;
   letter-spacing: 0.02em;
   color: var(--light-text);
-  text-align: center;
+  text-align: justify;
+  hyphens: auto;
   transition: color 0.3s ease-in-out;
 }
 

@@ -1,7 +1,6 @@
 .titulo {
   color: var(--light-text);
   font-family: var(--font-monospace);
-  font-display: swap;
   font-size: 2rem;
   font-weight: 700;
   margin-top: 4.2rem;
@@ -24,17 +23,15 @@
 .proyecto__arti__div {
   color: var(--light-text);
   font-family: var(--font-monospace);
-  font-display: swap;
+  width: 45%;
+}
+
+.parrafo {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.5;
-  /* text-align: center; */
-  width: 40%;
-}
-
-.proyecto__arti__div p {
-  text-align: center;
-  /* hyphens: auto; */
+  text-align: justify;
+  hyphens: auto;
 }
 
 .proyecto__arti__img {
@@ -102,11 +99,6 @@
     width: 45%;
   }
 
-  .proyecto__arti__div p {
-    text-align: justify;
-    hyphens: auto;
-  }
-
   .proyecto__arti__img {
     width: 50%;
   }
@@ -137,11 +129,6 @@
   .proyecto__arti__div {
     font-size: 1rem;
     width: 100%;
-  }
-
-  .proyecto__arti__div p {
-    text-align: justify;
-    hyphens: auto;
   }
 
   .proyecto__arti__img {
