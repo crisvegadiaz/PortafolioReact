@@ -16,6 +16,11 @@
   height: 1.5rem;
   aspect-ratio: 1 / 1;
   object-fit: contain;
+  transition: color 0.5s ease-in-out;
+}
+
+.cabecera__menu svg:hover {
+  color: var(--light-accent);
 }
 
 .cabecera__menu > a,
@@ -26,16 +31,10 @@
   color: var(--light-text);
   padding: 0.5rem;
   text-decoration: none;
-  transition: color 0.5s ease-in-out;
 }
 
 .cabecera__menu button {
   margin-left: 70%;
-}
-
-.cabecera__menu > a:hover,
-.cabecera__menu button:hover {
-  color: var(--light-accent);
 }
 
 .cabecera__menu__redes {
